@@ -18,7 +18,6 @@ class CheckmarkSegmentedControl: UIControl {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-    
     }
     
     override func drawRect(rect: CGRect) {

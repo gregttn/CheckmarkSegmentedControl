@@ -26,7 +26,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         super.tearDown()
     }
     
-    func testShouldPlaceTitlesAtTheBottomOfTheConainer() {
+    func testShouldPlaceTitlesAtTheBottomOfTheContainer() {
         checkmark.drawRect(checkmark.frame)
         
         for index in (0..<titles.count) {
