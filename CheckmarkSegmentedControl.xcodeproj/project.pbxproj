@@ -13,6 +13,8 @@
 		63522E721AEE236C00D1FDF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63522E711AEE236C00D1FDF7 /* Images.xcassets */; };
 		63522E751AEE236C00D1FDF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63522E731AEE236C00D1FDF7 /* LaunchScreen.xib */; };
 		63522E811AEE236C00D1FDF7 /* CheckmarkSegmentedControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63522E801AEE236C00D1FDF7 /* CheckmarkSegmentedControlTests.swift */; };
+		63522E8D1AEE253900D1FDF7 /* CheckmarkSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63522E8C1AEE253900D1FDF7 /* CheckmarkSegmentedControl.swift */; };
+		63522E8E1AEE264200D1FDF7 /* CheckmarkSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63522E8C1AEE253900D1FDF7 /* CheckmarkSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		63522E7A1AEE236C00D1FDF7 /* CheckmarkSegmentedControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckmarkSegmentedControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63522E7F1AEE236C00D1FDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63522E801AEE236C00D1FDF7 /* CheckmarkSegmentedControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControlTests.swift; sourceTree = "<group>"; };
+		63522E8C1AEE253900D1FDF7 /* CheckmarkSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 				63522E711AEE236C00D1FDF7 /* Images.xcassets */,
 				63522E731AEE236C00D1FDF7 /* LaunchScreen.xib */,
 				63522E681AEE236C00D1FDF7 /* Supporting Files */,
+				63522E8C1AEE253900D1FDF7 /* CheckmarkSegmentedControl.swift */,
 			);
 			path = CheckmarkSegmentedControl;
 			sourceTree = "<group>";
@@ -212,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63522E8D1AEE253900D1FDF7 /* CheckmarkSegmentedControl.swift in Sources */,
 				63522E6D1AEE236C00D1FDF7 /* ViewController.swift in Sources */,
 				63522E6B1AEE236C00D1FDF7 /* AppDelegate.swift in Sources */,
 			);
@@ -221,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63522E8E1AEE264200D1FDF7 /* CheckmarkSegmentedControl.swift in Sources */,
 				63522E811AEE236C00D1FDF7 /* CheckmarkSegmentedControlTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +415,7 @@
 				63522E861AEE236C00D1FDF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63522E871AEE236C00D1FDF7 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControlTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +424,7 @@
 				63522E891AEE236C00D1FDF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
