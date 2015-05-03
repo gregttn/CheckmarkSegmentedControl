@@ -41,6 +41,7 @@ class CheckmarkSegmentedControl: UIControl {
         label.font = titleFont
         label.fontSize = titleFont.pointSize
         label.string = content
+        label.alignmentMode = kCAAlignmentCenter
         
         return label
     }

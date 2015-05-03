@@ -49,6 +49,16 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         }
     }
 
+    func testTitleLabelContentIsCentered() {
+        checkmark.drawRect(checkmark.frame)
+        
+        for index in (0..<titles.count) {
+            let titleLayer: CATextLayer = checkmark.layer.sublayers[index] as! CATextLayer
+            
+            XCTAssertEqual(titleLayer.alignmentMode, kCAAlignmentCenter)
+        }
+    }
+    
     private func sizeForText(text: String, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = text
