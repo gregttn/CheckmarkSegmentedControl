@@ -25,16 +25,19 @@ class CheckmarkSegmentedControl: UIControl {
         let sectionSize: CGSize = CGSizeMake(rect.width / CGFloat(titles.count), rect.height)
     
         for index in (0..<titles.count) {
-            let sectionOffset = CGPoint(x: sectionSize.width * CGFloat(index), y: 0)
+            let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
 
-            let label = createTitleLabel(sectionSize, containerOffset: sectionOffset, content: titles[index])
+            let label = createTitleLabel(containerFrame, content: titles[index])
             layer.addSublayer(label)
+            
+            let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame)
+            layer.addSublayer(circleLayer)
         }
     }
     
-    private func createTitleLabel(containerSize: CGSize, containerOffset: CGPoint, content: String) -> CATextLayer {
+    private func createTitleLabel(containerFrame: CGRect, content: String) -> CATextLayer {
         let labelSize = sizeForLabel(content)
-        let labelFrame = CGRectMake(containerOffset.x, containerSize.height - labelSize.height, containerSize.width, labelSize.height)
+        let labelFrame = CGRectMake(containerFrame.origin.x, containerFrame.height - labelSize.height, containerFrame.width, labelSize.height)
         
         let label: CATextLayer = CATextLayer()
         label.frame = labelFrame
@@ -45,6 +48,17 @@ class CheckmarkSegmentedControl: UIControl {
         label.foregroundColor = titleColor.CGColor
         
         return label
+    }
+    
+    private func createCircleLayer(containerFrame: CGRect, titleLabelFrame: CGRect) -> CALayer {
+        let sideLength = containerFrame.height - titleLabelFrame.height
+        
+        let circleLayer: CALayer = CALayer()
+        circleLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - sideLength/2, 0, sideLength, sideLength)
+        circleLayer.cornerRadius = sideLength/2
+        circleLayer.backgroundColor = UIColor.lightGrayColor().CGColor
+        
+        return circleLayer
     }
     
     private func sizeForLabel(text: String) -> CGSize {
