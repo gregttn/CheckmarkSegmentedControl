@@ -26,14 +26,14 @@ class CheckmarkSegmentedControl: UIControl {
         for index in (0..<titles.count) {
             let sectionOffset = CGPoint(x: sectionSize.width * CGFloat(index), y: 0)
 
-            let label = createTitleLabel(sectionSize, continerOffset: sectionOffset, content: titles[index])
+            let label = createTitleLabel(sectionSize, containerOffset: sectionOffset, content: titles[index])
             layer.addSublayer(label)
         }
     }
     
-    private func createTitleLabel(containerSize: CGSize, continerOffset: CGPoint, content: String) -> CATextLayer {
+    private func createTitleLabel(containerSize: CGSize, containerOffset: CGPoint, content: String) -> CATextLayer {
         let labelSize = sizeForLabel(content)
-        let labelFrame = CGRectMake(continerOffset.x, containerSize.height - labelSize.height, labelSize.width, labelSize.height)
+        let labelFrame = CGRectMake(containerOffset.x, containerSize.height - labelSize.height, containerSize.width, labelSize.height)
         
         let label: CATextLayer = CATextLayer()
         label.frame = labelFrame

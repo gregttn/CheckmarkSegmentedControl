@@ -33,9 +33,12 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let titleLayer: CATextLayer = checkmark.layer.sublayers[index] as! CATextLayer
             let expectedSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
         
-            let expectedOrigin = CGPoint(x: CGFloat(index) * checkmark.frame.width / CGFloat(checkmark.titles.count), y:checkmark.frame.height - expectedSize.height)
+            let sectionContainerWidth = checkmark.frame.width / CGFloat(checkmark.titles.count)
+            let expectedOrigin = CGPoint(x: CGFloat(index) * sectionContainerWidth, y:checkmark.frame.height - expectedSize.height)
             XCTAssertEqualWithAccuracy(titleLayer.frame.origin.x, expectedOrigin.x, 0.1, "Incorrect x origin for: \(checkmark.titles[index])")
             XCTAssertEqualWithAccuracy(titleLayer.frame.origin.y, expectedOrigin.y, 0.1, "Incorrect x origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.width, sectionContainerWidth, 0.1, "Incorrect x origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.height, expectedSize.height, 0.1, "Incorrect height for: \(checkmark.titles[index])")
         }
     }
     
