@@ -62,6 +62,16 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         }
     }
     
+    func testShouldChangeTitleColor() {
+        checkmark.titleColor = UIColor.blueColor()
+        checkmark.drawRect(checkmark.frame)
+        
+        for index in (0..<titles.count) {
+            let titleLayer: CATextLayer = checkmark.layer.sublayers[index] as! CATextLayer
+            
+            XCTAssertTrue(CGColorEqualToColor(titleLayer.foregroundColor, UIColor.blueColor().CGColor))
+        }
+    }
     private func sizeForText(text: String, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = text

@@ -11,6 +11,7 @@ import UIKit
 class CheckmarkSegmentedControl: UIControl {
     var titles: [String] = []
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
+    var titleColor: UIColor = UIColor.blackColor()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,6 +42,7 @@ class CheckmarkSegmentedControl: UIControl {
         label.fontSize = titleFont.pointSize
         label.string = content
         label.alignmentMode = kCAAlignmentCenter
+        label.foregroundColor = titleColor.CGColor
         
         return label
     }
