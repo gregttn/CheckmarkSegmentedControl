@@ -12,6 +12,7 @@ class CheckmarkSegmentedControl: UIControl {
     var titles: [String] = []
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
     var titleColor: UIColor = UIColor.blackColor()
+    var titleLabelTopMargin: CGFloat = 12.0
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,7 +31,8 @@ class CheckmarkSegmentedControl: UIControl {
             let label = createTitleLabel(containerFrame, content: titles[index])
             layer.addSublayer(label)
             
-            let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame)
+            let circleLayerFrame = CGRectInset(containerFrame, titleLabelTopMargin/2, 0)
+            let circleLayer = createCircleLayer(circleLayerFrame, titleLabelFrame: label.frame)
             layer.addSublayer(circleLayer)
         }
     }
@@ -54,7 +56,8 @@ class CheckmarkSegmentedControl: UIControl {
         let sideLength = containerFrame.height - titleLabelFrame.height
         
         let circleLayer: CALayer = CALayer()
-        circleLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - sideLength/2, 0, sideLength, sideLength)
+        let middleX = CGRectGetMidX(containerFrame)
+        circleLayer.frame = CGRectMake(middleX - sideLength/2, 0, sideLength, sideLength)
         circleLayer.cornerRadius = sideLength/2
         circleLayer.backgroundColor = UIColor.lightGrayColor().CGColor
         

@@ -76,22 +76,24 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     
     func testShouldDrawCirlceAboveTitleLabel() {
         checkmark.drawRect(checkmark.frame)
+        checkmark.titleLabelTopMargin = 10.0
         
         for index in (0..<titles.count) {
             let layerIndex = (index * 2) + 1
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
             let titleSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
             
-            let containerWidth: CGFloat = checkmark.frame.width / CGFloat(checkmark.titles.count)
-            let containerFrame  = CGRectMake(containerWidth * CGFloat(index), 0, containerWidth, checkmark.frame.height)
-            let remainingHeight = checkmark.frame.height - titleSize.height
-
-            let expectedOrigin = CGPoint(x: CGRectGetMidX(containerFrame) - remainingHeight/2, y:0.0)
+            let containerWidth: CGFloat = (checkmark.frame.width / CGFloat(titles.count))
+            let containerFrame = CGRectMake(containerWidth * CGFloat(index), 0, containerWidth, checkmark.frame.height)
+            let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2, 0)
+            let sideLength = containerFrame.height - titleSize.height
+            let middleX = CGRectGetMidX(containerFrame)
+            let expectedFrame = CGRectMake(middleX - sideLength/2, 0, sideLength, sideLength)
             
-            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedOrigin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedOrigin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.width, remainingHeight, 0.1, "Incorrect circle w origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.height, remainingHeight, 0.1, "Incorrect circle height for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect circle w origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.height, expectedFrame.height, 0.1, "Incorrect circle height for: \(checkmark.titles[index])")
         }
     }
     
