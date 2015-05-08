@@ -75,20 +75,20 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     }
     
     func testShouldDrawCirlceAboveTitleLabel() {
+        checkmark.titleLabelTopMargin = 15.0
         checkmark.drawRect(checkmark.frame)
-        checkmark.titleLabelTopMargin = 10.0
         
         for index in (0..<titles.count) {
             let layerIndex = (index * 2) + 1
-            let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
-            let titleSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
+            let sectionSize: CGSize = CGSizeMake(checkmark.frame.width / CGFloat(titles.count), checkmark.frame.height)
             
-            let containerWidth: CGFloat = (checkmark.frame.width / CGFloat(titles.count))
-            let containerFrame = CGRectMake(containerWidth * CGFloat(index), 0, containerWidth, checkmark.frame.height)
-            let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2, 0)
-            let sideLength = containerFrame.height - titleSize.height
-            let middleX = CGRectGetMidX(containerFrame)
-            let expectedFrame = CGRectMake(middleX - sideLength/2, 0, sideLength, sideLength)
+            let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
+            let titleSize: CGSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
+            let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
+            let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, 0)
+            let circleSideLength = circleLayerFrame.height - titleSize.height - checkmark.titleLabelTopMargin
+            let middleX = CGRectGetMidX(circleLayerFrame)
+            let expectedFrame = CGRectMake(middleX - circleSideLength/2, 0, circleSideLength, circleSideLength)
             
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
