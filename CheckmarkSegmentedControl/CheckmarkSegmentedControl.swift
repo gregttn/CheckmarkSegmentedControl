@@ -13,6 +13,8 @@ class CheckmarkSegmentedControl: UIControl {
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
     var titleColor: UIColor = UIColor.blackColor()
     var titleLabelTopMargin: CGFloat = 12.0
+    var strokeColor: UIColor = UIColor.blackColor()
+    var selectedIndex: Int = 0
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -33,6 +35,11 @@ class CheckmarkSegmentedControl: UIControl {
             
             let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame)
             layer.addSublayer(circleLayer)
+            
+            if index == selectedIndex {
+                let borderLayer = createCircleBorder(circleLayer.frame, bounds: circleLayer.bounds)
+                layer.addSublayer(borderLayer)
+            }
         }
     }
     
@@ -61,6 +68,18 @@ class CheckmarkSegmentedControl: UIControl {
         circleLayer.backgroundColor = UIColor.lightGrayColor().CGColor
         
         return circleLayer
+    }
+    
+    private func createCircleBorder(frame: CGRect, bounds: CGRect) -> CAShapeLayer {
+        let borderLayer: CAShapeLayer = CAShapeLayer()
+        borderLayer.frame = frame
+        borderLayer.lineWidth = 3
+        borderLayer.fillColor = UIColor.clearColor().CGColor
+        borderLayer.strokeColor = strokeColor.CGColor
+        borderLayer.strokeEnd = 1.0
+        borderLayer.path = UIBezierPath(ovalInRect:bounds).CGPath
+        
+        return borderLayer
     }
     
     private func sizeForLabel(text: String) -> CGSize {

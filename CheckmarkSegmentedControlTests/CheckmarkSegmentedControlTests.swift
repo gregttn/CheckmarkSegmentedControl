@@ -12,6 +12,7 @@ import XCTest
 class CheckmarkSegmentedControlTests: XCTestCase {
     var checkmark: CheckmarkSegmentedControl!
     let titles: [String] = ["option 1", "option 2"]
+    let numberOfLayers = 3
     
     override func setUp() {
         super.setUp()
@@ -30,7 +31,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         checkmark.drawRect(checkmark.frame)
         
         for index in (0..<titles.count) {
-            let layerIndex = index * 2
+            let layerIndex = index * numberOfLayers
             let titleLayer: CATextLayer = checkmark.layer.sublayers[layerIndex] as! CATextLayer
             let expectedSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
         
@@ -47,7 +48,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         checkmark.drawRect(checkmark.frame)
         
         for index in (0..<titles.count) {
-            let titleLayer: CATextLayer = checkmark.layer.sublayers[index * 2] as! CATextLayer
+            let titleLayer: CATextLayer = checkmark.layer.sublayers[index * numberOfLayers] as! CATextLayer
             
             XCTAssertEqual(titleLayer.string as! String, checkmark.titles[index])
         }
@@ -57,7 +58,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         checkmark.drawRect(checkmark.frame)
         
         for index in (0..<titles.count) {
-            let titleLayer: CATextLayer = checkmark.layer.sublayers[index * 2] as! CATextLayer
+            let titleLayer: CATextLayer = checkmark.layer.sublayers[index * numberOfLayers] as! CATextLayer
             
             XCTAssertEqual(titleLayer.alignmentMode, kCAAlignmentCenter)
         }
@@ -68,7 +69,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         checkmark.drawRect(checkmark.frame)
         
         for index in (0..<titles.count) {
-            let titleLayer: CATextLayer = checkmark.layer.sublayers[index * 2] as! CATextLayer
+            let titleLayer: CATextLayer = checkmark.layer.sublayers[index * numberOfLayers] as! CATextLayer
             
             XCTAssertTrue(CGColorEqualToColor(titleLayer.foregroundColor, UIColor.blueColor().CGColor))
         }
@@ -79,16 +80,9 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         checkmark.drawRect(checkmark.frame)
         
         for index in (0..<titles.count) {
-            let layerIndex = (index * 2) + 1
-            let sectionSize: CGSize = CGSizeMake(checkmark.frame.width / CGFloat(titles.count), checkmark.frame.height)
-            
+            let layerIndex = (index * numberOfLayers) + 1
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
-            let titleSize: CGSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
-            let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
-            let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, 0)
-            let circleSideLength = circleLayerFrame.height - titleSize.height - checkmark.titleLabelTopMargin
-            let middleX = CGRectGetMidX(circleLayerFrame)
-            let expectedFrame = CGRectMake(middleX - circleSideLength/2, 0, circleSideLength, circleSideLength)
+            let expectedFrame = expectedFrameFor(circleLayer, frame: checkmark.frame, index: index)
             
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
@@ -98,12 +92,12 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     }
     
     func testUseFrameWidthInsteadOfHeightIfSmallerThanHeightForCircleFrame() {
-        println("TEST STARTED")
         let frame = CGRectMake(0, 0, 100, 500)
         checkmark.drawRect(frame)
         
         for index in (0..<titles.count) {
-            let layerIndex = (index * 2) + 1
+            let layerIndex = (index * numberOfLayers) + 1
+            println(layerIndex)
             let sectionSize: CGSize = CGSizeMake(frame.width / CGFloat(titles.count), frame.height)
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
             
@@ -113,11 +107,41 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let middleX = CGRectGetMidX(circleLayerFrame)
             let expectedFrame = CGRectMake(middleX - circleLayerFrame.width/2, 0, circleLayerFrame.width, circleLayerFrame.width)
             
-            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect circle w origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.height, expectedFrame.height, 0.1, "Incorrect circle height for: \(checkmark.titles[index])")
+            XCTAssertEqual(circleLayer.frame, expectedFrame)
         }
+    }
+    
+    func testShouldPresentFirstOptionAsSelectedByDefault() {
+        checkmark.strokeColor = UIColor.blueColor()
+        checkmark.drawRect(checkmark.frame)
+        
+        let layerIndex = 2
+        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[layerIndex] as! CAShapeLayer
+        
+        let expectedFrame = expectedFrameFor(borderLayer, frame: checkmark.frame, index: 0)
+        
+        XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blueColor().CGColor))
+        XCTAssertTrue(CGColorEqualToColor(borderLayer.fillColor, UIColor.clearColor().CGColor))
+        XCTAssertEqual(borderLayer.lineWidth , 3)
+        XCTAssertEqual(borderLayer.frame, expectedFrame)
+    }
+    
+    func testShouldAllowToSetSelectedOption() {
+        checkmark.strokeColor = UIColor.blueColor()
+        checkmark.selectedIndex = 1
+        checkmark.drawRect(checkmark.frame)
+        
+        let firstLayerIndex = 2
+        XCTAssertFalse(checkmark.layer.sublayers[firstLayerIndex].isKindOfClass(CAShapeLayer))
+        
+        let layerIndex = 4
+        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[layerIndex] as! CAShapeLayer
+        let expectedFrame = expectedFrameFor(borderLayer, frame: checkmark.frame, index: 1)
+        
+        XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blueColor().CGColor))
+        XCTAssertTrue(CGColorEqualToColor(borderLayer.fillColor, UIColor.clearColor().CGColor))
+        XCTAssertEqual(borderLayer.lineWidth , 3)
+        XCTAssertEqual(borderLayer.frame, expectedFrame)
     }
     
     private func sizeForText(text: String, font: UIFont) -> CGSize {
@@ -125,5 +149,17 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         let string: NSString = text
 
         return string.sizeWithAttributes(textAttributes)
+    }
+    
+    private func expectedFrameFor(layer: CALayer, frame: CGRect, index: Int) -> CGRect {
+        let sectionSize: CGSize = CGSizeMake(checkmark.frame.width / CGFloat(titles.count), checkmark.frame.height)
+        let titleSize: CGSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
+        let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
+        let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, 0)
+        let circleSideLength = circleLayerFrame.height - titleSize.height - checkmark.titleLabelTopMargin
+        let middleX = CGRectGetMidX(circleLayerFrame)
+        let expectedFrame = CGRectMake(middleX - circleSideLength/2, 0, circleSideLength, circleSideLength)
+        
+        return expectedFrame
     }
 }
