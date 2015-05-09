@@ -27,12 +27,11 @@ class CheckmarkSegmentedControl: UIControl {
         
         for index in (0..<titles.count) {
             let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
-        
+            
             let label = createTitleLabel(containerFrame, content: titles[index])
             layer.addSublayer(label)
             
-            let circleLayerFrame = CGRectInset(containerFrame, titleLabelTopMargin/2.0, 0)
-            let circleLayer = createCircleLayer(circleLayerFrame, titleLabelFrame: label.frame)
+            let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame)
             layer.addSublayer(circleLayer)
         }
     }
@@ -52,14 +51,13 @@ class CheckmarkSegmentedControl: UIControl {
         return label
     }
     
-    private func createCircleLayer(circleLayerFrame: CGRect, titleLabelFrame: CGRect) -> CALayer {
-        let sideLength = circleLayerFrame.height - titleLabelFrame.height - titleLabelTopMargin
-        let middleX = CGRectGetMidX(circleLayerFrame)
+    private func createCircleLayer(containerFrame: CGRect, titleLabelFrame: CGRect) -> CALayer {
+        let frame = CGRectInset(containerFrame, titleLabelTopMargin/2.0, (titleLabelFrame.height + titleLabelTopMargin)/2)
+        let height = frame.height > frame.width ? frame.width : frame.height
         
         let circleLayer: CALayer = CALayer()
-        circleLayer.frame = CGRectMake(middleX - sideLength/2, 0, sideLength, sideLength)
-        
-        circleLayer.cornerRadius = sideLength/2
+        circleLayer.frame = CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height)
+        circleLayer.cornerRadius = height/2
         circleLayer.backgroundColor = UIColor.lightGrayColor().CGColor
         
         return circleLayer

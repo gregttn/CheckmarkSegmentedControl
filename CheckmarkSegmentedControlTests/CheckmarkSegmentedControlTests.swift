@@ -17,7 +17,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        checkmark = CheckmarkSegmentedControl(frame: CGRectMake(0, 0, 50, 60))
+        checkmark = CheckmarkSegmentedControl(frame: CGRectMake(0, 0, 500, 60))
         checkmark.titles = titles
     }
     
@@ -89,6 +89,29 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let circleSideLength = circleLayerFrame.height - titleSize.height - checkmark.titleLabelTopMargin
             let middleX = CGRectGetMidX(circleLayerFrame)
             let expectedFrame = CGRectMake(middleX - circleSideLength/2, 0, circleSideLength, circleSideLength)
+            
+            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect circle w origin for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.height, expectedFrame.height, 0.1, "Incorrect circle height for: \(checkmark.titles[index])")
+        }
+    }
+    
+    func testUseFrameWidthInsteadOfHeightIfSmallerThanHeightForCircleFrame() {
+        println("TEST STARTED")
+        let frame = CGRectMake(0, 0, 100, 500)
+        checkmark.drawRect(frame)
+        
+        for index in (0..<titles.count) {
+            let layerIndex = (index * 2) + 1
+            let sectionSize: CGSize = CGSizeMake(frame.width / CGFloat(titles.count), frame.height)
+            let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
+            
+            let titleSize: CGSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
+            let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
+            let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, (titleSize.height + checkmark.titleLabelTopMargin)/2)
+            let middleX = CGRectGetMidX(circleLayerFrame)
+            let expectedFrame = CGRectMake(middleX - circleLayerFrame.width/2, 0, circleLayerFrame.width, circleLayerFrame.width)
             
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
