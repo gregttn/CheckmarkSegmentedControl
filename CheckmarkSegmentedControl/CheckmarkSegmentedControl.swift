@@ -38,7 +38,7 @@ class CheckmarkSegmentedControl: UIControl {
             layer.addSublayer(circleLayer)
             
             if index == selectedIndex {
-                let borderLayer = createCircleBorder(circleLayer.frame, bounds: circleLayer.bounds)
+                let borderLayer = createCircleBorder(circleLayer.frame)
                 layer.addSublayer(borderLayer)
                 
                 let tickLayer = createTick(circleLayer.frame)
@@ -74,14 +74,14 @@ class CheckmarkSegmentedControl: UIControl {
         return circleLayer
     }
     
-    private func createCircleBorder(frame: CGRect, bounds: CGRect) -> CAShapeLayer {
+    private func createCircleBorder(frame: CGRect) -> CAShapeLayer {
         let borderLayer: CAShapeLayer = CAShapeLayer()
         borderLayer.frame = frame
         borderLayer.lineWidth = lineWidth
         borderLayer.fillColor = UIColor.clearColor().CGColor
         borderLayer.strokeColor = strokeColor.CGColor
         borderLayer.strokeEnd = 1.0
-        borderLayer.path = UIBezierPath(ovalInRect:bounds).CGPath
+        borderLayer.path = UIBezierPath(ovalInRect:CGRectMake(0, 0, frame.width, frame.height)).CGPath
         
         return borderLayer
     }
