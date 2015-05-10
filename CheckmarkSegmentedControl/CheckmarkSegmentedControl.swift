@@ -16,6 +16,7 @@ class CheckmarkSegmentedControl: UIControl {
     var strokeColor: UIColor = UIColor.blackColor()
     var selectedIndex: Int = 0
     var lineWidth: CGFloat = 3.0
+    var animationLength: CFTimeInterval = 0.4
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -114,7 +115,7 @@ class CheckmarkSegmentedControl: UIControl {
     private func animateCircleBorder(layer: CAShapeLayer) {
         let animation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        animation.duration = 0.4
+        animation.duration = animationLength
         animation.fromValue = 0.0
         animation.toValue = 1.0
         
