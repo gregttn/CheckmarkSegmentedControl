@@ -144,6 +144,18 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertEqual(borderLayer.frame, expectedFrame)
     }
     
+    func testShouldNotAllowNegativeValueToBeAssignedToSelectedIndex() {
+        checkmark.selectedIndex = -1
+        
+        XCTAssertEqual(checkmark.selectedIndex, 0)
+    }
+    
+    func testShouldSetSelectedToMaxIndexOfTitlesIfGreaterValuePassed() {
+        checkmark.selectedIndex = titles.count
+        
+        XCTAssertEqual(checkmark.selectedIndex, 1)
+    }
+    
     private func sizeForText(text: String, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = text

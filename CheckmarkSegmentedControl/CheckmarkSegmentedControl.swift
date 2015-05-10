@@ -14,7 +14,29 @@ class CheckmarkSegmentedControl: UIControl {
     var titleColor: UIColor = UIColor.blackColor()
     var titleLabelTopMargin: CGFloat = 12.0
     var strokeColor: UIColor = UIColor.blackColor()
-    var selectedIndex: Int = 0
+    private var _selectedIndex = 0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    var selectedIndex: Int {
+        get {
+            return _selectedIndex
+        }
+        
+        set {
+            switch newValue{
+                case 0..<titles.count:
+                    _selectedIndex = newValue
+                case let v where v >= titles.count:
+                    _selectedIndex = titles.count - 1
+                default:
+                    _selectedIndex = 0
+            }
+        }
+    }
+    
     var lineWidth: CGFloat = 3.0
     var animationLength: CFTimeInterval = 0.4
     
@@ -38,7 +60,7 @@ class CheckmarkSegmentedControl: UIControl {
             let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame)
             layer.addSublayer(circleLayer)
             
-            if index == selectedIndex {
+            if index == _selectedIndex {
                 let borderLayer = createCircleBorder(circleLayer.frame)
                 animateCircleBorder(borderLayer)
                 layer.addSublayer(borderLayer)
