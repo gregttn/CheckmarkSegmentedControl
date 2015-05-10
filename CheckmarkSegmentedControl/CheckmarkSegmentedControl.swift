@@ -15,6 +15,7 @@ class CheckmarkSegmentedControl: UIControl {
     var titleLabelTopMargin: CGFloat = 12.0
     var strokeColor: UIColor = UIColor.blackColor()
     var selectedIndex: Int = 0
+    var lineWidth: CGFloat = 3.0
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -39,6 +40,9 @@ class CheckmarkSegmentedControl: UIControl {
             if index == selectedIndex {
                 let borderLayer = createCircleBorder(circleLayer.frame, bounds: circleLayer.bounds)
                 layer.addSublayer(borderLayer)
+                
+                let tickLayer = createTick(circleLayer.frame)
+                layer.addSublayer(tickLayer)
             }
         }
     }
@@ -73,13 +77,36 @@ class CheckmarkSegmentedControl: UIControl {
     private func createCircleBorder(frame: CGRect, bounds: CGRect) -> CAShapeLayer {
         let borderLayer: CAShapeLayer = CAShapeLayer()
         borderLayer.frame = frame
-        borderLayer.lineWidth = 3
+        borderLayer.lineWidth = lineWidth
         borderLayer.fillColor = UIColor.clearColor().CGColor
         borderLayer.strokeColor = strokeColor.CGColor
         borderLayer.strokeEnd = 1.0
         borderLayer.path = UIBezierPath(ovalInRect:bounds).CGPath
         
         return borderLayer
+    }
+    
+    private func createTick(containerFrame: CGRect) -> CAShapeLayer {
+        let tickBorderLayer: CAShapeLayer = CAShapeLayer()
+        tickBorderLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - (5*lineWidth)/2.0, CGRectGetMidY(containerFrame), containerFrame.width, containerFrame.height)
+        tickBorderLayer.lineWidth = 1
+        tickBorderLayer.fillColor = strokeColor.CGColor
+        
+        let tickPath = UIBezierPath()
+        let tickWidth: CGFloat = lineWidth
+        tickPath.moveToPoint(CGPointMake(0, 0))
+        tickPath.addLineToPoint(CGPointMake(0, tickWidth * 3))
+        tickPath.addLineToPoint(CGPointMake(tickWidth * 5, tickWidth * 3))
+        tickPath.addLineToPoint(CGPointMake(tickWidth * 5, tickWidth * 2))
+        tickPath.addLineToPoint(CGPointMake(tickWidth, tickWidth * 2))
+        tickPath.addLineToPoint(CGPointMake(tickWidth, 0))
+        tickPath.closePath()
+        
+        tickPath.applyTransform(CGAffineTransformMakeRotation(CGFloat(-M_PI_4)))
+        
+        tickBorderLayer.path = tickPath.CGPath
+        
+        return tickBorderLayer
     }
     
     private func sizeForLabel(text: String) -> CGSize {

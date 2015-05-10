@@ -12,7 +12,7 @@ import XCTest
 class CheckmarkSegmentedControlTests: XCTestCase {
     var checkmark: CheckmarkSegmentedControl!
     let titles: [String] = ["option 1", "option 2"]
-    let numberOfLayers = 3
+    let numberOfLayers = 4
     
     override func setUp() {
         super.setUp()
