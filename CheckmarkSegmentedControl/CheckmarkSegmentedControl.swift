@@ -39,6 +39,7 @@ class CheckmarkSegmentedControl: UIControl {
             
             if index == selectedIndex {
                 let borderLayer = createCircleBorder(circleLayer.frame)
+                animateCircleBorder(borderLayer)
                 layer.addSublayer(borderLayer)
                 
                 let tickLayer = createTick(circleLayer.frame)
@@ -107,6 +108,17 @@ class CheckmarkSegmentedControl: UIControl {
         tickBorderLayer.path = tickPath.CGPath
         
         return tickBorderLayer
+    }
+    
+    // MARK: animations
+    private func animateCircleBorder(layer: CAShapeLayer) {
+        let animation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.duration = 0.4
+        animation.fromValue = 0.0
+        animation.toValue = 1.0
+        
+        layer.addAnimation(animation, forKey: "strokeEnd")
     }
     
     private func sizeForLabel(text: String) -> CGSize {
