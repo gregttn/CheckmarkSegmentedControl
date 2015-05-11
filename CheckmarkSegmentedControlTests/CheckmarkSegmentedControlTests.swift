@@ -177,6 +177,9 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertEqual(checkmark.selectedIndex, 1)
     }
     
+    func testShouldMaskToBounds() {
+        XCTAssertTrue(checkmark.layer.masksToBounds)
+    }
     private func sizeForText(text: String, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = text

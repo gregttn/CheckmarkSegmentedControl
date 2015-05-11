@@ -42,10 +42,16 @@ class CheckmarkSegmentedControl: UIControl {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setup()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
+    }
+    
+    private func setup() {
+        layer.masksToBounds = true
     }
     
     override func drawRect(rect: CGRect) {
@@ -63,7 +69,7 @@ class CheckmarkSegmentedControl: UIControl {
             layer.addSublayer(circleLayer)
             
             if index == _selectedIndex {
-                let borderLayer = createCircleBorder(circleLayer.frame)
+                let borderLayer = createCircleBorder(circleLayer.frame, bounds: circleLayer.bounds)
                 animateCircleBorder(borderLayer)
                 layer.addSublayer(borderLayer)
                 
@@ -100,14 +106,14 @@ class CheckmarkSegmentedControl: UIControl {
         return circleLayer
     }
     
-    private func createCircleBorder(frame: CGRect) -> CAShapeLayer {
+    private func createCircleBorder(frame: CGRect, bounds: CGRect) -> CAShapeLayer {
         let borderLayer: CAShapeLayer = CAShapeLayer()
         borderLayer.frame = frame
         borderLayer.lineWidth = lineWidth
         borderLayer.fillColor = UIColor.clearColor().CGColor
         borderLayer.strokeColor = strokeColor.CGColor
         borderLayer.strokeEnd = 1.0
-        borderLayer.path = UIBezierPath(ovalInRect:CGRectMake(0, 0, frame.width, frame.height)).CGPath
+        borderLayer.path = UIBezierPath(ovalInRect:CGRectInset(bounds, lineWidth/2, lineWidth/2)).CGPath
         
         return borderLayer
     }
