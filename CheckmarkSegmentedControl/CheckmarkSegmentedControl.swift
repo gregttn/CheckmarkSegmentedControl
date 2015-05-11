@@ -14,11 +14,8 @@ class CheckmarkSegmentedControl: UIControl {
     var titleColor: UIColor = UIColor.blackColor()
     var titleLabelTopMargin: CGFloat = 12.0
     var strokeColor: UIColor = UIColor.blackColor()
-    private var _selectedIndex = 0 {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
+    var lineWidth: CGFloat = 3.0
+    var animationLength: CFTimeInterval = 0.4
     
     var selectedIndex: Int {
         get {
@@ -37,8 +34,11 @@ class CheckmarkSegmentedControl: UIControl {
         }
     }
     
-    var lineWidth: CGFloat = 3.0
-    var animationLength: CFTimeInterval = 0.4
+    private var _selectedIndex = 0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -50,6 +50,8 @@ class CheckmarkSegmentedControl: UIControl {
     
     override func drawRect(rect: CGRect) {
         let sectionSize: CGSize = CGSizeMake(rect.width / CGFloat(titles.count), rect.height)
+        
+        self.layer.sublayers = nil
         
         for index in (0..<titles.count) {
             let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
@@ -134,14 +136,29 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     // MARK: animations
+    
     private func animateCircleBorder(layer: CAShapeLayer) {
         let animation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         animation.duration = animationLength
         animation.fromValue = 0.0
         animation.toValue = 1.0
-        
+
         layer.addAnimation(animation, forKey: "strokeEnd")
+    }
+    
+    // MARK: respond to touches
+
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let touch: UITouch = touches.first as! UITouch
+        let location = touch.locationInView(self)
+
+        if CGRectContainsPoint(bounds, location) {
+            let sectionWidth = self.bounds.width / CGFloat(titles.count)
+            selectedIndex = Int(location.x / sectionWidth)
+            
+            setNeedsDisplay()
+        }
     }
     
     private func sizeForLabel(text: String) -> CGSize {

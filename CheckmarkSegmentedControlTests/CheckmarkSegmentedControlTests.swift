@@ -144,6 +144,18 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertEqual(borderLayer.frame, expectedFrame)
     }
     
+    func testShouldClearSubleyersBeforeDrawing() {
+        checkmark.strokeColor = UIColor.blueColor()
+        checkmark.selectedIndex = 1
+        checkmark.drawRect(checkmark.frame)
+        
+        XCTAssertEqual(checkmark.layer.sublayers.count, 6)
+        
+        checkmark.drawRect(checkmark.frame)
+        
+        XCTAssertEqual(checkmark.layer.sublayers.count, 6)
+    }
+    
     func testShouldNotAllowNegativeValueToBeAssignedToSelectedIndex() {
         checkmark.selectedIndex = -1
         
@@ -152,6 +164,15 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     
     func testShouldSetSelectedToMaxIndexOfTitlesIfGreaterValuePassed() {
         checkmark.selectedIndex = titles.count
+        
+        XCTAssertEqual(checkmark.selectedIndex, 1)
+    }
+    
+    func testShouldChangeSelectedElementOnTap() {
+        let point = CGPointMake(checkmark.frame.width/CGFloat(titles.count) + 10 ,10)
+        let touch = StubTouch(location: point)
+        
+        checkmark.touchesBegan([touch], withEvent: UIEvent())
         
         XCTAssertEqual(checkmark.selectedIndex, 1)
     }
@@ -173,5 +194,17 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         let expectedFrame = CGRectMake(middleX - circleSideLength/2, 0, circleSideLength, circleSideLength)
         
         return expectedFrame
+    }
+}
+
+class StubTouch: UITouch {
+    let location: CGPoint
+    
+    init(location: CGPoint) {
+        self.location = location
+    }
+    
+    override func locationInView(view: UIView?) -> CGPoint {
+        return location
     }
 }
