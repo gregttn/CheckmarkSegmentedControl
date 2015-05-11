@@ -90,6 +90,7 @@ class CheckmarkSegmentedControl: UIControl {
         label.string = content
         label.alignmentMode = kCAAlignmentCenter
         label.foregroundColor = titleColor.CGColor
+        label.contentsScale = UIScreen.mainScreen().scale
         
         return label
     }
