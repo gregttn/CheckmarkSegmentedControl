@@ -162,9 +162,11 @@ class CheckmarkSegmentedControl: UIControl {
 
         if CGRectContainsPoint(bounds, location) {
             let sectionWidth = self.bounds.width / CGFloat(titles.count)
-            selectedIndex = Int(location.x / sectionWidth)
+            let index = Int(location.x / sectionWidth)
             
-            setNeedsDisplay()
+            if selectedIndex != index {
+                selectedIndex = index
+            }
         }
     }
     
