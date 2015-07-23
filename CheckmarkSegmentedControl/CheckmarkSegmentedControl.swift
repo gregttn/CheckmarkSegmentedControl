@@ -96,7 +96,7 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     private func createCircleLayer(containerFrame: CGRect, titleLabelFrame: CGRect) -> CALayer {
-        let frame = CGRectInset(containerFrame, titleLabelTopMargin/2.0, (titleLabelFrame.height + titleLabelTopMargin)/2)
+        let frame = CGRectInset(containerFrame, titleLabelTopMargin/2, (titleLabelFrame.height + titleLabelTopMargin)/2)
         let height = frame.height > frame.width ? frame.width : frame.height
         
         let circleLayer: CALayer = CALayer()
@@ -145,13 +145,14 @@ class CheckmarkSegmentedControl: UIControl {
     // MARK: animations
     
     private func animateCircleBorder(layer: CAShapeLayer) {
-        let animation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        let animationKey = "strokeEnd"
+        let animation: CABasicAnimation = CABasicAnimation(keyPath: animationKey)
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         animation.duration = animationLength
         animation.fromValue = 0.0
         animation.toValue = 1.0
 
-        layer.addAnimation(animation, forKey: "strokeEnd")
+        layer.addAnimation(animation, forKey: animationKey)
     }
     
     // MARK: respond to touches

@@ -129,6 +129,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     func testShouldAllowToSetSelectedOption() {
         checkmark.strokeColor = UIColor.blueColor()
         checkmark.selectedIndex = 1
+        
         checkmark.drawRect(checkmark.frame)
         
         let firstLayerIndex = 2
@@ -147,6 +148,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     func testShouldClearSubleyersBeforeDrawing() {
         checkmark.strokeColor = UIColor.blueColor()
         checkmark.selectedIndex = 1
+        
         checkmark.drawRect(checkmark.frame)
         
         XCTAssertEqual(checkmark.layer.sublayers.count, 6)
@@ -180,6 +182,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     func testShouldMaskToBounds() {
         XCTAssertTrue(checkmark.layer.masksToBounds)
     }
+    
     private func sizeForText(text: String, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = text
