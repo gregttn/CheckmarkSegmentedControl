@@ -11,7 +11,7 @@ import XCTest
 
 class CheckmarkSegmentedControlTests: XCTestCase {
     var checkmark: CheckmarkSegmentedControl!
-    let titles: [String] = ["option 1", "option 2"]
+    let titles: [String] = ["option", "another option"]
     let numberOfLayers = 4
     
     override func setUp() {
@@ -97,7 +97,6 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         
         for index in (0..<titles.count) {
             let layerIndex = (index * numberOfLayers) + 1
-            println(layerIndex)
             let sectionSize: CGSize = CGSizeMake(frame.width / CGFloat(titles.count), frame.height)
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
             
@@ -181,6 +180,43 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     
     func testShouldMaskToBounds() {
         XCTAssertTrue(checkmark.layer.masksToBounds)
+    }
+    
+    func testShouldResizeZeroFrameToMinimumSize() {
+        let largestLabelSize = titles.map({ self.sizeForText($0, font: self.checkmark.titleFont) })
+            .sorted({ $0.width > $1.width}).first!
+        let bestWidth = Int(largestLabelSize.width) * titles.count
+        let bestHeight = Int(largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
+        
+        let resultSize = checkmark.sizeThatFits(CGSizeZero)
+
+        XCTAssertEqual(Int(resultSize.width), bestWidth)
+        XCTAssertEqual(Int(resultSize.height), bestHeight)
+    }
+    
+    func testShouldNotChangeCorrectSize() {
+        let additionalLength = 50
+        let largestLabelSize = titles.map({ self.sizeForText($0, font: self.checkmark.titleFont) })
+            .sorted({ $0.width > $1.width}).first!
+        
+        let bestWidth = Int(largestLabelSize.width) * titles.count
+        let bestHeight = Int(largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
+        
+        let size = CGSize(width: bestWidth + additionalLength, height: bestHeight + additionalLength)
+        let resultSize = checkmark.sizeThatFits(size)
+        
+        XCTAssertEqual(resultSize.width, size.width)
+        XCTAssertEqual(resultSize.height, size.height)
+    }
+    
+    func testShouldReturnSameSizeIfNoElementsToDisplay() {
+        checkmark.titles.removeAll()
+        
+        let size = CGSize(width: 100, height:100)
+        let resultSize = checkmark.sizeThatFits(size)
+        
+        XCTAssertEqual(resultSize.width, size.width)
+        XCTAssertEqual(resultSize.height, size.height)
     }
     
     private func sizeForText(text: String, font: UIFont) -> CGSize {

@@ -9,6 +9,8 @@
 import UIKit
 
 class CheckmarkSegmentedControl: UIControl {
+    static let minCheckmarkHeight: CGFloat = 20.0
+    
     var titles: [String] = []
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
     var titleColor: UIColor = UIColor.blackColor()
@@ -48,6 +50,29 @@ class CheckmarkSegmentedControl: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+    }
+    
+    override func sizeThatFits(size: CGSize) -> CGSize {
+        let largestLabelSize = titles.map({ self.sizeForLabel($0) })
+                                    .sorted({ $0.width > $1.width}).first
+        
+        if let largestLabelSize = largestLabelSize {
+            let minAllowedSize = CGSizeMake(largestLabelSize.width * CGFloat(titles.count), largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
+            var width: CGFloat = size.width
+            var height: CGFloat = size.height
+            
+            if (size.width < minAllowedSize.width) {
+                width = minAllowedSize.width
+            }
+            
+            if (size.height < minAllowedSize.height) {
+                height = minAllowedSize.height
+            }
+            
+            return CGSize(width: width, height: height)
+        }
+        
+        return size
     }
     
     private func setup() {
