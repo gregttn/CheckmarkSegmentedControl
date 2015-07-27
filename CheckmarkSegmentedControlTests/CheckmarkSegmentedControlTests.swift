@@ -11,7 +11,7 @@ import XCTest
 
 class CheckmarkSegmentedControlTests: XCTestCase {
     var checkmark: CheckmarkSegmentedControl!
-    let titles: [String] = ["option", "another option"]
+    let titles: [CheckmarkOption] = [CheckmarkOption(title:"option"), CheckmarkOption(title:"another option")]
     let numberOfLayers = 4
     
     override func setUp() {
@@ -19,7 +19,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         checkmark = CheckmarkSegmentedControl(frame: CGRectMake(0, 0, 500, 60))
-        checkmark.titles = titles
+        checkmark.options = titles
     }
     
     override func tearDown() {
@@ -33,14 +33,14 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         for index in (0..<titles.count) {
             let layerIndex = index * numberOfLayers
             let titleLayer: CATextLayer = checkmark.layer.sublayers[layerIndex] as! CATextLayer
-            let expectedSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
+            let expectedSize = sizeForText(checkmark.options[index], font: checkmark.titleFont)
         
-            let sectionContainerWidth = checkmark.frame.width / CGFloat(checkmark.titles.count)
+            let sectionContainerWidth = checkmark.frame.width / CGFloat(checkmark.options.count)
             let expectedOrigin = CGPoint(x: CGFloat(index) * sectionContainerWidth, y:checkmark.frame.height - expectedSize.height)
-            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.x, expectedOrigin.x, 0.1, "Incorrect x origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.y, expectedOrigin.y, 0.1, "Incorrect y origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(titleLayer.frame.width, sectionContainerWidth, 0.1, "Incorrect width for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(titleLayer.frame.height, expectedSize.height, 0.1, "Incorrect height for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.x, expectedOrigin.x, 0.1, "Incorrect x origin for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.y, expectedOrigin.y, 0.1, "Incorrect y origin for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.width, sectionContainerWidth, 0.1, "Incorrect width for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.height, expectedSize.height, 0.1, "Incorrect height for: \(checkmark.options[index])")
         }
     }
     
@@ -50,7 +50,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         for index in (0..<titles.count) {
             let titleLayer: CATextLayer = checkmark.layer.sublayers[index * numberOfLayers] as! CATextLayer
             
-            XCTAssertEqual(titleLayer.string as! String, checkmark.titles[index])
+            XCTAssertEqual(titleLayer.string as! String, checkmark.options[index].title)
         }
     }
 
@@ -84,10 +84,10 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
             let expectedFrame = expectedFrameFor(circleLayer, frame: checkmark.frame, index: index)
             
-            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect circle w origin for: \(checkmark.titles[index])")
-            XCTAssertEqualWithAccuracy(circleLayer.frame.height, expectedFrame.height, 0.1, "Incorrect circle height for: \(checkmark.titles[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect circle w origin for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(circleLayer.frame.height, expectedFrame.height, 0.1, "Incorrect circle height for: \(checkmark.options[index])")
         }
     }
     
@@ -100,7 +100,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let sectionSize: CGSize = CGSizeMake(frame.width / CGFloat(titles.count), frame.height)
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
             
-            let titleSize: CGSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
+            let titleSize: CGSize = sizeForText(checkmark.options[index], font: checkmark.titleFont)
             let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
             let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, (titleSize.height + checkmark.titleLabelTopMargin)/2)
             let middleX = CGRectGetMidX(circleLayerFrame)
@@ -210,7 +210,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     }
     
     func testShouldReturnSameSizeIfNoElementsToDisplay() {
-        checkmark.titles.removeAll()
+        checkmark.options.removeAll()
         
         let size = CGSize(width: 100, height:100)
         let resultSize = checkmark.sizeThatFits(size)
@@ -219,16 +219,16 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertEqual(resultSize.height, size.height)
     }
     
-    private func sizeForText(text: String, font: UIFont) -> CGSize {
+    private func sizeForText(option: CheckmarkOption, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
-        let string: NSString = text
+        let string: NSString = option.title
 
         return string.sizeWithAttributes(textAttributes)
     }
     
     private func expectedFrameFor(layer: CALayer, frame: CGRect, index: Int) -> CGRect {
         let sectionSize: CGSize = CGSizeMake(checkmark.frame.width / CGFloat(titles.count), checkmark.frame.height)
-        let titleSize: CGSize = sizeForText(checkmark.titles[index], font: checkmark.titleFont)
+        let titleSize: CGSize = sizeForText(checkmark.options[index], font: checkmark.titleFont)
         let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
         let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, 0)
         let circleSideLength = circleLayerFrame.height - titleSize.height - checkmark.titleLabelTopMargin

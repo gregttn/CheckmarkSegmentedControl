@@ -14,7 +14,10 @@ class ViewController: UIViewController {
        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        checkmark.titles = ["Option 1","Option 2","Option 3","Option 4"]
+        checkmark.options = [CheckmarkOption(title:"Option 1"),
+            CheckmarkOption(title: "Option 2"),
+            CheckmarkOption(title: "Option 3"),
+            CheckmarkOption(title: "Option 4")]
     }
 
     override func didReceiveMemoryWarning() {

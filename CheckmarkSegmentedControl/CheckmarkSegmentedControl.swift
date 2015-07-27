@@ -11,7 +11,7 @@ import UIKit
 class CheckmarkSegmentedControl: UIControl {
     static let minCheckmarkHeight: CGFloat = 20.0
     
-    var titles: [String] = []
+    var options: [CheckmarkOption] = []
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
     var titleColor: UIColor = UIColor.blackColor()
     var titleLabelTopMargin: CGFloat = 12.0
@@ -26,10 +26,10 @@ class CheckmarkSegmentedControl: UIControl {
         
         set {
             switch newValue{
-                case 0..<titles.count:
+                case 0..<options.count:
                     _selectedIndex = newValue
-                case let v where v >= titles.count:
-                    _selectedIndex = titles.count - 1
+                case let v where v >= options.count:
+                    _selectedIndex = options.count - 1
                 default:
                     _selectedIndex = 0
             }
@@ -53,11 +53,11 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     override func sizeThatFits(size: CGSize) -> CGSize {
-        let largestLabelSize = titles.map({ self.sizeForLabel($0) })
+        let largestLabelSize = options.map({ self.sizeForLabel($0.title) })
                                     .sorted({ $0.width > $1.width}).first
         
         if let largestLabelSize = largestLabelSize {
-            let minAllowedSize = CGSizeMake(largestLabelSize.width * CGFloat(titles.count), largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
+            let minAllowedSize = CGSizeMake(largestLabelSize.width * CGFloat(options.count), largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
             var width: CGFloat = size.width
             var height: CGFloat = size.height
             
@@ -80,14 +80,14 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     override func drawRect(rect: CGRect) {
-        let sectionSize: CGSize = CGSizeMake(rect.width / CGFloat(titles.count), rect.height)
+        let sectionSize: CGSize = CGSizeMake(rect.width / CGFloat(options.count), rect.height)
         
         self.layer.sublayers = nil
         
-        for index in (0..<titles.count) {
+        for index in (0..<options.count) {
             let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
             
-            let label = createTitleLabel(containerFrame, content: titles[index])
+            let label = createTitleLabel(containerFrame, content: options[index].title)
             layer.addSublayer(label)
             
             let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame)
@@ -187,7 +187,7 @@ class CheckmarkSegmentedControl: UIControl {
         let location = touch.locationInView(self)
 
         if CGRectContainsPoint(bounds, location) {
-            let sectionWidth = self.bounds.width / CGFloat(titles.count)
+            let sectionWidth = self.bounds.width / CGFloat(options.count)
             let index = Int(location.x / sectionWidth)
             
             if selectedIndex != index {
@@ -201,5 +201,17 @@ class CheckmarkSegmentedControl: UIControl {
         let string: NSString = text
         
         return string.sizeWithAttributes(textAttributes)
+    }
+}
+
+struct CheckmarkOption {
+    let title: String
+    let borderColor: UIColor
+    let fillColor: UIColor
+    
+    init(title: String, borderColor: UIColor = UIColor.blackColor(), fillColor: UIColor = UIColor.lightGrayColor()) {
+        self.title = title
+        self.borderColor = borderColor
+        self.fillColor = fillColor
     }
 }
