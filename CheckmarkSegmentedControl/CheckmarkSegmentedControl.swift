@@ -85,12 +85,13 @@ class CheckmarkSegmentedControl: UIControl {
         self.layer.sublayers = nil
         
         for index in (0..<options.count) {
+            let option = options[index]
             let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
             
-            let label = createTitleLabel(containerFrame, content: options[index].title)
+            let label = createTitleLabel(containerFrame, content: option.title)
             layer.addSublayer(label)
             
-            let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame)
+            let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame, fillColor: option.fillColor)
             layer.addSublayer(circleLayer)
             
             if index == _selectedIndex {
@@ -120,14 +121,14 @@ class CheckmarkSegmentedControl: UIControl {
         return label
     }
     
-    private func createCircleLayer(containerFrame: CGRect, titleLabelFrame: CGRect) -> CALayer {
+    private func createCircleLayer(containerFrame: CGRect, titleLabelFrame: CGRect, fillColor: UIColor) -> CALayer {
         let frame = CGRectInset(containerFrame, titleLabelTopMargin/2, (titleLabelFrame.height + titleLabelTopMargin)/2)
         let height = frame.height > frame.width ? frame.width : frame.height
         
         let circleLayer: CALayer = CALayer()
         circleLayer.frame = CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height)
         circleLayer.cornerRadius = height/2
-        circleLayer.backgroundColor = UIColor.lightGrayColor().CGColor
+        circleLayer.backgroundColor = fillColor.CGColor
         
         return circleLayer
     }

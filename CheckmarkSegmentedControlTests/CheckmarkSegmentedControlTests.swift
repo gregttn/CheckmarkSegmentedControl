@@ -219,6 +219,31 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertEqual(resultSize.height, size.height)
     }
     
+    func testShouldDrawEachOptionWithDefaultFillColor() {
+        checkmark.drawRect(checkmark.frame)
+        
+        for index in (0..<titles.count) {
+            let layerIndex = (index * numberOfLayers) + 1
+            let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
+            
+            XCTAssertTrue(CGColorEqualToColor(circleLayer.backgroundColor, UIColor.lightGrayColor().CGColor))
+        }
+    }
+    
+    func testShouldDrawEachOptionWithCorrectFillColor() {
+        checkmark.options = [CheckmarkOption(title: "Option", fillColor: UIColor.redColor()),
+            CheckmarkOption(title: "Another option", fillColor: UIColor.blueColor())]
+        
+        checkmark.drawRect(checkmark.frame)
+
+        for index in (0..<titles.count) {
+            let layerIndex = (index * numberOfLayers) + 1
+            let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
+            
+            XCTAssertTrue(CGColorEqualToColor(circleLayer.backgroundColor, checkmark.options[index].fillColor.CGColor))
+        }
+    }
+    
     private func sizeForText(option: CheckmarkOption, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = option.title
