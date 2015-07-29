@@ -244,6 +244,28 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         }
     }
     
+    func testShouldSelectedOptionBorderWithDefaultFillColor() {
+        checkmark.drawRect(checkmark.frame)
+        
+        let layerIndex = 2
+        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[layerIndex] as! CAShapeLayer
+            
+        XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blackColor().CGColor))
+        
+    }
+    
+    func testShouldSelectedOptionBorderWithCustomFillColor() {
+        checkmark.options = [CheckmarkOption(title: "Option", borderColor: UIColor.redColor()),
+            CheckmarkOption(title: "Another option", borderColor: UIColor.blueColor())]
+        checkmark.drawRect(checkmark.frame)
+        
+        let layerIndex = 2
+        
+        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[layerIndex] as! CAShapeLayer
+        XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.redColor().CGColor))
+        
+    }
+    
     private func sizeForText(option: CheckmarkOption, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = option.title

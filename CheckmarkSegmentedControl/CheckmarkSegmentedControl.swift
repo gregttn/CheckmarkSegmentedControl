@@ -15,7 +15,12 @@ class CheckmarkSegmentedControl: UIControl {
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
     var titleColor: UIColor = UIColor.blackColor()
     var titleLabelTopMargin: CGFloat = 12.0
-    var strokeColor: UIColor = UIColor.blackColor()
+    var strokeColor: UIColor = UIColor.blackColor() {
+        didSet {
+            options = options.map({CheckmarkOption(title: $0.title, borderColor: self.strokeColor, fillColor: $0.fillColor)})
+        }
+    }
+    
     var lineWidth: CGFloat = 3.0
     var animationLength: CFTimeInterval = 0.4
     
@@ -95,7 +100,7 @@ class CheckmarkSegmentedControl: UIControl {
             layer.addSublayer(circleLayer)
             
             if index == _selectedIndex {
-                let borderLayer = createCircleBorder(circleLayer.frame, bounds: circleLayer.bounds)
+                let borderLayer = createCircleBorder(circleLayer.frame, bounds: circleLayer.bounds, strokeColor: option.borderColor)
                 animateCircleBorder(borderLayer)
                 layer.addSublayer(borderLayer)
                 
@@ -133,7 +138,7 @@ class CheckmarkSegmentedControl: UIControl {
         return circleLayer
     }
     
-    private func createCircleBorder(frame: CGRect, bounds: CGRect) -> CAShapeLayer {
+    private func createCircleBorder(frame: CGRect, bounds: CGRect, strokeColor: UIColor) -> CAShapeLayer {
         let borderLayer: CAShapeLayer = CAShapeLayer()
         borderLayer.frame = frame
         borderLayer.lineWidth = lineWidth
