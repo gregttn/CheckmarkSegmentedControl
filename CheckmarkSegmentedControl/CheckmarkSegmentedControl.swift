@@ -104,7 +104,7 @@ class CheckmarkSegmentedControl: UIControl {
                 animateCircleBorder(borderLayer)
                 layer.addSublayer(borderLayer)
                 
-                let tickLayer = createTick(circleLayer.frame)
+                let tickLayer = createTick(circleLayer.frame, strokeColor: option.borderColor)
                 layer.addSublayer(tickLayer)
             }
         }
@@ -150,7 +150,7 @@ class CheckmarkSegmentedControl: UIControl {
         return borderLayer
     }
     
-    private func createTick(containerFrame: CGRect) -> CAShapeLayer {
+    private func createTick(containerFrame: CGRect, strokeColor: UIColor) -> CAShapeLayer {
         let tickBorderLayer: CAShapeLayer = CAShapeLayer()
         tickBorderLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - (5*lineWidth)/2.0, CGRectGetMidY(containerFrame), containerFrame.width, containerFrame.height)
         tickBorderLayer.lineWidth = 1
