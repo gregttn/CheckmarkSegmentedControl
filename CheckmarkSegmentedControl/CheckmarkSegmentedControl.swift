@@ -122,6 +122,9 @@ class CheckmarkSegmentedControl: UIControl {
         label.alignmentMode = kCAAlignmentCenter
         label.foregroundColor = titleColor.CGColor
         label.contentsScale = UIScreen.mainScreen().scale
+        label.shouldRasterize = true
+        label.rasterizationScale = UIScreen.mainScreen().scale
+        label.contentsScale = UIScreen.mainScreen().scale
         
         return label
     }
@@ -132,8 +135,11 @@ class CheckmarkSegmentedControl: UIControl {
         
         let circleLayer: CALayer = CALayer()
         circleLayer.frame = CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height)
-        circleLayer.cornerRadius = height/2
+        circleLayer.cornerRadius = ceil(height/2)
         circleLayer.backgroundColor = fillColor.CGColor
+        circleLayer.shouldRasterize = true
+        circleLayer.rasterizationScale = UIScreen.mainScreen().scale
+        circleLayer.contentsScale = UIScreen.mainScreen().scale
         
         return circleLayer
     }
@@ -145,7 +151,11 @@ class CheckmarkSegmentedControl: UIControl {
         borderLayer.fillColor = UIColor.clearColor().CGColor
         borderLayer.strokeColor = strokeColor.CGColor
         borderLayer.strokeEnd = 1.0
-        borderLayer.path = UIBezierPath(ovalInRect:CGRectInset(bounds, lineWidth/2, lineWidth/2)).CGPath
+        borderLayer.shouldRasterize = true
+        borderLayer.rasterizationScale = UIScreen.mainScreen().scale
+        borderLayer.contentsScale = UIScreen.mainScreen().scale
+        let cornerRadius = ceil(bounds.height/2)
+        borderLayer.path = UIBezierPath(roundedRect: CGRectInset(bounds, lineWidth/2, lineWidth/2), cornerRadius: cornerRadius).CGPath
         
         return borderLayer
     }
@@ -155,6 +165,9 @@ class CheckmarkSegmentedControl: UIControl {
         tickBorderLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - (5*lineWidth)/2.0, CGRectGetMidY(containerFrame), containerFrame.width, containerFrame.height)
         tickBorderLayer.lineWidth = 1
         tickBorderLayer.fillColor = strokeColor.CGColor
+        tickBorderLayer.shouldRasterize = true
+        tickBorderLayer.rasterizationScale = UIScreen.mainScreen().scale
+        tickBorderLayer.contentsScale = UIScreen.mainScreen().scale
         
         let tickPath = UIBezierPath()
         let tickWidth: CGFloat = lineWidth
@@ -174,7 +187,6 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     // MARK: animations
-    
     private func animateCircleBorder(layer: CAShapeLayer) {
         let animationKey = "strokeEnd"
         let animation: CABasicAnimation = CABasicAnimation(keyPath: animationKey)
