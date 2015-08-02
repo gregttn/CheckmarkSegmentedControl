@@ -35,14 +35,16 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         for index in (0..<defaultOptions.count) {
             let layerIndex = index * numberOfLayers
             let titleLayer: CATextLayer = checkmark.layer.sublayers[layerIndex] as! CATextLayer
-            let expectedSize = sizeForText(checkmark.options[index], font: checkmark.titleFont)
-        
             let sectionContainerWidth = checkmark.frame.width / CGFloat(checkmark.options.count)
+            let expectedSize = sizeForText(checkmark.options[index], font: checkmark.titleFont)
             let expectedOrigin = CGPoint(x: CGFloat(index) * sectionContainerWidth, y:checkmark.frame.height - expectedSize.height)
-            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.x, expectedOrigin.x, 0.1, "Incorrect x origin for: \(checkmark.options[index])")
-            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.y, expectedOrigin.y, 0.1, "Incorrect y origin for: \(checkmark.options[index])")
-            XCTAssertEqualWithAccuracy(titleLayer.frame.width, sectionContainerWidth, 0.1, "Incorrect width for: \(checkmark.options[index])")
-            XCTAssertEqualWithAccuracy(titleLayer.frame.height, expectedSize.height, 0.1, "Incorrect height for: \(checkmark.options[index])")
+            
+            let expectedFrame = CGRectIntegral(CGRectMake(expectedOrigin.x, expectedOrigin.y, sectionContainerWidth, expectedSize.height))
+            
+            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect x origin for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect y origin for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect width for: \(checkmark.options[index])")
+            XCTAssertEqualWithAccuracy(titleLayer.frame.height, expectedFrame.height, 0.1, "Incorrect height for: \(checkmark.options[index])")
         }
     }
     
@@ -86,6 +88,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
             let expectedFrame = expectedFrameFor(circleLayer, frame: checkmark.frame, index: index)
             
+            println("ActualFrame: \(circleLayer.frame)")
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.options[index])")
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.options[index])")
             XCTAssertEqualWithAccuracy(circleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect circle w origin for: \(checkmark.options[index])")
@@ -294,10 +297,13 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     
     private func expectedFrameFor(layer: CALayer, frame: CGRect, index: Int) -> CGRect {
         let sectionSize: CGSize = CGSizeMake(checkmark.frame.width / CGFloat(checkmark.options.count), checkmark.frame.height)
+        let containerFrame = CGRectIntegral(CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height))
+        
         let titleSize: CGSize = sizeForText(checkmark.options[index], font: checkmark.titleFont)
-        let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
+        let titleFrame = CGRectIntegral(CGRectMake(0, 0, titleSize.width, titleSize.height))
+        
         let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, 0)
-        let circleSideLength = circleLayerFrame.height - titleSize.height - checkmark.titleLabelTopMargin
+        let circleSideLength = circleLayerFrame.height - titleFrame.height - checkmark.titleLabelTopMargin
         let middleX = CGRectGetMidX(circleLayerFrame)
         let expectedFrame = CGRectMake(middleX - circleSideLength/2, 0, circleSideLength, circleSideLength)
         

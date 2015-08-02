@@ -91,7 +91,7 @@ class CheckmarkSegmentedControl: UIControl {
         
         for index in (0..<options.count) {
             let option = options[index]
-            let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
+            let containerFrame = CGRectIntegral(CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height))
             
             let label = createTitleLabel(containerFrame, content: option.title)
             layer.addSublayer(label)
@@ -112,7 +112,7 @@ class CheckmarkSegmentedControl: UIControl {
     
     private func createTitleLabel(containerFrame: CGRect, content: String) -> CATextLayer {
         let labelSize = sizeForLabel(content)
-        let labelFrame = CGRectMake(containerFrame.origin.x, containerFrame.height - labelSize.height, containerFrame.width, labelSize.height)
+        let labelFrame = CGRectIntegral(CGRectMake(containerFrame.origin.x, containerFrame.height - labelSize.height, containerFrame.width, labelSize.height))
         
         let label: CATextLayer = CATextLayer()
         label.frame = labelFrame
