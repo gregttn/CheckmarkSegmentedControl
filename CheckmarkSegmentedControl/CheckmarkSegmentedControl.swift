@@ -130,11 +130,11 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     private func createCircleLayer(containerFrame: CGRect, titleLabelFrame: CGRect, fillColor: UIColor) -> CALayer {
-        let frame = CGRectInset(containerFrame, titleLabelTopMargin/2, (titleLabelFrame.height + titleLabelTopMargin)/2)
+        let frame = CGRectIntegral(CGRectInset(containerFrame, titleLabelTopMargin/2, (titleLabelFrame.height + titleLabelTopMargin)/2))
         let height = frame.height > frame.width ? frame.width : frame.height
-        
+
         let circleLayer: CALayer = CALayer()
-        circleLayer.frame = CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height)
+        circleLayer.frame = CGRectIntegral(CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height))
         circleLayer.cornerRadius = ceil(height/2)
         circleLayer.backgroundColor = fillColor.CGColor
         circleLayer.shouldRasterize = true
