@@ -122,10 +122,8 @@ class CheckmarkSegmentedControl: UIControl {
         label.string = content
         label.alignmentMode = kCAAlignmentCenter
         label.foregroundColor = titleColor.CGColor
-        label.contentsScale = UIScreen.mainScreen().scale
-        label.shouldRasterize = true
-        label.rasterizationScale = UIScreen.mainScreen().scale
-        label.contentsScale = UIScreen.mainScreen().scale
+        
+        adjustScale(label)
         
         return label
     }
@@ -138,9 +136,8 @@ class CheckmarkSegmentedControl: UIControl {
         circleLayer.frame = CGRectIntegral(CGRectInset(CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height), circleBorderOffset, circleBorderOffset))
         circleLayer.cornerRadius = ceil(circleLayer.frame.height/2)
         circleLayer.backgroundColor = fillColor.CGColor
-        circleLayer.shouldRasterize = true
-        circleLayer.rasterizationScale = UIScreen.mainScreen().scale
-        circleLayer.contentsScale = UIScreen.mainScreen().scale
+        
+        adjustScale(circleLayer)
         
         return circleLayer
     }
@@ -152,39 +149,40 @@ class CheckmarkSegmentedControl: UIControl {
         borderLayer.fillColor = UIColor.clearColor().CGColor
         borderLayer.strokeColor = strokeColor.CGColor
         borderLayer.strokeEnd = 1.0
-        borderLayer.shouldRasterize = true
-        borderLayer.rasterizationScale = UIScreen.mainScreen().scale
-        borderLayer.contentsScale = UIScreen.mainScreen().scale
         let cornerRadius = ceil(bounds.height/2)
         borderLayer.path = UIBezierPath(roundedRect: CGRectInset(CGRectInset(bounds, -circleBorderOffset, -circleBorderOffset), lineWidth/2, lineWidth/2), cornerRadius: cornerRadius).CGPath
+        
+        adjustScale(borderLayer)
         
         return borderLayer
     }
     
     private func createTick(containerFrame: CGRect, strokeColor: UIColor) -> CAShapeLayer {
+        let tickPath = UIBezierPath()
+        tickPath.moveToPoint(CGPointMake(0, 0))
+        tickPath.addLineToPoint(CGPointMake(0, lineWidth * 3))
+        tickPath.addLineToPoint(CGPointMake(lineWidth * 5, lineWidth * 3))
+        tickPath.addLineToPoint(CGPointMake(lineWidth * 5, lineWidth * 2))
+        tickPath.addLineToPoint(CGPointMake(lineWidth, lineWidth * 2))
+        tickPath.addLineToPoint(CGPointMake(lineWidth, 0))
+        tickPath.closePath()
+        tickPath.applyTransform(CGAffineTransformMakeRotation(CGFloat(-M_PI_4)))
+        
         let tickBorderLayer: CAShapeLayer = CAShapeLayer()
         tickBorderLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - (5*lineWidth)/2.0, CGRectGetMidY(containerFrame), containerFrame.width, containerFrame.height)
         tickBorderLayer.lineWidth = 1
         tickBorderLayer.fillColor = strokeColor.CGColor
-        tickBorderLayer.shouldRasterize = true
-        tickBorderLayer.rasterizationScale = UIScreen.mainScreen().scale
-        tickBorderLayer.contentsScale = UIScreen.mainScreen().scale
-        
-        let tickPath = UIBezierPath()
-        let tickWidth: CGFloat = lineWidth
-        tickPath.moveToPoint(CGPointMake(0, 0))
-        tickPath.addLineToPoint(CGPointMake(0, tickWidth * 3))
-        tickPath.addLineToPoint(CGPointMake(tickWidth * 5, tickWidth * 3))
-        tickPath.addLineToPoint(CGPointMake(tickWidth * 5, tickWidth * 2))
-        tickPath.addLineToPoint(CGPointMake(tickWidth, tickWidth * 2))
-        tickPath.addLineToPoint(CGPointMake(tickWidth, 0))
-        tickPath.closePath()
-        
-        tickPath.applyTransform(CGAffineTransformMakeRotation(CGFloat(-M_PI_4)))
-        
         tickBorderLayer.path = tickPath.CGPath
         
+        adjustScale(tickBorderLayer)
+        
         return tickBorderLayer
+    }
+    
+    private func adjustScale(layer: CALayer) {
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.mainScreen().scale
+        layer.contentsScale = UIScreen.mainScreen().scale
     }
     
     // MARK: animations
