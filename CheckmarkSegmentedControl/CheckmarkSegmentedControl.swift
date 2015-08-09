@@ -213,7 +213,10 @@ class CheckmarkSegmentedControl: UIControl {
             
             if selectedIndex != index {
                 selectedIndex = index
+                
+                sendActionsForControlEvents(UIControlEvents.ValueChanged)
             }
+            
         }
     }
     
@@ -225,10 +228,13 @@ class CheckmarkSegmentedControl: UIControl {
     }
 }
 
-struct CheckmarkOption {
+struct CheckmarkOption: Printable {
     let title: String
     let borderColor: UIColor
     let fillColor: UIColor
+    var description: String {
+        return "CheckmarkOption[title: \(title)]"
+    }
     
     init(title: String, borderColor: UIColor = UIColor.blackColor(), fillColor: UIColor = UIColor.lightGrayColor()) {
         self.title = title

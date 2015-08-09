@@ -25,5 +25,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func optionSelected(sender: AnyObject) {
+        println("Selected option: \(checkmark.options[checkmark.selectedIndex])")
+    }
 }
 

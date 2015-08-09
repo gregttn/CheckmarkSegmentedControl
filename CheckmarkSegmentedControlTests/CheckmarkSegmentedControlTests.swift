@@ -188,6 +188,17 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertEqual(checkmark.selectedIndex, 1)
     }
     
+    func testShouldSendValueChangedEventWhenNewValueselected() {
+        let point = CGPointMake(checkmark.frame.width/CGFloat(checkmark.options.count) + 10 ,10)
+        let touch = StubTouch(location: point)
+        
+        var captor: EventCaptor = EventCaptor()
+        checkmark.addTarget(captor, action: "capture", forControlEvents: UIControlEvents.ValueChanged)
+        checkmark.touchesBegan([touch], withEvent: UIEvent())
+        
+        XCTAssertTrue(captor.captured)
+    }
+    
     func testShouldMaskToBounds() {
         XCTAssertTrue(checkmark.layer.masksToBounds)
     }
@@ -307,6 +318,14 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         let expectedFrame = CGRectIntegral(CGRectMake(middleX - circleLayerFrame.height/2, 0, circleLayerFrame.height, circleLayerFrame.height))
         
         return CGRectInset(expectedFrame,1,1)
+    }
+}
+
+class EventCaptor: NSObject {
+    var captured = false
+    
+    func capture() {
+        self.captured = true
     }
 }
 
