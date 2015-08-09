@@ -113,7 +113,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             
             let titleSize: CGSize = sizeForText(checkmark.options[index], font: checkmark.titleFont)
             let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
-            let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, (titleSize.height + checkmark.titleLabelTopMargin)/2)
+            let circleLayerFrame = CGRectInset(containerFrame, 0, (titleSize.height + checkmark.titleLabelTopMargin)/2)
             let middleX = CGRectGetMidX(circleLayerFrame)
             let expectedFrame = CGRectInset(CGRectMake(middleX - circleLayerFrame.width/2, 0, circleLayerFrame.width, circleLayerFrame.width),1,1)
             

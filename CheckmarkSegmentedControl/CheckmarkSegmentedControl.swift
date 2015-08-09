@@ -15,7 +15,7 @@ class CheckmarkSegmentedControl: UIControl {
     var options: [CheckmarkOption] = []
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
     var titleColor: UIColor = UIColor.blackColor()
-    var titleLabelTopMargin: CGFloat = 12.0
+    var titleLabelTopMargin: CGFloat = 6.0
     var strokeColor: UIColor = UIColor.blackColor() {
         didSet {
             options = options.map({CheckmarkOption(title: $0.title, borderColor: self.strokeColor, fillColor: $0.fillColor)})
@@ -97,7 +97,8 @@ class CheckmarkSegmentedControl: UIControl {
             let label = createTitleLabel(containerFrame, content: option.title)
             layer.addSublayer(label)
             
-            let circleLayer = createCircleLayer(containerFrame, titleLabelFrame: label.frame, fillColor: option.fillColor)
+            let remainingContainerFrame = CGRectIntegral(CGRectInset(containerFrame, 0, (label.frame.height + titleLabelTopMargin)/2))
+            let circleLayer = createCircleLayer(remainingContainerFrame, fillColor: option.fillColor)
             layer.addSublayer(circleLayer)
             
             if index == _selectedIndex {
@@ -113,10 +114,10 @@ class CheckmarkSegmentedControl: UIControl {
     
     private func createTitleLabel(containerFrame: CGRect, content: String) -> CATextLayer {
         let labelSize = sizeForLabel(content)
-        let labelFrame = CGRectIntegral(CGRectMake(containerFrame.origin.x, containerFrame.height - labelSize.height, containerFrame.width, labelSize.height))
+        let labelFrame = CGRectMake(containerFrame.origin.x, containerFrame.height - labelSize.height, containerFrame.width, labelSize.height)
         
         let label: CATextLayer = CATextLayer()
-        label.frame = labelFrame
+        label.frame = CGRectIntegral(labelFrame)
         label.font = titleFont
         label.fontSize = titleFont.pointSize
         label.string = content
@@ -128,12 +129,13 @@ class CheckmarkSegmentedControl: UIControl {
         return label
     }
     
-    private func createCircleLayer(containerFrame: CGRect, titleLabelFrame: CGRect, fillColor: UIColor) -> CALayer {
-        let frame = CGRectIntegral(CGRectInset(containerFrame, titleLabelTopMargin/2, (titleLabelFrame.height + titleLabelTopMargin)/2))
-        let height = frame.height > frame.width ? frame.width : frame.height
-
+    private func createCircleLayer(containerFrame: CGRect, fillColor: UIColor) -> CALayer {
+        let height = min(containerFrame.width, containerFrame.height)
+        let xOffset = CGRectGetMidX(containerFrame) - height/2
+        let frame = CGRectInset(CGRectMake(xOffset, 0, height, height), circleBorderOffset, circleBorderOffset)
+        
         let circleLayer: CALayer = CALayer()
-        circleLayer.frame = CGRectIntegral(CGRectInset(CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height), circleBorderOffset, circleBorderOffset))
+        circleLayer.frame = CGRectIntegral(frame)
         circleLayer.cornerRadius = ceil(circleLayer.frame.height/2)
         circleLayer.backgroundColor = fillColor.CGColor
         
@@ -149,8 +151,10 @@ class CheckmarkSegmentedControl: UIControl {
         borderLayer.fillColor = UIColor.clearColor().CGColor
         borderLayer.strokeColor = strokeColor.CGColor
         borderLayer.strokeEnd = 1.0
+        
         let cornerRadius = ceil(bounds.height/2)
-        borderLayer.path = UIBezierPath(roundedRect: CGRectInset(CGRectInset(bounds, -circleBorderOffset, -circleBorderOffset), lineWidth/2, lineWidth/2), cornerRadius: cornerRadius).CGPath
+        let frameForPath = CGRectInset(CGRectInset(bounds, -circleBorderOffset, -circleBorderOffset), lineWidth/2, lineWidth/2)
+        borderLayer.path = UIBezierPath(roundedRect: frameForPath, cornerRadius: cornerRadius).CGPath
         
         adjustScale(borderLayer)
         
