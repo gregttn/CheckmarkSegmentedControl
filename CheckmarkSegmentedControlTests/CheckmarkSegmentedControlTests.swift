@@ -115,7 +115,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let containerFrame = CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height)
             let circleLayerFrame = CGRectInset(containerFrame, checkmark.titleLabelTopMargin/2.0, (titleSize.height + checkmark.titleLabelTopMargin)/2)
             let middleX = CGRectGetMidX(circleLayerFrame)
-            let expectedFrame = CGRectMake(middleX - circleLayerFrame.width/2, 0, circleLayerFrame.width, circleLayerFrame.width)
+            let expectedFrame = CGRectInset(CGRectMake(middleX - circleLayerFrame.width/2, 0, circleLayerFrame.width, circleLayerFrame.width),1,1)
             
             XCTAssertEqual(circleLayer.frame, expectedFrame)
         }
@@ -306,7 +306,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         let middleX = CGRectGetMidX(circleLayerFrame)
         let expectedFrame = CGRectIntegral(CGRectMake(middleX - circleLayerFrame.height/2, 0, circleLayerFrame.height, circleLayerFrame.height))
         
-        return expectedFrame
+        return CGRectInset(expectedFrame,1,1)
     }
 }
 

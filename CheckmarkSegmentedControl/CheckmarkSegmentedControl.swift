@@ -9,6 +9,7 @@
 import UIKit
 
 class CheckmarkSegmentedControl: UIControl {
+    private let circleBorderOffset: CGFloat = 1.0
     static let minCheckmarkHeight: CGFloat = 20.0
     
     var options: [CheckmarkOption] = []
@@ -134,8 +135,8 @@ class CheckmarkSegmentedControl: UIControl {
         let height = frame.height > frame.width ? frame.width : frame.height
 
         let circleLayer: CALayer = CALayer()
-        circleLayer.frame = CGRectIntegral(CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height))
-        circleLayer.cornerRadius = ceil(height/2)
+        circleLayer.frame = CGRectIntegral(CGRectInset(CGRectMake(CGRectGetMidX(frame) - height/2, 0, height, height), circleBorderOffset, circleBorderOffset))
+        circleLayer.cornerRadius = ceil(circleLayer.frame.height/2)
         circleLayer.backgroundColor = fillColor.CGColor
         circleLayer.shouldRasterize = true
         circleLayer.rasterizationScale = UIScreen.mainScreen().scale
@@ -155,7 +156,7 @@ class CheckmarkSegmentedControl: UIControl {
         borderLayer.rasterizationScale = UIScreen.mainScreen().scale
         borderLayer.contentsScale = UIScreen.mainScreen().scale
         let cornerRadius = ceil(bounds.height/2)
-        borderLayer.path = UIBezierPath(roundedRect: CGRectInset(bounds, lineWidth/2, lineWidth/2), cornerRadius: cornerRadius).CGPath
+        borderLayer.path = UIBezierPath(roundedRect: CGRectInset(CGRectInset(bounds, -circleBorderOffset, -circleBorderOffset), lineWidth/2, lineWidth/2), cornerRadius: cornerRadius).CGPath
         
         return borderLayer
     }
