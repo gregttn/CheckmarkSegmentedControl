@@ -11,7 +11,13 @@ import UIKit
 class CheckmarkSegmentedControl: UIControl {
     static let minCheckmarkHeight: CGFloat = 20.0
     
-    var options: [CheckmarkOption] = []
+    var options: [CheckmarkOption] = [] {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    var animationLength: CFTimeInterval = 0.4
     var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
     var titleColor: UIColor = UIColor.blackColor()
     var titleLabelTopMargin: CGFloat = 6.0
@@ -29,8 +35,6 @@ class CheckmarkSegmentedControl: UIControl {
             setNeedsDisplay()
         }
     }
-    
-    var animationLength: CFTimeInterval = 0.4
     
     var selectedIndex: Int {
         get {
