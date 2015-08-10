@@ -95,6 +95,7 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     private func setup() {
+        contentMode = UIViewContentMode.Redraw
         layer.masksToBounds = true
         lineWidth = 3.0
     }

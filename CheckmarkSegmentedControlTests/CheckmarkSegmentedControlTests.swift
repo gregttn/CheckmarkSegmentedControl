@@ -221,10 +221,6 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertTrue(captor.captured)
     }
     
-    func testShouldMaskToBounds() {
-        XCTAssertTrue(checkmark.layer.masksToBounds)
-    }
-    
     func testShouldResizeZeroFrameToMinimumSize() {
         let largestLabelSize = defaultOptions.map({ self.sizeForText($0, font: self.checkmark.titleFont) })
             .sorted({ $0.width > $1.width}).first!
@@ -321,6 +317,15 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         XCTAssertTrue(CGColorEqualToColor(tickLayer.fillColor, checkmark.options[0].borderColor.CGColor))
     }
     
+    func testShouldMaskToBounds() {
+        XCTAssertTrue(checkmark.layer.masksToBounds)
+    }
+    
+    func testContentModeSetToRedraw() {
+        XCTAssertEqual(checkmark.contentMode, UIViewContentMode.Redraw)
+    }
+    
+    // helpers
     private func sizeForText(option: CheckmarkOption, font: UIFont) -> CGSize {
         let textAttributes = [NSFontAttributeName : font]
         let string: NSString = option.title
