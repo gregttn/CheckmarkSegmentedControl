@@ -94,7 +94,6 @@ class CheckmarkSegmentedControlTests: XCTestCase {
             let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
             let expectedFrame = expectedFrameFor(circleLayer, frame: checkmark.frame, index: index)
             
-            println("ActualFrame: \(circleLayer.frame)")
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.x, expectedFrame.origin.x, 0.1, "Incorrect circle x origin for: \(checkmark.options[index])")
             XCTAssertEqualWithAccuracy(circleLayer.frame.origin.y, expectedFrame.origin.y, 0.1, "Incorrect circle y origin for: \(checkmark.options[index])")
             XCTAssertEqualWithAccuracy(circleLayer.frame.width, expectedFrame.width, 0.1, "Incorrect circle w origin for: \(checkmark.options[index])")
@@ -133,6 +132,16 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         }
     }
     
+    func testBorderLayerHasDoubleTheSetLineWidth() {
+        checkmark.lineWidth = 2.0
+        
+        checkmark.drawRect(checkmark.frame)
+        
+        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[LayerIndex.Circle.rawValue] as! CAShapeLayer
+        
+        XCTAssertEqual(borderLayer.lineWidth , 4)
+    }
+    
     func testShouldPresentFirstOptionAsSelectedByDefault() {
         checkmark.strokeColor = UIColor.blueColor()
         checkmark.drawRect(checkmark.frame)
@@ -143,7 +152,6 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         
         XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blueColor().CGColor))
         XCTAssertTrue(CGColorEqualToColor(borderLayer.fillColor, UIColor.clearColor().CGColor))
-        XCTAssertEqual(borderLayer.lineWidth , 3)
         XCTAssertEqual(borderLayer.strokeEnd, 1.0)
         XCTAssertEqual(borderLayer.frame, expectedFrame)
     }
@@ -164,7 +172,6 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         
         XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blueColor().CGColor))
         XCTAssertTrue(CGColorEqualToColor(borderLayer.fillColor, UIColor.clearColor().CGColor))
-        XCTAssertEqual(borderLayer.lineWidth , 3)
         XCTAssertEqual(borderLayer.strokeEnd, 1.0)
         XCTAssertEqual(borderLayer.frame, expectedFrame)
     }

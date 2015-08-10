@@ -22,7 +22,15 @@ class CheckmarkSegmentedControl: UIControl {
         }
     }
     
-    var lineWidth: CGFloat = 3.0
+    var lineWidth: CGFloat = 3.0 {
+        didSet {
+            self.tickLineWidth = lineWidth
+            self.circleBorderLineWidth = lineWidth * 2
+            
+            setNeedsDisplay()
+        }
+    }
+    
     var animationLength: CFTimeInterval = 0.4
     
     var selectedIndex: Int {
@@ -42,6 +50,8 @@ class CheckmarkSegmentedControl: UIControl {
         }
     }
     
+    private var tickLineWidth: CGFloat = 0
+    private var circleBorderLineWidth: CGFloat = 0
     private var _selectedIndex = 0 {
         didSet {
             setNeedsDisplay()
@@ -83,6 +93,7 @@ class CheckmarkSegmentedControl: UIControl {
     
     private func setup() {
         layer.masksToBounds = true
+        lineWidth = 3.0
     }
     
     override func drawRect(rect: CGRect) {
@@ -135,7 +146,7 @@ class CheckmarkSegmentedControl: UIControl {
         
         let borderLayer: CAShapeLayer = CAShapeLayer()
         borderLayer.frame = frame
-        borderLayer.lineWidth = lineWidth
+        borderLayer.lineWidth = circleBorderLineWidth
         borderLayer.fillColor = UIColor.clearColor().CGColor
         borderLayer.backgroundColor = option.fillColor.CGColor
         borderLayer.cornerRadius = cornerRadius
@@ -153,16 +164,16 @@ class CheckmarkSegmentedControl: UIControl {
     private func createTick(containerFrame: CGRect, strokeColor: UIColor) -> CAShapeLayer {
         let tickPath = UIBezierPath()
         tickPath.moveToPoint(CGPointMake(0, 0))
-        tickPath.addLineToPoint(CGPointMake(0, lineWidth * 3))
-        tickPath.addLineToPoint(CGPointMake(lineWidth * 5, lineWidth * 3))
-        tickPath.addLineToPoint(CGPointMake(lineWidth * 5, lineWidth * 2))
-        tickPath.addLineToPoint(CGPointMake(lineWidth, lineWidth * 2))
-        tickPath.addLineToPoint(CGPointMake(lineWidth, 0))
+        tickPath.addLineToPoint(CGPointMake(0, tickLineWidth * 3))
+        tickPath.addLineToPoint(CGPointMake(tickLineWidth * 5, tickLineWidth * 3))
+        tickPath.addLineToPoint(CGPointMake(tickLineWidth * 5, tickLineWidth * 2))
+        tickPath.addLineToPoint(CGPointMake(tickLineWidth, tickLineWidth * 2))
+        tickPath.addLineToPoint(CGPointMake(tickLineWidth, 0))
         tickPath.closePath()
         tickPath.applyTransform(CGAffineTransformMakeRotation(CGFloat(-M_PI_4)))
         
         let tickBorderLayer: CAShapeLayer = CAShapeLayer()
-        tickBorderLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - (5*lineWidth)/2.0, CGRectGetMidY(containerFrame), containerFrame.width, containerFrame.height)
+        tickBorderLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - (5*tickLineWidth)/2.0, CGRectGetMidY(containerFrame), containerFrame.width, containerFrame.height)
         tickBorderLayer.lineWidth = 1
         tickBorderLayer.fillColor = strokeColor.CGColor
         tickBorderLayer.path = tickPath.CGPath
