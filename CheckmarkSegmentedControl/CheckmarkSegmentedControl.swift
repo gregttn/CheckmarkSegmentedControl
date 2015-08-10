@@ -98,15 +98,13 @@ class CheckmarkSegmentedControl: UIControl {
             layer.addSublayer(label)
             
             let remainingContainerFrame = CGRectIntegral(CGRectInset(containerFrame, 0, (label.frame.height + titleLabelTopMargin)/2))
-            let circleLayer = createCircleLayer(remainingContainerFrame, fillColor: option.fillColor)
-            layer.addSublayer(circleLayer)
+            let borderLayer = createCircleLayer(remainingContainerFrame, option: option)
+            layer.addSublayer(borderLayer)
             
             if index == _selectedIndex {
-                let borderLayer = createCircleBorder(circleLayer.frame, bounds: circleLayer.bounds, strokeColor: option.borderColor)
                 animateCircleBorder(borderLayer)
-                layer.addSublayer(borderLayer)
                 
-                let tickLayer = createTick(circleLayer.frame, strokeColor: option.borderColor)
+                let tickLayer = createTick(borderLayer.frame, strokeColor: option.borderColor)
                 layer.addSublayer(tickLayer)
             }
         }
@@ -129,32 +127,23 @@ class CheckmarkSegmentedControl: UIControl {
         return label
     }
     
-    private func createCircleLayer(containerFrame: CGRect, fillColor: UIColor) -> CALayer {
+    private func createCircleLayer(containerFrame: CGRect, option: CheckmarkOption) -> CAShapeLayer {
         let height = min(containerFrame.width, containerFrame.height)
         let xOffset = CGRectGetMidX(containerFrame) - height/2
         let frame = CGRectInset(CGRectMake(xOffset, 0, height, height), circleBorderOffset, circleBorderOffset)
+        let cornerRadius = ceil(frame.height/2)
         
-        let circleLayer: CALayer = CALayer()
-        circleLayer.frame = CGRectIntegral(frame)
-        circleLayer.cornerRadius = ceil(circleLayer.frame.height/2)
-        circleLayer.backgroundColor = fillColor.CGColor
-        
-        adjustScale(circleLayer)
-        
-        return circleLayer
-    }
-    
-    private func createCircleBorder(frame: CGRect, bounds: CGRect, strokeColor: UIColor) -> CAShapeLayer {
         let borderLayer: CAShapeLayer = CAShapeLayer()
         borderLayer.frame = frame
         borderLayer.lineWidth = lineWidth
         borderLayer.fillColor = UIColor.clearColor().CGColor
-        borderLayer.strokeColor = strokeColor.CGColor
-        borderLayer.strokeEnd = 1.0
+        borderLayer.backgroundColor = option.fillColor.CGColor
+        borderLayer.cornerRadius = cornerRadius
+        borderLayer.strokeColor = option.borderColor.CGColor
+        borderLayer.strokeEnd = 0
+        borderLayer.masksToBounds = true
         
-        let cornerRadius = ceil(bounds.height/2)
-        let frameForPath = CGRectInset(CGRectInset(bounds, -circleBorderOffset, -circleBorderOffset), lineWidth/2, lineWidth/2)
-        borderLayer.path = UIBezierPath(roundedRect: frameForPath, cornerRadius: cornerRadius).CGPath
+        borderLayer.path = UIBezierPath(roundedRect: borderLayer.bounds, cornerRadius: cornerRadius).CGPath
         
         adjustScale(borderLayer)
         
@@ -191,6 +180,7 @@ class CheckmarkSegmentedControl: UIControl {
     
     // MARK: animations
     private func animateCircleBorder(layer: CAShapeLayer) {
+        layer.strokeEnd = 1.0
         let animationKey = "strokeEnd"
         let animation: CABasicAnimation = CABasicAnimation(keyPath: animationKey)
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)

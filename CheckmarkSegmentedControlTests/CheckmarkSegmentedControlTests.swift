@@ -11,16 +11,16 @@ import XCTest
 
 class CheckmarkSegmentedControlTests: XCTestCase {
     enum LayerIndex: Int {
+        case Text = 0
         case Circle = 1
-        case Border = 2
-        case Tick = 3
+        case Tick = 2
     }
     
     var checkmark: CheckmarkSegmentedControl!
     let defaultOptions: [CheckmarkOption] = [CheckmarkOption(title:"option"), CheckmarkOption(title:"another option")]
     let coloredOptiones: [CheckmarkOption] = [CheckmarkOption(title: "Option", fillColor: UIColor.whiteColor(), borderColor: UIColor.redColor()),
         CheckmarkOption(title: "Another option", fillColor: UIColor.yellowColor(), borderColor: UIColor.blueColor())]
-    let numberOfLayers = 4
+    let numberOfLayers = 3
     
     override func setUp() {
         super.setUp()
@@ -102,6 +102,18 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         }
     }
     
+    func testCircleLayerMasksToBounds() {
+        checkmark.titleLabelTopMargin = 15.0
+        checkmark.drawRect(checkmark.frame)
+        
+        for index in (0..<checkmark.options.count) {
+            let layerIndex = (index * numberOfLayers) + LayerIndex.Circle.rawValue
+            let circleLayer: CALayer = checkmark.layer.sublayers[layerIndex] as! CALayer
+            
+            XCTAssertTrue(circleLayer.masksToBounds)
+        }
+    }
+    
     func testUseFrameWidthInsteadOfHeightIfSmallerThanHeightForCircleFrame() {
         let frame = CGRectMake(0, 0, 100, 500)
         checkmark.drawRect(frame)
@@ -125,13 +137,14 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         checkmark.strokeColor = UIColor.blueColor()
         checkmark.drawRect(checkmark.frame)
         
-        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[LayerIndex.Border.rawValue] as! CAShapeLayer
+        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[LayerIndex.Circle.rawValue] as! CAShapeLayer
         
         let expectedFrame = expectedFrameFor(borderLayer, frame: checkmark.frame, index: 0)
         
         XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blueColor().CGColor))
         XCTAssertTrue(CGColorEqualToColor(borderLayer.fillColor, UIColor.clearColor().CGColor))
         XCTAssertEqual(borderLayer.lineWidth , 3)
+        XCTAssertEqual(borderLayer.strokeEnd, 1.0)
         XCTAssertEqual(borderLayer.frame, expectedFrame)
     }
     
@@ -141,16 +154,18 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         
         checkmark.drawRect(checkmark.frame)
         
-        let firstLayerIndex = LayerIndex.Border.rawValue
-        XCTAssertFalse(checkmark.layer.sublayers[firstLayerIndex].isKindOfClass(CAShapeLayer))
+        let firstLayerIndex = LayerIndex.Circle.rawValue
+        XCTAssertTrue(checkmark.layer.sublayers[firstLayerIndex].isKindOfClass(CAShapeLayer))
+        XCTAssertEqual(checkmark.layer.sublayers[firstLayerIndex].strokeEnd, 0.0)
         
-        let layerIndex = LayerIndex.Border.rawValue * (checkmark.selectedIndex + 1)
+        let layerIndex = LayerIndex.Circle.rawValue * (checkmark.selectedIndex*numberOfLayers)
         let borderLayer: CAShapeLayer = checkmark.layer.sublayers[layerIndex] as! CAShapeLayer
         let expectedFrame = expectedFrameFor(borderLayer, frame: checkmark.frame, index: 1)
         
         XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blueColor().CGColor))
         XCTAssertTrue(CGColorEqualToColor(borderLayer.fillColor, UIColor.clearColor().CGColor))
         XCTAssertEqual(borderLayer.lineWidth , 3)
+        XCTAssertEqual(borderLayer.strokeEnd, 1.0)
         XCTAssertEqual(borderLayer.frame, expectedFrame)
     }
     
@@ -160,11 +175,11 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         
         checkmark.drawRect(checkmark.frame)
         
-        XCTAssertEqual(checkmark.layer.sublayers.count, 6)
+        XCTAssertEqual(checkmark.layer.sublayers.count, 5)
         
         checkmark.drawRect(checkmark.frame)
         
-        XCTAssertEqual(checkmark.layer.sublayers.count, 6)
+        XCTAssertEqual(checkmark.layer.sublayers.count, 5)
     }
     
     func testShouldNotAllowNegativeValueToBeAssignedToSelectedIndex() {
@@ -267,7 +282,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     func testShouldDrawSelectedOptionBorderWithDefaultFillColor() {
         checkmark.drawRect(checkmark.frame)
         
-        let layerIndex = LayerIndex.Border.rawValue
+        let layerIndex = LayerIndex.Circle.rawValue
         let borderLayer: CAShapeLayer = checkmark.layer.sublayers[layerIndex] as! CAShapeLayer
         
         XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, UIColor.blackColor().CGColor))
@@ -278,7 +293,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         checkmark.options = coloredOptiones
         checkmark.drawRect(checkmark.frame)
         
-        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[LayerIndex.Border.rawValue] as! CAShapeLayer
+        let borderLayer: CAShapeLayer = checkmark.layer.sublayers[LayerIndex.Circle.rawValue] as! CAShapeLayer
         XCTAssertTrue(CGColorEqualToColor(borderLayer.strokeColor, checkmark.options[0].borderColor.CGColor))
     }
     
