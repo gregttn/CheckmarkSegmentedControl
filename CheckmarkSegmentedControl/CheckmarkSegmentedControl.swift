@@ -9,7 +9,6 @@
 import UIKit
 
 class CheckmarkSegmentedControl: UIControl {
-    private let circleBorderOffset: CGFloat = 1.0
     static let minCheckmarkHeight: CGFloat = 20.0
     
     var options: [CheckmarkOption] = []
@@ -141,7 +140,7 @@ class CheckmarkSegmentedControl: UIControl {
     private func createCircleLayer(containerFrame: CGRect, option: CheckmarkOption) -> CAShapeLayer {
         let height = min(containerFrame.width, containerFrame.height)
         let xOffset = CGRectGetMidX(containerFrame) - height/2
-        let frame = CGRectInset(CGRectMake(xOffset, 0, height, height), circleBorderOffset, circleBorderOffset)
+        let frame = CGRectMake(xOffset, 0, height, height)
         let cornerRadius = ceil(frame.height/2)
         
         let borderLayer: CAShapeLayer = CAShapeLayer()
