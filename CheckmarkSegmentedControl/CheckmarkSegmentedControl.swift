@@ -71,6 +71,12 @@ class CheckmarkSegmentedControl: UIControl {
         setup()
     }
     
+    private func setup() {
+        contentMode = UIViewContentMode.Redraw
+        layer.masksToBounds = true
+        lineWidth = 3.0
+    }
+    
     override func sizeThatFits(size: CGSize) -> CGSize {
         let largestLabelSize = options.map({ self.sizeForLabel($0.title) })
                                     .sorted({ $0.width > $1.width}).first
@@ -92,12 +98,6 @@ class CheckmarkSegmentedControl: UIControl {
         }
         
         return size
-    }
-    
-    private func setup() {
-        contentMode = UIViewContentMode.Redraw
-        layer.masksToBounds = true
-        lineWidth = 3.0
     }
     
     override func drawRect(rect: CGRect) {
@@ -207,7 +207,6 @@ class CheckmarkSegmentedControl: UIControl {
     }
     
     // MARK: respond to touches
-
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         let touch: UITouch = touches.first as! UITouch
         let location = touch.locationInView(self)

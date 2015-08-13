@@ -39,6 +39,7 @@
 		63522E7F1AEE236C00D1FDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63522E801AEE236C00D1FDF7 /* CheckmarkSegmentedControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControlTests.swift; sourceTree = "<group>"; };
 		63522E8C1AEE253900D1FDF7 /* CheckmarkSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControl.swift; sourceTree = "<group>"; };
+		63957B501B7B350300F30849 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		63522E5C1AEE236C00D1FDF7 = {
 			isa = PBXGroup;
 			children = (
+				63957B501B7B350300F30849 /* README.md */,
 				63522E671AEE236C00D1FDF7 /* CheckmarkSegmentedControl */,
 				63522E7D1AEE236C00D1FDF7 /* CheckmarkSegmentedControlTests */,
 				63522E661AEE236C00D1FDF7 /* Products */,
