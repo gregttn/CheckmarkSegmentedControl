@@ -1,6 +1,6 @@
 # CheckmarkSegmentedControl
 
-CheckmarkSegmentedControl is a customiable alternative to UISegmentedControl.
+CheckmarkSegmentedControl is a customisable alternative to UISegmentedControl.
 
 ![Preview](https://raw.githubusercontent.com/gregttn/CheckmarkSegmentedControl/master/preview.gif)
 
