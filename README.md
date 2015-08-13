@@ -2,7 +2,7 @@
 
 CheckmarkSegmentedControl is a customiable alternative to UISegmentedControl.
 
-[Preview](https://github.com/gregttn/CheckmarkSegmentedControl/raw/master/preview.gif)
+![Preview](https://raw.githubusercontent.com/gregttn/CheckmarkSegmentedControl/master/preview.gif)
 
 ### Features
 * creation of segmented control with look of radio buttons
