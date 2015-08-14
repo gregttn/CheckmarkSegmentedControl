@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class CheckmarkSegmentedControl: UIControl {
     static let minCheckmarkHeight: CGFloat = 20.0
     
@@ -123,6 +124,15 @@ class CheckmarkSegmentedControl: UIControl {
                 layer.addSublayer(tickLayer)
             }
         }
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        options = [
+            CheckmarkOption(title:"Option 1"), // by default black border and light gray colour as background
+            CheckmarkOption(title: "Option 2", borderColor: UIColor.orangeColor(), fillColor: UIColor.brownColor()),
+            CheckmarkOption(title: "Option 3", borderColor: UIColor.brownColor(), fillColor: UIColor.orangeColor()),
+            CheckmarkOption(title: "Option 4", borderColor: UIColor.greenColor(), fillColor: UIColor.blueColor())
+        ]
     }
     
     private func createTitleLabel(containerFrame: CGRect, content: String) -> CATextLayer {
