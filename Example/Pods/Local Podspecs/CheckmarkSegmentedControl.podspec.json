@@ -1,0 +1,26 @@
+{
+  "name": "CheckmarkSegmentedControl",
+  "version": "0.1.0",
+  "summary": "A short description of CheckmarkSegmentedControl.",
+  "description": "",
+  "homepage": "https://github.com/gregttn/CheckmarkSegmentedControl",
+  "license": "MIT",
+  "authors": {
+    "gregttn": "gregttn@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/gregttn/CheckmarkSegmentedControl.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/gregttn",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/*.swift",
+  "resource_bundles": {
+    "CheckmarkSegmentedControl": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

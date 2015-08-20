@@ -1,0 +1,6 @@
+framework module CheckmarkSegmentedControl {
+  umbrella header "CheckmarkSegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

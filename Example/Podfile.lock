@@ -1,0 +1,14 @@
+PODS:
+  - CheckmarkSegmentedControl (0.1.0)
+
+DEPENDENCIES:
+  - CheckmarkSegmentedControl (from `../`)
+
+EXTERNAL SOURCES:
+  CheckmarkSegmentedControl:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CheckmarkSegmentedControl: cc147240acc6943441405005972d90f7fc561db8
+
+COCOAPODS: 0.38.2

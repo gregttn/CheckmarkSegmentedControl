@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03631BADB417A6A5CB7CBC070258388C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C1B382142A94BD4C89ACB0DDCEB8D5 /* Foundation.framework */; };
+		2F2CBF89D4DE0D9ECA64971ECE08C03C /* CheckmarkSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B57685223C002DD932DDDA225DCF63 /* CheckmarkSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39EF810C71FE802CFC129503A6D019E1 /* CheckmarkSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DE53930CAB5DB914D6885C6BA40384 /* CheckmarkSegmentedControl-dummy.m */; };
+		57661AAE5A3377BF2ECA3E611FE29667 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31083979F4E77ECA8AB87BD900557698 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77E8EE9C8C3DE8DDF2ACBDE8E0AB30E8 /* Pods-CheckmarkSegmentedControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF0523D0B4E952644B5FE6E02A3FE6 /* Pods-CheckmarkSegmentedControl_Example-dummy.m */; };
+		7AF321C343ED6011DF801037841C0197 /* CheckmarkSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E5B295BAC45B02BCE2B1D93D3237FA /* CheckmarkSegmentedControl.swift */; };
+		9714636DFE99F626FE302DE9BD08B600 /* CheckmarkSegmentedControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB611719E29B0A59756A4D653A862121 /* CheckmarkSegmentedControl.bundle */; };
+		CF6CEA40DDB711689819E10ABEA0AD48 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82E9C2350AFC7F1C61B193C4DB8E0 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m */; };
+		D9A6759C4A3E3DB590B9B700CC6948A1 /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C8E876169256B27BEC73497C3DBB7BC /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E03F8DDEB9796952A8F6B9164E543843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C1B382142A94BD4C89ACB0DDCEB8D5 /* Foundation.framework */; };
+		E3975F480B4CBC72B7435E4C4BB07A15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C1B382142A94BD4C89ACB0DDCEB8D5 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32672893868208E88A6D2746008D0FAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264A724F19022AD088CDA641FEC57DBB;
+			remoteInfo = CheckmarkSegmentedControl;
+		};
+		791A00E320E7C4EDDECE8E043DF83A3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264A724F19022AD088CDA641FEC57DBB;
+			remoteInfo = CheckmarkSegmentedControl;
+		};
+		E494B97DF414BB2F6313DA377BCF5055 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4140011B77C3E290081379F92E99269;
+			remoteInfo = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06E5B295BAC45B02BCE2B1D93D3237FA /* CheckmarkSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControl.swift; sourceTree = "<group>"; };
+		100D1CB4F790B542B6FC77F76CE7D505 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		11010140F3A0394A2E5CB5AB3112317C /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2BB82E9C2350AFC7F1C61B193C4DB8E0 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckmarkSegmentedControl_Tests-dummy.m"; sourceTree = "<group>"; };
+		31083979F4E77ECA8AB87BD900557698 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CheckmarkSegmentedControl_Example-umbrella.h"; sourceTree = "<group>"; };
+		332BCD525D454C2C52B21A8DA7DF0D25 /* Pods-CheckmarkSegmentedControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheckmarkSegmentedControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3827CB0D9EE9BABF4517038BF20A74A5 /* CheckmarkSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CheckmarkSegmentedControl.modulemap; sourceTree = "<group>"; };
+		430E2164203DBB323C3E80F2D225A11D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55514473E990EA9C05642FC6DD70AE7C /* Pods-CheckmarkSegmentedControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckmarkSegmentedControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5C8E876169256B27BEC73497C3DBB7BC /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CheckmarkSegmentedControl_Tests-umbrella.h"; sourceTree = "<group>"; };
+		62DD05AB096D3FB6AF8B40B315497AF8 /* Pods_CheckmarkSegmentedControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DF0523D0B4E952644B5FE6E02A3FE6 /* Pods-CheckmarkSegmentedControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckmarkSegmentedControl_Example-dummy.m"; sourceTree = "<group>"; };
+		67D6868A7AC33BE4A9161CDA389E86B9 /* CheckmarkSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CheckmarkSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		6800B6337370DF1112D04850EA64285B /* Pods-CheckmarkSegmentedControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckmarkSegmentedControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6CC7806993B2E1CB5BF2D3E544D517A6 /* Pods-CheckmarkSegmentedControl_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Tests-resources.sh"; sourceTree = "<group>"; };
+		748CE2A69348D5232689811E15F3A1CD /* Pods-CheckmarkSegmentedControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Example-frameworks.sh"; sourceTree = "<group>"; };
+		74B57685223C002DD932DDDA225DCF63 /* CheckmarkSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CheckmarkSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
+		8B13140CCB468F13F9D40ECAF39F5E04 /* Pods_CheckmarkSegmentedControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9AA378BC2EBD3A47E14E0FEB17DA20 /* Pods-CheckmarkSegmentedControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheckmarkSegmentedControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9412C5979BFA61A921419FF82926EB1F /* Pods-CheckmarkSegmentedControl_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Example-resources.sh"; sourceTree = "<group>"; };
+		98DE53930CAB5DB914D6885C6BA40384 /* CheckmarkSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CheckmarkSegmentedControl-dummy.m"; sourceTree = "<group>"; };
+		B16ABEC5CC5A33127651A138897D9C7D /* Pods-CheckmarkSegmentedControl_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		B9C85FFB01B5A3A9202F14B6B9B42CC5 /* Pods-CheckmarkSegmentedControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheckmarkSegmentedControl_Example.modulemap"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BDAD9671F220F9D8A97EADA6902EA05A /* CheckmarkSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CheckmarkSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1EC0702EF9BD1230920D8C3717CAA8F /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2F0AB912DB4DDF3EE997F6253A12600 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FDA4A35486C4196F1ABFEE3B377FBE /* CheckmarkSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CheckmarkSegmentedControl.xcconfig; sourceTree = "<group>"; };
+		C4DC289FF9783E21F0C9E4403D357CB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C1B382142A94BD4C89ACB0DDCEB8D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E8E39AF95BEA458920DE4B048FC5B443 /* CheckmarkSegmentedControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CheckmarkSegmentedControl-Private.xcconfig"; sourceTree = "<group>"; };
+		EB611719E29B0A59756A4D653A862121 /* CheckmarkSegmentedControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckmarkSegmentedControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F400A4920EA4394AC4E3847B9F8D3730 /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F716202BB06180EC0A710680B67094DA /* Pods-CheckmarkSegmentedControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheckmarkSegmentedControl_Tests.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09B026BED7B903B2584336769DF3891D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03631BADB417A6A5CB7CBC070258388C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383F8C1E17A75E988CB8791957152744 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9061CE5585873B1672CFF24DAF26A316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3975F480B4CBC72B7435E4C4BB07A15 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D009F9D4F45712D474307C7C36865ADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03F8DDEB9796952A8F6B9164E543843 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A581E9A07DB6BB99A645C9C4C1C4E79 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B73809B61C37394DEBE01D0D5EBCC196 /* Pods-CheckmarkSegmentedControl_Example */,
+				DD7F632F6113C578DF089690682E0521 /* Pods-CheckmarkSegmentedControl_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		16559A282DEBD8B21DD3C0807FB3927B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				06E5B295BAC45B02BCE2B1D93D3237FA /* CheckmarkSegmentedControl.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4BBFB468222151852583F09DAF6AA12E /* CheckmarkSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				6DD37A14289C2129A4A7F17515E5D70E /* Pod */,
+				A92C084EE33DB0E1FEFF80246E39A4DA /* Support Files */,
+			);
+			name = CheckmarkSegmentedControl;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D2C1B382142A94BD4C89ACB0DDCEB8D5 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6DD37A14289C2129A4A7F17515E5D70E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				16559A282DEBD8B21DD3C0807FB3927B /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				B81E7F77A9D8F74073324AA9BC1D7AC7 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				0A581E9A07DB6BB99A645C9C4C1C4E79 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A92C084EE33DB0E1FEFF80246E39A4DA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3827CB0D9EE9BABF4517038BF20A74A5 /* CheckmarkSegmentedControl.modulemap */,
+				C2FDA4A35486C4196F1ABFEE3B377FBE /* CheckmarkSegmentedControl.xcconfig */,
+				E8E39AF95BEA458920DE4B048FC5B443 /* CheckmarkSegmentedControl-Private.xcconfig */,
+				98DE53930CAB5DB914D6885C6BA40384 /* CheckmarkSegmentedControl-dummy.m */,
+				67D6868A7AC33BE4A9161CDA389E86B9 /* CheckmarkSegmentedControl-prefix.pch */,
+				74B57685223C002DD932DDDA225DCF63 /* CheckmarkSegmentedControl-umbrella.h */,
+				C4DC289FF9783E21F0C9E4403D357CB0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CheckmarkSegmentedControl";
+			sourceTree = "<group>";
+		};
+		B73809B61C37394DEBE01D0D5EBCC196 /* Pods-CheckmarkSegmentedControl_Example */ = {
+			isa = PBXGroup;
+			children = (
+				430E2164203DBB323C3E80F2D225A11D /* Info.plist */,
+				B9C85FFB01B5A3A9202F14B6B9B42CC5 /* Pods-CheckmarkSegmentedControl_Example.modulemap */,
+				6800B6337370DF1112D04850EA64285B /* Pods-CheckmarkSegmentedControl_Example-acknowledgements.markdown */,
+				332BCD525D454C2C52B21A8DA7DF0D25 /* Pods-CheckmarkSegmentedControl_Example-acknowledgements.plist */,
+				62DF0523D0B4E952644B5FE6E02A3FE6 /* Pods-CheckmarkSegmentedControl_Example-dummy.m */,
+				748CE2A69348D5232689811E15F3A1CD /* Pods-CheckmarkSegmentedControl_Example-frameworks.sh */,
+				9412C5979BFA61A921419FF82926EB1F /* Pods-CheckmarkSegmentedControl_Example-resources.sh */,
+				31083979F4E77ECA8AB87BD900557698 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h */,
+				11010140F3A0394A2E5CB5AB3112317C /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */,
+				F400A4920EA4394AC4E3847B9F8D3730 /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */,
+			);
+			name = "Pods-CheckmarkSegmentedControl_Example";
+			path = "Target Support Files/Pods-CheckmarkSegmentedControl_Example";
+			sourceTree = "<group>";
+		};
+		B81E7F77A9D8F74073324AA9BC1D7AC7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BBFB468222151852583F09DAF6AA12E /* CheckmarkSegmentedControl */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB611719E29B0A59756A4D653A862121 /* CheckmarkSegmentedControl.bundle */,
+				BDAD9671F220F9D8A97EADA6902EA05A /* CheckmarkSegmentedControl.framework */,
+				62DD05AB096D3FB6AF8B40B315497AF8 /* Pods_CheckmarkSegmentedControl_Example.framework */,
+				8B13140CCB468F13F9D40ECAF39F5E04 /* Pods_CheckmarkSegmentedControl_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD7F632F6113C578DF089690682E0521 /* Pods-CheckmarkSegmentedControl_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C2F0AB912DB4DDF3EE997F6253A12600 /* Info.plist */,
+				F716202BB06180EC0A710680B67094DA /* Pods-CheckmarkSegmentedControl_Tests.modulemap */,
+				55514473E990EA9C05642FC6DD70AE7C /* Pods-CheckmarkSegmentedControl_Tests-acknowledgements.markdown */,
+				8C9AA378BC2EBD3A47E14E0FEB17DA20 /* Pods-CheckmarkSegmentedControl_Tests-acknowledgements.plist */,
+				2BB82E9C2350AFC7F1C61B193C4DB8E0 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m */,
+				B16ABEC5CC5A33127651A138897D9C7D /* Pods-CheckmarkSegmentedControl_Tests-frameworks.sh */,
+				6CC7806993B2E1CB5BF2D3E544D517A6 /* Pods-CheckmarkSegmentedControl_Tests-resources.sh */,
+				5C8E876169256B27BEC73497C3DBB7BC /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h */,
+				C1EC0702EF9BD1230920D8C3717CAA8F /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */,
+				100D1CB4F790B542B6FC77F76CE7D505 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */,
+			);
+			name = "Pods-CheckmarkSegmentedControl_Tests";
+			path = "Target Support Files/Pods-CheckmarkSegmentedControl_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		99019EE0CE99576D9F9F2BF30BF82475 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F2CBF89D4DE0D9ECA64971ECE08C03C /* CheckmarkSegmentedControl-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD9E5069B9253C312950903D1F9F537 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A6759C4A3E3DB590B9B700CC6948A1 /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2D0E8E729820053902A00996A731809 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57661AAE5A3377BF2ECA3E611FE29667 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		264A724F19022AD088CDA641FEC57DBB /* CheckmarkSegmentedControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F0931E0601BF5D04C4CEF3FE08163C1 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl" */;
+			buildPhases = (
+				1671A7399D5ACCB42A35081A1649C040 /* Sources */,
+				09B026BED7B903B2584336769DF3891D /* Frameworks */,
+				A62A89085F8E172A90BD6B0A8AEF64EF /* Resources */,
+				99019EE0CE99576D9F9F2BF30BF82475 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40B72D91EE43ADA10EAF050A6B653295 /* PBXTargetDependency */,
+			);
+			name = CheckmarkSegmentedControl;
+			productName = CheckmarkSegmentedControl;
+			productReference = BDAD9671F220F9D8A97EADA6902EA05A /* CheckmarkSegmentedControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F445A52E8DC4B2884A6297C7DFBE0F3 /* Pods-CheckmarkSegmentedControl_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DED598FC48B90B863B940A23E24C32A /* Build configuration list for PBXNativeTarget "Pods-CheckmarkSegmentedControl_Tests" */;
+			buildPhases = (
+				EAADEA86FC556C12ABD8C1FACF2CDCA2 /* Sources */,
+				9061CE5585873B1672CFF24DAF26A316 /* Frameworks */,
+				DCD9E5069B9253C312950903D1F9F537 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DC5EB60B40A473643789D6F1D34AED2 /* PBXTargetDependency */,
+			);
+			name = "Pods-CheckmarkSegmentedControl_Tests";
+			productName = "Pods-CheckmarkSegmentedControl_Tests";
+			productReference = 8B13140CCB468F13F9D40ECAF39F5E04 /* Pods_CheckmarkSegmentedControl_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A4140011B77C3E290081379F92E99269 /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B4D93302CCB22AD02C99EC980F9EC59 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl-CheckmarkSegmentedControl" */;
+			buildPhases = (
+				33250806A9191DB3D2423140870C7BB0 /* Sources */,
+				383F8C1E17A75E988CB8791957152744 /* Frameworks */,
+				74DABAE3165A93CD35372D90769E05BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
+			productName = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
+			productReference = EB611719E29B0A59756A4D653A862121 /* CheckmarkSegmentedControl.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F137CC361DB95E8897B1FC7D63C22308 /* Pods-CheckmarkSegmentedControl_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70133BAEF9B021C9BC96AA4C3198A723 /* Build configuration list for PBXNativeTarget "Pods-CheckmarkSegmentedControl_Example" */;
+			buildPhases = (
+				C285B43ABCAC1836249727B2AF9D2E14 /* Sources */,
+				D009F9D4F45712D474307C7C36865ADA /* Frameworks */,
+				F2D0E8E729820053902A00996A731809 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E3A89EE45660D5B314D70CB4242FAE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-CheckmarkSegmentedControl_Example";
+			productName = "Pods-CheckmarkSegmentedControl_Example";
+			productReference = 62DD05AB096D3FB6AF8B40B315497AF8 /* Pods_CheckmarkSegmentedControl_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				264A724F19022AD088CDA641FEC57DBB /* CheckmarkSegmentedControl */,
+				A4140011B77C3E290081379F92E99269 /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */,
+				F137CC361DB95E8897B1FC7D63C22308 /* Pods-CheckmarkSegmentedControl_Example */,
+				9F445A52E8DC4B2884A6297C7DFBE0F3 /* Pods-CheckmarkSegmentedControl_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74DABAE3165A93CD35372D90769E05BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62A89085F8E172A90BD6B0A8AEF64EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9714636DFE99F626FE302DE9BD08B600 /* CheckmarkSegmentedControl.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1671A7399D5ACCB42A35081A1649C040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39EF810C71FE802CFC129503A6D019E1 /* CheckmarkSegmentedControl-dummy.m in Sources */,
+				7AF321C343ED6011DF801037841C0197 /* CheckmarkSegmentedControl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33250806A9191DB3D2423140870C7BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C285B43ABCAC1836249727B2AF9D2E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E8EE9C8C3DE8DDF2ACBDE8E0AB30E8 /* Pods-CheckmarkSegmentedControl_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAADEA86FC556C12ABD8C1FACF2CDCA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6CEA40DDB711689819E10ABEA0AD48 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40B72D91EE43ADA10EAF050A6B653295 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
+			target = A4140011B77C3E290081379F92E99269 /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */;
+			targetProxy = E494B97DF414BB2F6313DA377BCF5055 /* PBXContainerItemProxy */;
+		};
+		5E3A89EE45660D5B314D70CB4242FAE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CheckmarkSegmentedControl;
+			target = 264A724F19022AD088CDA641FEC57DBB /* CheckmarkSegmentedControl */;
+			targetProxy = 791A00E320E7C4EDDECE8E043DF83A3B /* PBXContainerItemProxy */;
+		};
+		7DC5EB60B40A473643789D6F1D34AED2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CheckmarkSegmentedControl;
+			target = 264A724F19022AD088CDA641FEC57DBB /* CheckmarkSegmentedControl */;
+			targetProxy = 32672893868208E88A6D2746008D0FAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0DF276E9D54FB0F3314E1BCE5F448542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EC0702EF9BD1230920D8C3717CAA8F /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CheckmarkSegmentedControl_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26312B311DE464492BE7A8E653E1DF2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11010140F3A0394A2E5CB5AB3112317C /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CheckmarkSegmentedControl_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BBF8F387329B15F1BECE9DD579341AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E39AF95BEA458920DE4B048FC5B443 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CheckmarkSegmentedControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CheckmarkSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D104B1623BDF9B9BF39973C86308CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F400A4920EA4394AC4E3847B9F8D3730 /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CheckmarkSegmentedControl_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		49AE7742B1243069BFC4110A961FC4DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100D1CB4F790B542B6FC77F76CE7D505 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CheckmarkSegmentedControl_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A275052E03D5098546F109D9128DDFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E39AF95BEA458920DE4B048FC5B443 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CheckmarkSegmentedControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CheckmarkSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7A315471811673282B187F64933314F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E39AF95BEA458920DE4B048FC5B443 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = CheckmarkSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F8B3F6AA4AA35D82FE1D8DD4CB4C0207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E39AF95BEA458920DE4B048FC5B443 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = CheckmarkSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F0931E0601BF5D04C4CEF3FE08163C1 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BBF8F387329B15F1BECE9DD579341AC /* Debug */,
+				A275052E03D5098546F109D9128DDFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70133BAEF9B021C9BC96AA4C3198A723 /* Build configuration list for PBXNativeTarget "Pods-CheckmarkSegmentedControl_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26312B311DE464492BE7A8E653E1DF2C /* Debug */,
+				3D104B1623BDF9B9BF39973C86308CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B4D93302CCB22AD02C99EC980F9EC59 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl-CheckmarkSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7A315471811673282B187F64933314F /* Debug */,
+				F8B3F6AA4AA35D82FE1D8DD4CB4C0207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DED598FC48B90B863B940A23E24C32A /* Build configuration list for PBXNativeTarget "Pods-CheckmarkSegmentedControl_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DF276E9D54FB0F3314E1BCE5F448542 /* Debug */,
+				49AE7742B1243069BFC4110A961FC4DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
