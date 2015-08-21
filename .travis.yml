@@ -1,3 +1,9 @@
 language: objective-c
+podfile: Example/Podfile
 osx_image: xcode6.4
-script: xctool test -project Example/CheckmarkSegmentedControl.xcodeproj -scheme CheckmarkSegmentedControl-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+before_install:
+- gem install cocoapods
+- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+script:
+- set -o pipefail && xcodebuild test -workspace Example/CheckmarkSegmentedControl.xcworkspace -scheme CheckmarkSegmentedControl-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+- pod lib lint --quick
