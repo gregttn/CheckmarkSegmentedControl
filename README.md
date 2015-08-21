@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gregttn/CheckmarkSegmentedControl.svg?branch=master)](https://travis-ci.org/gregttn/CheckmarkSegmentedControl)
+
 # CheckmarkSegmentedControl
 
 CheckmarkSegmentedControl is a customisable alternative to UISegmentedControl.
