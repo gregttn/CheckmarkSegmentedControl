@@ -15,7 +15,16 @@ Visually it looks like radio buttons group with checkmark sign in the middle and
 
 ### Installation
 
-For the moment only manual installation is available. You need to copy CheckmarkSegmentedControl.swift to your project.
+#### Cocoapods
+Include the following in your Podfile:
+
+```ruby
+use_frameworks!
+pod 'CheckmarkSegmentedControl'
+```
+
+#### Manual
+You need to copy CheckmarkSegmentedControl.swift to your project.
 
 ### Usage
 
