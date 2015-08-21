@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/gregttn/CheckmarkSegmentedControl.svg?branch=master)](https://travis-ci.org/gregttn/CheckmarkSegmentedControl)
+[![Pod Version](https://img.shields.io/cocoapods/v/CheckmarkSegmentedControl.svg?style=flat)](https://cocoapods.org/pods/CheckmarkSegmentedControl)
 
 # CheckmarkSegmentedControl
 
