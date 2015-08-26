@@ -1,8 +1,8 @@
 {
   "name": "CheckmarkSegmentedControl",
   "version": "0.1.0",
-  "summary": "A short description of CheckmarkSegmentedControl.",
-  "description": "",
+  "summary": "CheckmarkSegmentedControl is a customisable alternative to UISegmentedControl.",
+  "description": "CheckmarkSegmentedControl is a customisable alternative to UISegmentedControl. Visually it looks like radio buttons group with checkmark sign in the middle and animated border on selection. Each option can be fully customised.",
   "homepage": "https://github.com/gregttn/CheckmarkSegmentedControl",
   "license": "MIT",
   "authors": {
@@ -22,5 +22,6 @@
     "CheckmarkSegmentedControl": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "frameworks": "UIKit"
 }

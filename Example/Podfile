@@ -7,6 +7,6 @@ end
 
 target 'CheckmarkSegmentedControl_Tests', :exclusive => true do
   pod "CheckmarkSegmentedControl", :path => "../"
-
+  pod "Nimble", '~> 1.0.0' 
   
 end
