@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func optionSelected(sender: AnyObject) {
-        println("Selected option: \(checkmark.options[checkmark.selectedIndex])")
+        print("Selected option: \(checkmark.options[checkmark.selectedIndex])")
     }
 }
 
