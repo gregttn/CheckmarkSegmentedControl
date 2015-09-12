@@ -219,13 +219,13 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     func testShouldResizeZeroFrameToMinimumSize() {
         let largestLabelSize = defaultOptions.map({ self.sizeForText($0, font: self.checkmark.titleFont) })
             .sort({ $0.width > $1.width}).first!
-        let bestWidth = Int(largestLabelSize.width) * checkmark.options.count
-        let bestHeight = Int(largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
+        let bestWidth: CGFloat = largestLabelSize.width * CGFloat(checkmark.options.count)
+        let bestHeight: CGFloat = largestLabelSize.height + CGFloat(CheckmarkSegmentedControl.minCheckmarkHeight)
         
         let resultSize = checkmark.sizeThatFits(CGSizeZero)
         
-        expect(Int(floor(resultSize.width))) == bestWidth
-        expect(Int(resultSize.height)) == bestHeight
+        expect(resultSize.width).to(equal(bestWidth))
+        expect(resultSize.height).to(equal(bestHeight))
     }
     
     func testShouldNotChangeCorrectSize() {
