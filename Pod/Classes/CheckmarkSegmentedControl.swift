@@ -62,7 +62,7 @@ public class CheckmarkSegmentedControl: UIControl {
         }
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -80,7 +80,7 @@ public class CheckmarkSegmentedControl: UIControl {
     
     override public func sizeThatFits(size: CGSize) -> CGSize {
         let largestLabelSize = options.map({ self.sizeForLabel($0.title) })
-                                    .sorted({ $0.width > $1.width}).first
+                                    .sort({ $0.width > $1.width}).first
         
         if let largestLabelSize = largestLabelSize {
             let minAllowedSize = CGSizeMake(largestLabelSize.width * CGFloat(options.count), largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
@@ -217,10 +217,13 @@ public class CheckmarkSegmentedControl: UIControl {
     }
     
     // MARK: respond to touches
-    override public func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        let touch: UITouch = touches.first as! UITouch
+    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        guard let touch: UITouch = touches.first else {
+            return
+        }
+        
         let location = touch.locationInView(self)
-
+        
         if CGRectContainsPoint(bounds, location) {
             let sectionWidth = self.bounds.width / CGFloat(options.count)
             let index = Int(location.x / sectionWidth)
@@ -242,7 +245,7 @@ public class CheckmarkSegmentedControl: UIControl {
     }
 }
 
-public struct CheckmarkOption: Printable {
+public struct CheckmarkOption: CustomStringConvertible {
     public let title: String
     public let borderColor: UIColor
     public let fillColor: UIColor
