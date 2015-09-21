@@ -7,197 +7,197 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04E9BA7BC30C136E9EE9AB82C88DF6BD /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7FF425507EE08447B96FF45310D3E /* SourceLocation.swift */; };
-		12143FCE1D7E80A4429E106A81CFF236 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3868949692E94F7B18544FCFC142642 /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		141510D75DB560A0A626A36E901A0B9D /* CheckmarkSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C167E59D91FB6F1FBD3ED8DC2187646 /* CheckmarkSegmentedControl-dummy.m */; };
-		1923D25BD224D52578DFD92BF8F1E5EA /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A09FF20C5B99602F681D2D32E49632 /* NMBExceptionCapture.m */; };
+		001A86EDFEA95BCA08F59FF551E47635 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3477AA9CC025808C4AD7068FEA359D7 /* Nimble-dummy.m */; };
+		011D722E2A1BFD696D9C84E27C758C56 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B368ED0263ABAB3ADC70EEAD44C5884 /* FailureMessage.swift */; };
+		038D5C99900094F30C36570C3618CDB3 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5F9F170DA5611BF09C3466BDABC6C /* Match.swift */; };
+		05F17A1F0C59C5B1CDA4EF0BCCD6C7FA /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = E73D8EA6D6714DEFDA6FF65BB3D3EC06 /* DSL.m */; };
+		08CB0DA2314E9BCFE0FE3638C46C5B90 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9833CF1C1FBEDB14267CBC48327C /* SourceLocation.swift */; };
+		10F81039AF797A2D036AB29FD7E57D25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCAEF7A80AFC63F31C7C7EE44A76F46 /* Foundation.framework */; };
+		1542602256D7457F5F60AA3AE4FE994C /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998417B6F20D297D154C4E1F395D9F28 /* AssertionDispatcher.swift */; };
+		18CAB19AA46FAB5FACD8E7512DDF7A6B /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3189D636EB6EBE082754A9315BBCF881 /* BeLessThan.swift */; };
 		1BF0CA7F6FB50E562DC1C68FD4997BF0 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF20FA9191F198E325316D16B90C0C3 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m */; };
-		1CA10C1DEF4B53CC814B7F6A9F31F53D /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6669125F5B0CA6E48D134A6F0CE349C9 /* BeGreaterThan.swift */; };
-		21E34F7856243AB777594B086D0020E4 /* ObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77022633B3AF7152AEE913F83BA34A3 /* ObjCMatcher.swift */; };
-		2668C8D9EC40C0707489F2DB651F3443 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F63D609F3F455212FC98B4B8E80187 /* BeLessThan.swift */; };
-		2A8823223D6E2DF35907142963E9C004 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A18431EF97D8463BE1C6535E1587CD4B /* Nimble-dummy.m */; };
-		2BA452044BEF7AB5B4FAA47E7E11DFAE /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EAF260415F1748A58849FD5A3527B9 /* AssertionRecorder.swift */; };
-		2EBBEBE9684F8B2F0BD94171735CDDA7 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F89A5BADDD5B24BDCB029B928CFE2F /* BeEmpty.swift */; };
-		366B2A3AB7F5CAD0FB8DCC5C9B40E778 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A21F930A4CF8FE2A8990D63A938A31 /* ThrowError.swift */; };
-		3C3315868D8356FE49C1410911E4C22D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132A432CCCC9FABF33839A8FE90D2DA1 /* UIKit.framework */; };
-		50D63B08A9AC0F12BC214772482445BE /* CheckmarkSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F85C6220B727CCDE948DD9BE5163F /* CheckmarkSegmentedControl.swift */; };
-		52FC73690839025008698BA7E8DA79E1 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 465AD7EE17B2EEADBA1C838646DC4502 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54B291B64E9C7BCDD0B27F30A1EC64C8 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052EA0840E0B4A5811992300DD8CB1A /* BeAKindOf.swift */; };
+		1C36DAAC072E8DCA19F65EF2232D8092 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84241D8876DF0E50D9704DBFB7DD26CE /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2365CCFDD820FA6C7968551863C6939A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCAEF7A80AFC63F31C7C7EE44A76F46 /* Foundation.framework */; };
+		23C94A04E2EB4B3A45FEF86F61738831 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED9C1484A1192BB85A9602E16C2823C /* BeGreaterThanOrEqualTo.swift */; };
+		2AF17D76D34970D363AC1B9BA80F23B1 /* ObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023A7DE3814B184D8A0B20CF6498902 /* ObjCMatcher.swift */; };
+		3314381C12FC6212795D6B6E68D3EA40 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90D474213A978E9330B8D7ADB0941D /* Functional.swift */; };
+		37C48D96B98C9FF1364C9D0762199494 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890FE3B6A45E667655521E9A7B1B55E /* AsyncMatcherWrapper.swift */; };
+		39CDECC261F9E9FC088975688EAB9AC0 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91420863F18493C39E3F01DE6F6201A /* Expectation.swift */; };
+		3C35CD60523BAD198ED2FAE62DBA0F12 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736A6D8452A525B67DE141A465988329 /* BeLogical.swift */; };
+		3EF39878408F19160FA0BAD3DD7EBBFC /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D27722D83BC3D9312A23783CD5A433 /* Poll.swift */; };
+		448A675F54AE0553804EEFEC201D0FF6 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C3300C12AD0F62600067D634600090 /* Contain.swift */; };
+		49E84B5D1B4DEEA68C23F983E0B8B8B3 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28ABBBDA48301F3B41B294BFB74DE0 /* Stringers.swift */; };
+		4D7258A09D45386D92BF3DB5B3D4B7D1 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FF8573C698E8AA712B0203D7CEA38D /* BeEmpty.swift */; };
+		4DD4E9C0C7E509DEF97DD02CB3ADB401 /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932EC6A8D3380EC06AB67934B9D11A8 /* BeIdenticalTo.swift */; };
+		4E6E819BA156F67B8364767923767154 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77415285B6ABEF7D55E69C0EEE8F3E07 /* BeGreaterThan.swift */; };
 		57661AAE5A3377BF2ECA3E611FE29667 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31083979F4E77ECA8AB87BD900557698 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B709149CA7315BB70AFF70EF14B4235 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = C206B784D8FCCBBF7EE844635A516AF6 /* Functional.swift */; };
-		5C9825B12F9D4AC581E7D4AE017599EE /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B01C0A71CA8DB12D6AC61C09D3DA37 /* MatcherFunc.swift */; };
-		61A017308321F7E7E9A0A191A0FB0370 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C710099D16ACE66DD9EB45544D1E419 /* AsyncMatcherWrapper.swift */; };
-		61F31D7A76A82F7098FB741D7049C6AD /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9CAE0510ECA8924D2574EC06E438D /* Poll.swift */; };
-		627932349077925D7E2C906375796675 /* CheckmarkSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B456A08C2DEE077EC2C134521DE74365 /* CheckmarkSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70E32D2BF504148236A17D92FD9F5C9A /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B5DFA826686480410463123AD4ADE2 /* AdapterProtocols.swift */; };
-		71E3ADC67A93569C532AE8EFE57321E3 /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CEDE57B4B2A950D9B14641CB2BA6A3 /* DSL.m */; };
-		7249F9581FB5A294964B8E9A349BD279 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB221AB10E53C0F3F71D2C2AD368CC /* DSL+Wait.swift */; };
+		58BA02CA933FF79BE0F30A70B47A5BE5 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF8EF3C1CC9F8247B9B47F25D4C3BDD /* DSL.swift */; };
+		5921CDEE13C72105183E639CCAAE9742 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 66295FBDB70F4E5F9551DA82E06354DC /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A0281F32B980BA54592DD957BEFF08F /* CheckmarkSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEED0E090EAC6F47CD98B829968E2522 /* CheckmarkSegmentedControl-dummy.m */; };
+		635D2D2C5316B9B4A3B6C0FEEA4CC40C /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D390C7A8FC48159BE0E088F6BE5F4 /* AssertionRecorder.swift */; };
+		63A1482C116FE5EE5304938689661F69 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F7CB5C2DAFF222C31CEDDEA554544C /* EndWith.swift */; };
+		745702EB5AF8E82D7D605F6FB89E4C9E /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92760515F25A42717821D820A83B057 /* AdapterProtocols.swift */; };
+		77850CDB8FA043022311F62E9DA0A546 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE277C6B9C7B0E4429D1AFD98F4699B /* BeLessThanOrEqual.swift */; };
 		77E8EE9C8C3DE8DDF2ACBDE8E0AB30E8 /* Pods-CheckmarkSegmentedControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF0523D0B4E952644B5FE6E02A3FE6 /* Pods-CheckmarkSegmentedControl_Example-dummy.m */; };
-		783D726D55A9FE33AE071300094A39C3 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862789E0BAA2AD8801A7C8C3478B14C /* BeNil.swift */; };
-		7C1924B7DC2BBC2DA9385E210ED3ACBB /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D68A2610EFC67B45E3480DA7DFBB7 /* BeGreaterThanOrEqualTo.swift */; };
-		7F16D93B4DE9F1B1D07BC6E0C14D63AE /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131B381897C2F71FC7C99DDB2C189C9C /* BeLessThanOrEqual.swift */; };
-		80874BC3B25E6C2EE3960BA75D2A5917 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B30A8DDABE4157A957D0F21C71FAA1 /* BeLogical.swift */; };
-		8E33D739BADCCE059F058745A4E4A33F /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8582752031F8BAABBE323DB645AAC170 /* Match.swift */; };
-		8FBA3CD6D8B036E9764DBDC134847E1D /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839C159ACEEBFF46C786D73A8C0AE65 /* AllPass.swift */; };
-		94EC9F088F365A44F88E487A0B2D920A /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B02FB74D381AF0AA2EB206962F708 /* BeIdenticalTo.swift */; };
-		9501DE8F1994714448D5488AD0D0A473 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = C1741B0EDC1C1BF818EDFF543FC885FD /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97C4E361CDA662CE118F4C127340D118 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40340FA4B45A18D3852E719F90D4C35 /* Contain.swift */; };
-		999562FEC44FF930491991D22D7142F7 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E3858029AF2BC4AA750EDC83F47116 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AA8720F2FD1C041CA861D8B3277C8BC /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDE54B3D16E2C010F1705D173D7EFEC /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		800D0502FB146D1BF83DF75E3998AF7D /* CheckmarkSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69647F4318FA6A496DF3CA1C43D5563D /* CheckmarkSegmentedControl.swift */; };
+		8819C871B5C265C811CB94B549ABBEBD /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72573A4BADFB20F5A252504E6758120 /* BeginWith.swift */; };
+		8920D15EDAB38426F43FB1257A453C35 /* CheckmarkSegmentedControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 359185C087093E058683A489515D57F4 /* CheckmarkSegmentedControl.bundle */; };
+		901B3E72294C197649532007DC6D1415 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29356CB44F5F75772DF42E2B10793CCC /* BeAnInstanceOf.swift */; };
+		9107863292E82A7BE8A99B86BEEE6161 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FD2E9095B120E394D6F50CB4AB661C /* NimbleXCTestHandler.swift */; };
+		91B53C930FD075709C03ACD8BFB4B77C /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F6DE90AFBC884542360D70C5918B0 /* AllPass.swift */; };
+		9248B00996E0D8F82E1A33F55E64A2A0 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1536B041DA116B7D4E54DFFAE15AE5 /* DSL+Wait.swift */; };
+		9C1FDBC8ED10FF203A2A87FF219864D2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33604C0F4C4ACE1567738A2DB87D10A /* XCTest.framework */; };
 		9E2CFBD70001A01BA624E8CD4B5B5D46 /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB14DEBE32CB0C8A60B8D1CE36D7E03C /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A21D0049A2414805A014BFFCA859F4BF /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF20C273DA7FE4F19AD1BD32CA5FACD /* Equal.swift */; };
-		A28EC366AECE12DBE7C9100F77F496B7 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAEE23E34B0588CC474EA7BEC677A /* Expression.swift */; };
-		A80CE71D8A20FFCE5F604937C590ECE6 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635FAD5DE3EC587B62B3F9019D18B8A /* NimbleXCTestHandler.swift */; };
-		B2722FA544DDBB0205420AF5661E36A2 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A70A441A96AF4C2EEF6BE48461D588 /* MatcherProtocols.swift */; };
-		B7B64DF526857EF98ECE33C7E80DF99B /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC730B0F976F27EBAAF174E789E9A109 /* BeAnInstanceOf.swift */; };
-		BDEEB5C4B2155758EF1EBBA3047F51C4 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05B2822745D1065F672FE84F0CAA05 /* EndWith.swift */; };
-		BEBD332AA383BE68F9D7B289B8098754 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53F22127BE519C070A416B918167389 /* Foundation.framework */; };
-		C7B2935FAC7EF71C668D97A9BB75F02A /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951A8FB1091AE497BA1513C463E0EB /* BeCloseTo.swift */; };
-		CC45ECB7C61C2835EBD1E897749319A8 /* ObjCExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E0ABA4708483BFB84663FDD032751 /* ObjCExpectation.swift */; };
-		CCA6AB81B96B3939D58075EB69FC6707 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861F400E4A463D466B53BFD22FA798D /* AssertionDispatcher.swift */; };
-		CD28720829A0C3B6353705E013708A8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53F22127BE519C070A416B918167389 /* Foundation.framework */; };
-		CF64918DA25BB8BE7EE5642D114C86C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53F22127BE519C070A416B918167389 /* Foundation.framework */; };
-		CF687C666B36A29E793BB7F994DD7C80 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872A2742E29D1D1C0EC938163198DD69 /* XCTest.framework */; };
-		D6C149E415EDE0ACFC0302D1009525D3 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887615452EA60AA330680E76C8B082F6 /* Stringers.swift */; };
-		D8291231AA3D63D683D2ABEF3F880889 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B0D8D7C7117AB21447A0136179D4B /* RaisesException.swift */; };
-		E03F8DDEB9796952A8F6B9164E543843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53F22127BE519C070A416B918167389 /* Foundation.framework */; };
-		E87C4E5631A4221DC3546F35AC599EB2 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD66DC8D3AEFDAA2193DCC94F9C168 /* Expectation.swift */; };
-		EA976B9546B267C37AC636987080D4A4 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97D3E081FFB0F24E08A435D478080A /* DSL.swift */; };
-		F1BAE95E70BF905D35E3F86A5859C2E8 /* CheckmarkSegmentedControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3ACB95DED3374BE3EB91144DA523F88D /* CheckmarkSegmentedControl.bundle */; };
-		F6866EAFC4A92E1BA95C24A96456AEEB /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29613CAB2550D8434AAD3E18B798B55 /* FailureMessage.swift */; };
-		F81DFA2D40A97880E9CD8CF4E24BF838 /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F5ACE51C314B0919E454B63FC6B76 /* BeginWith.swift */; };
+		A7098B86DA108566A3696F8474CE03B4 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = D28FF74983EC046BBE21E81D58C045E7 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCD1CF52A9FF49A6151BF1D55F3B00AF /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC70C02BE123F9B82A1C7613A66234 /* Expression.swift */; };
+		C0246721300D59C9B8556C7D190BE36C /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FF37A74E610A657DEEBA442314BCEE /* Equal.swift */; };
+		C0D75B9A689B4FF3E6589C0B4D97E29A /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712831FD80B54DFA3B4C4D3F17A76192 /* RaisesException.swift */; };
+		C1D4F597F759E30F7D94AB5CD66CCF70 /* CheckmarkSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD96508B850B0BE63BE9CA6A05B5DE8 /* CheckmarkSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2533050FFAB5E97A81FFF9546B881A4 /* ObjCExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9E924244B5D92F2B0478707A83088 /* ObjCExpectation.swift */; };
+		CF64918DA25BB8BE7EE5642D114C86C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCAEF7A80AFC63F31C7C7EE44A76F46 /* Foundation.framework */; };
+		D04A3D93ACF3CC89FF5418864AB66173 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9CA627B1D06E0B9925A681CA463D3 /* NMBExceptionCapture.m */; };
+		D3C52F7EC670BB0437E640BBBA24710A /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC887095CA6220C2EF8612C0BAF2BB /* MatcherFunc.swift */; };
+		DD108A46DE1CF4BDF4C900583A777180 /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA84CD057C735A0863E4431B06D583 /* BeCloseTo.swift */; };
+		E03F8DDEB9796952A8F6B9164E543843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCAEF7A80AFC63F31C7C7EE44A76F46 /* Foundation.framework */; };
+		E054B71D4378DC72AE9912B30927DC04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A865A4258309EC3AD1014B49698A737 /* UIKit.framework */; };
+		E45AAA21D0124CE2A6FB904094F2D6E9 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883ADDB99D5E0E10A4AEBF522E0BB09 /* MatcherProtocols.swift */; };
+		EA7C250776D66E6EA004C76182A05BFD /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E176126663F01B5B9ED558CDB600D /* BeNil.swift */; };
+		F2DF8F9B27885C116F3F0FE6D1C79B0A /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508B0541F23FB41145D8E8301DDC250 /* BeAKindOf.swift */; };
+		FA13A0A60407750014D65390BDDF6688 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C61449C0BF903DE244BC72E6FA9A63 /* ThrowError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2A596B5511199E65AEA2CC54C875C85A /* PBXContainerItemProxy */ = {
+		291AABA155698FED291D8814E0D7C3DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0C4C75AD551F55F485C8B9AD730799B0;
+			remoteGlobalIDString = 5B2D6E7CF593D164CD9C9C8B4AC84C6D;
+			remoteInfo = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
+		};
+		523BDCC0BEE92188041691538871E614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB0641382CFC4112A6AEB8B042E0610A;
+			remoteInfo = CheckmarkSegmentedControl;
+		};
+		612320D10C9C985810D9EDE94972A60D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DBBFB4845FB652AAAADFCFBEA641EF5;
 			remoteInfo = Nimble;
 		};
-		2F30EA05CC1A47BD7B3BEECB9717A233 /* PBXContainerItemProxy */ = {
+		9B88479AB36C5CCEE2D95DD31252DBBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CBD468382E129B55327825AE6BC1B20E;
+			remoteGlobalIDString = CB0641382CFC4112A6AEB8B042E0610A;
 			remoteInfo = CheckmarkSegmentedControl;
-		};
-		35FC098E9697444C64DEFD3DB6039BFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CBD468382E129B55327825AE6BC1B20E;
-			remoteInfo = CheckmarkSegmentedControl;
-		};
-		EDB2DE72CCD7F75DF23E78F2BB104DCF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04B252F31C8C72AD902107BCFA3566C7;
-			remoteInfo = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05F89A5BADDD5B24BDCB029B928CFE2F /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
+		0C1536B041DA116B7D4E54DFFAE15AE5 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		0DF20FA9191F198E325316D16B90C0C3 /* Pods-CheckmarkSegmentedControl_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckmarkSegmentedControl_Tests-dummy.m"; sourceTree = "<group>"; };
-		131B381897C2F71FC7C99DDB2C189C9C /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
-		132A432CCCC9FABF33839A8FE90D2DA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		1578C1CF52E7F0E5F0495D228F3FFC9A /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17E9CAE0510ECA8924D2574EC06E438D /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
-		1862789E0BAA2AD8801A7C8C3478B14C /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
-		220B0D8D7C7117AB21447A0136179D4B /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
+		0FE277C6B9C7B0E4429D1AFD98F4699B /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
+		13F5F9F170DA5611BF09C3466BDABC6C /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
+		16FF8573C698E8AA712B0203D7CEA38D /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
+		17BC70C02BE123F9B82A1C7613A66234 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Nimble/Expression.swift; sourceTree = "<group>"; };
+		17C3300C12AD0F62600067D634600090 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
+		29356CB44F5F75772DF42E2B10793CCC /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
+		2CDA84CD057C735A0863E4431B06D583 /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
+		2DDE54B3D16E2C010F1705D173D7EFEC /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
 		31083979F4E77ECA8AB87BD900557698 /* Pods-CheckmarkSegmentedControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CheckmarkSegmentedControl_Example-umbrella.h"; sourceTree = "<group>"; };
+		3189D636EB6EBE082754A9315BBCF881 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		332BCD525D454C2C52B21A8DA7DF0D25 /* Pods-CheckmarkSegmentedControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheckmarkSegmentedControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		36A09FF20C5B99602F681D2D32E49632 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
+		359185C087093E058683A489515D57F4 /* CheckmarkSegmentedControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckmarkSegmentedControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		3827CB0D9EE9BABF4517038BF20A74A5 /* CheckmarkSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CheckmarkSegmentedControl.modulemap; sourceTree = "<group>"; };
-		3ACB95DED3374BE3EB91144DA523F88D /* CheckmarkSegmentedControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckmarkSegmentedControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F6D68A2610EFC67B45E3480DA7DFBB7 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
-		40B01C0A71CA8DB12D6AC61C09D3DA37 /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
+		3A28ABBBDA48301F3B41B294BFB74DE0 /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
+		3D90D474213A978E9330B8D7ADB0941D /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
+		3DCAEF7A80AFC63F31C7C7EE44A76F46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		430E2164203DBB323C3E80F2D225A11D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45A70A441A96AF4C2EEF6BE48461D588 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
-		45CEDE57B4B2A950D9B14641CB2BA6A3 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Nimble/objc/DSL.m; sourceTree = "<group>"; };
-		465AD7EE17B2EEADBA1C838646DC4502 /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Nimble/objc/DSL.h; sourceTree = "<group>"; };
+		4BA9CA627B1D06E0B9925A681CA463D3 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		55514473E990EA9C05642FC6DD70AE7C /* Pods-CheckmarkSegmentedControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckmarkSegmentedControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		62B5DFA826686480410463123AD4ADE2 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
+		5883ADDB99D5E0E10A4AEBF522E0BB09 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
+		58AC887095CA6220C2EF8612C0BAF2BB /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
+		59FF37A74E610A657DEEBA442314BCEE /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
 		62B62DA7444B753278E4220152550DB6 /* Pods_CheckmarkSegmentedControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD05AB096D3FB6AF8B40B315497AF8 /* Pods_CheckmarkSegmentedControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DF0523D0B4E952644B5FE6E02A3FE6 /* Pods-CheckmarkSegmentedControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckmarkSegmentedControl_Example-dummy.m"; sourceTree = "<group>"; };
-		6669125F5B0CA6E48D134A6F0CE349C9 /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
+		66295FBDB70F4E5F9551DA82E06354DC /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Nimble/objc/DSL.h; sourceTree = "<group>"; };
 		67D6868A7AC33BE4A9161CDA389E86B9 /* CheckmarkSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CheckmarkSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
 		6800B6337370DF1112D04850EA64285B /* Pods-CheckmarkSegmentedControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckmarkSegmentedControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		69647F4318FA6A496DF3CA1C43D5563D /* CheckmarkSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControl.swift; sourceTree = "<group>"; };
 		6A904203FF01CB126B34A290BD6757D3 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
-		6CBB221AB10E53C0F3F71D2C2AD368CC /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		6CC7806993B2E1CB5BF2D3E544D517A6 /* Pods-CheckmarkSegmentedControl_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Tests-resources.sh"; sourceTree = "<group>"; };
-		70586924B1AE6FAF4B04EFD8E8C7F051 /* Nimble-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Nimble-Private.xcconfig"; sourceTree = "<group>"; };
-		72B30A8DDABE4157A957D0F21C71FAA1 /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
+		712831FD80B54DFA3B4C4D3F17A76192 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
+		736A6D8452A525B67DE141A465988329 /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		748CE2A69348D5232689811E15F3A1CD /* Pods-CheckmarkSegmentedControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Example-frameworks.sh"; sourceTree = "<group>"; };
-		76960A906D24F35D70A6F145250BBD51 /* CheckmarkSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CheckmarkSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C167E59D91FB6F1FBD3ED8DC2187646 /* CheckmarkSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CheckmarkSegmentedControl-dummy.m"; sourceTree = "<group>"; };
-		7D97D3E081FFB0F24E08A435D478080A /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Nimble/DSL.swift; sourceTree = "<group>"; };
-		8582752031F8BAABBE323DB645AAC170 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
-		8635FAD5DE3EC587B62B3F9019D18B8A /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
-		872A2742E29D1D1C0EC938163198DD69 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		887615452EA60AA330680E76C8B082F6 /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
+		77415285B6ABEF7D55E69C0EEE8F3E07 /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
+		7B368ED0263ABAB3ADC70EEAD44C5884 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Nimble/FailureMessage.swift; sourceTree = "<group>"; };
+		7B4D390C7A8FC48159BE0E088F6BE5F4 /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
+		7ED9C1484A1192BB85A9602E16C2823C /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
+		80D27722D83BC3D9312A23783CD5A433 /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
+		84241D8876DF0E50D9704DBFB7DD26CE /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
+		84EC9833CF1C1FBEDB14267CBC48327C /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
+		859F6DE90AFBC884542360D70C5918B0 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
+		8A865A4258309EC3AD1014B49698A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		8B7BA7A0A4D8ADC0AB53A4D3CE337BDC /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8C710099D16ACE66DD9EB45544D1E419 /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Nimble/Wrappers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
 		8C9AA378BC2EBD3A47E14E0FEB17DA20 /* Pods-CheckmarkSegmentedControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheckmarkSegmentedControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E25A28595F85BE78EC76AEE214D4725 /* Nimble-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Nimble-Private.xcconfig"; sourceTree = "<group>"; };
+		8FF8EF3C1CC9F8247B9B47F25D4C3BDD /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Nimble/DSL.swift; sourceTree = "<group>"; };
 		9412C5979BFA61A921419FF82926EB1F /* Pods-CheckmarkSegmentedControl_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Example-resources.sh"; sourceTree = "<group>"; };
+		998417B6F20D297D154C4E1F395D9F28 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
+		9AD96508B850B0BE63BE9CA6A05B5DE8 /* CheckmarkSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CheckmarkSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
 		9C83E4A38E7D29C55603996C09509B48 /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A18431EF97D8463BE1C6535E1587CD4B /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
+		A023A7DE3814B184D8A0B20CF6498902 /* ObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCMatcher.swift; path = Nimble/Wrappers/ObjCMatcher.swift; sourceTree = "<group>"; };
 		A5D2FBF629BD1E3E73D2562BA44B0964 /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A87B02FB74D381AF0AA2EB206962F708 /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
-		A8F63D609F3F455212FC98B4B8E80187 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		AAE9597C98EEE41C3200B80C68CB97C8 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
-		ACF20C273DA7FE4F19AD1BD32CA5FACD /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
 		B16ABEC5CC5A33127651A138897D9C7D /* Pods-CheckmarkSegmentedControl_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckmarkSegmentedControl_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		B2EAF260415F1748A58849FD5A3527B9 /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
-		B456A08C2DEE077EC2C134521DE74365 /* CheckmarkSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CheckmarkSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
-		B6A21F930A4CF8FE2A8990D63A938A31 /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
-		B861F400E4A463D466B53BFD22FA798D /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
+		B3E9E924244B5D92F2B0478707A83088 /* ObjCExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCExpectation.swift; path = Nimble/ObjCExpectation.swift; sourceTree = "<group>"; };
+		B3EB26DF574BEFE1BFF4B49C37C327F8 /* CheckmarkSegmentedControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CheckmarkSegmentedControl-Private.xcconfig"; sourceTree = "<group>"; };
 		B8890E5A587D4809FD918E3F7FF380F8 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
+		B932EC6A8D3380EC06AB67934B9D11A8 /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
 		B9C85FFB01B5A3A9202F14B6B9B42CC5 /* Pods-CheckmarkSegmentedControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheckmarkSegmentedControl_Example.modulemap"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C052EA0840E0B4A5811992300DD8CB1A /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
-		C1741B0EDC1C1BF818EDFF543FC885FD /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
-		C206B784D8FCCBBF7EE844635A516AF6 /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
+		BD2E176126663F01B5B9ED558CDB600D /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
 		C2F0AB912DB4DDF3EE997F6253A12600 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2FDA4A35486C4196F1ABFEE3B377FBE /* CheckmarkSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CheckmarkSegmentedControl.xcconfig; sourceTree = "<group>"; };
-		C3868949692E94F7B18544FCFC142642 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
+		C33604C0F4C4ACE1567738A2DB87D10A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C4DC289FF9783E21F0C9E4403D357CB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C839C159ACEEBFF46C786D73A8C0AE65 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
-		C8951A8FB1091AE497BA1513C463E0EB /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
-		CD4F5ACE51C314B0919E454B63FC6B76 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
-		D2B7FF425507EE08447B96FF45310D3E /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
-		D53F22127BE519C070A416B918167389 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D5E3858029AF2BC4AA750EDC83F47116 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Nimble/Nimble.h; sourceTree = "<group>"; };
-		D77022633B3AF7152AEE913F83BA34A3 /* ObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCMatcher.swift; path = Nimble/Wrappers/ObjCMatcher.swift; sourceTree = "<group>"; };
+		C890FE3B6A45E667655521E9A7B1B55E /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Nimble/Wrappers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
+		CEED0E090EAC6F47CD98B829968E2522 /* CheckmarkSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CheckmarkSegmentedControl-dummy.m"; sourceTree = "<group>"; };
+		D28FF74983EC046BBE21E81D58C045E7 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Nimble/Nimble.h; sourceTree = "<group>"; };
+		D3FD2E9095B120E394D6F50CB4AB661C /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
+		D508B0541F23FB41145D8E8301DDC250 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
+		D8C07C47B3028E18F7A65B31F1780A8C /* CheckmarkSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CheckmarkSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F7CB5C2DAFF222C31CEDDEA554544C /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
+		D91420863F18493C39E3F01DE6F6201A /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Nimble/Expectation.swift; sourceTree = "<group>"; };
+		D92760515F25A42717821D820A83B057 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
 		DB14DEBE32CB0C8A60B8D1CE36D7E03C /* Pods-CheckmarkSegmentedControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CheckmarkSegmentedControl_Tests-umbrella.h"; sourceTree = "<group>"; };
-		DE6DAEE23E34B0588CC474EA7BEC677A /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Nimble/Expression.swift; sourceTree = "<group>"; };
-		E7596FCBAFC28A8CB334FC559C473268 /* CheckmarkSegmentedControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CheckmarkSegmentedControl-Private.xcconfig"; sourceTree = "<group>"; };
-		E97F85C6220B727CCDE948DD9BE5163F /* CheckmarkSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControl.swift; sourceTree = "<group>"; };
-		EE05B2822745D1065F672FE84F0CAA05 /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
-		F29613CAB2550D8434AAD3E18B798B55 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Nimble/FailureMessage.swift; sourceTree = "<group>"; };
-		F3AD66DC8D3AEFDAA2193DCC94F9C168 /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Nimble/Expectation.swift; sourceTree = "<group>"; };
-		F40340FA4B45A18D3852E719F90D4C35 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
+		E72573A4BADFB20F5A252504E6758120 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
+		E73D8EA6D6714DEFDA6FF65BB3D3EC06 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Nimble/objc/DSL.m; sourceTree = "<group>"; };
+		E9C61449C0BF903DE244BC72E6FA9A63 /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
+		F3477AA9CC025808C4AD7068FEA359D7 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
+		F4DFD6183350FC5BF2480E558E86BD2E /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6384D85AEBA12A5D057CA84C89DA926 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F67C8176F130F63DED147A9132AC7E0A /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckmarkSegmentedControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F716202BB06180EC0A710680B67094DA /* Pods-CheckmarkSegmentedControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheckmarkSegmentedControl_Tests.modulemap"; sourceTree = "<group>"; };
-		FB4E0ABA4708483BFB84663FDD032751 /* ObjCExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCExpectation.swift; path = Nimble/ObjCExpectation.swift; sourceTree = "<group>"; };
-		FC730B0F976F27EBAAF174E789E9A109 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		12FA338EAD769B90E4FF379019B114E9 /* Frameworks */ = {
+		1737C4F71A7769D8BF5FB56B8B153970 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEBD332AA383BE68F9D7B289B8098754 /* Foundation.framework in Frameworks */,
-				3C3315868D8356FE49C1410911E4C22D /* UIKit.framework in Frameworks */,
+				10F81039AF797A2D036AB29FD7E57D25 /* Foundation.framework in Frameworks */,
+				9C1FDBC8ED10FF203A2A87FF219864D2 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2BD3CC528CFFB1BC267D9C7EF54F0E04 /* Frameworks */ = {
+		3C3C4DFF2AC25A5B2D3E8BE22760FBB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,20 +212,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99CBCF3CDFA79EEB1DBDA7312DEB6A58 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD28720829A0C3B6353705E013708A8F /* Foundation.framework in Frameworks */,
-				CF687C666B36A29E793BB7F994DD7C80 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D009F9D4F45712D474307C7C36865ADA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E03F8DDEB9796952A8F6B9164E543843 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E71285F68ABC45D85E4545654B5870CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2365CCFDD820FA6C7968551863C6939A /* Foundation.framework in Frameworks */,
+				E054B71D4378DC72AE9912B30927DC04 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +252,7 @@
 		16559A282DEBD8B21DD3C0807FB3927B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E97F85C6220B727CCDE948DD9BE5163F /* CheckmarkSegmentedControl.swift */,
+				69647F4318FA6A496DF3CA1C43D5563D /* CheckmarkSegmentedControl.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -268,9 +268,9 @@
 		3B8137962D5109D5F3D982079CF3F646 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D53F22127BE519C070A416B918167389 /* Foundation.framework */,
-				132A432CCCC9FABF33839A8FE90D2DA1 /* UIKit.framework */,
-				872A2742E29D1D1C0EC938163198DD69 /* XCTest.framework */,
+				3DCAEF7A80AFC63F31C7C7EE44A76F46 /* Foundation.framework */,
+				8A865A4258309EC3AD1014B49698A737 /* UIKit.framework */,
+				C33604C0F4C4ACE1567738A2DB87D10A /* XCTest.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -310,10 +310,10 @@
 			children = (
 				3827CB0D9EE9BABF4517038BF20A74A5 /* CheckmarkSegmentedControl.modulemap */,
 				C2FDA4A35486C4196F1ABFEE3B377FBE /* CheckmarkSegmentedControl.xcconfig */,
-				E7596FCBAFC28A8CB334FC559C473268 /* CheckmarkSegmentedControl-Private.xcconfig */,
-				7C167E59D91FB6F1FBD3ED8DC2187646 /* CheckmarkSegmentedControl-dummy.m */,
+				B3EB26DF574BEFE1BFF4B49C37C327F8 /* CheckmarkSegmentedControl-Private.xcconfig */,
+				CEED0E090EAC6F47CD98B829968E2522 /* CheckmarkSegmentedControl-dummy.m */,
 				67D6868A7AC33BE4A9161CDA389E86B9 /* CheckmarkSegmentedControl-prefix.pch */,
-				B456A08C2DEE077EC2C134521DE74365 /* CheckmarkSegmentedControl-umbrella.h */,
+				9AD96508B850B0BE63BE9CA6A05B5DE8 /* CheckmarkSegmentedControl-umbrella.h */,
 				C4DC289FF9783E21F0C9E4403D357CB0 /* Info.plist */,
 			);
 			name = "Support Files";
@@ -352,10 +352,10 @@
 				F6384D85AEBA12A5D057CA84C89DA926 /* Info.plist */,
 				B8890E5A587D4809FD918E3F7FF380F8 /* Nimble.modulemap */,
 				AAE9597C98EEE41C3200B80C68CB97C8 /* Nimble.xcconfig */,
-				70586924B1AE6FAF4B04EFD8E8C7F051 /* Nimble-Private.xcconfig */,
-				A18431EF97D8463BE1C6535E1587CD4B /* Nimble-dummy.m */,
+				8E25A28595F85BE78EC76AEE214D4725 /* Nimble-Private.xcconfig */,
+				F3477AA9CC025808C4AD7068FEA359D7 /* Nimble-dummy.m */,
 				6A904203FF01CB126B34A290BD6757D3 /* Nimble-prefix.pch */,
-				C3868949692E94F7B18544FCFC142642 /* Nimble-umbrella.h */,
+				84241D8876DF0E50D9704DBFB7DD26CE /* Nimble-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Nimble";
@@ -364,9 +364,9 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3ACB95DED3374BE3EB91144DA523F88D /* CheckmarkSegmentedControl.bundle */,
-				76960A906D24F35D70A6F145250BBD51 /* CheckmarkSegmentedControl.framework */,
-				1578C1CF52E7F0E5F0495D228F3FFC9A /* Nimble.framework */,
+				359185C087093E058683A489515D57F4 /* CheckmarkSegmentedControl.bundle */,
+				D8C07C47B3028E18F7A65B31F1780A8C /* CheckmarkSegmentedControl.framework */,
+				F4DFD6183350FC5BF2480E558E86BD2E /* Nimble.framework */,
 				62DD05AB096D3FB6AF8B40B315497AF8 /* Pods_CheckmarkSegmentedControl_Example.framework */,
 				62B62DA7444B753278E4220152550DB6 /* Pods_CheckmarkSegmentedControl_Tests.framework */,
 			);
@@ -394,48 +394,48 @@
 		E221368D3D4DB179A191E0B1150367C0 /* Nimble */ = {
 			isa = PBXGroup;
 			children = (
-				62B5DFA826686480410463123AD4ADE2 /* AdapterProtocols.swift */,
-				C839C159ACEEBFF46C786D73A8C0AE65 /* AllPass.swift */,
-				B861F400E4A463D466B53BFD22FA798D /* AssertionDispatcher.swift */,
-				B2EAF260415F1748A58849FD5A3527B9 /* AssertionRecorder.swift */,
-				8C710099D16ACE66DD9EB45544D1E419 /* AsyncMatcherWrapper.swift */,
-				C052EA0840E0B4A5811992300DD8CB1A /* BeAKindOf.swift */,
-				FC730B0F976F27EBAAF174E789E9A109 /* BeAnInstanceOf.swift */,
-				C8951A8FB1091AE497BA1513C463E0EB /* BeCloseTo.swift */,
-				05F89A5BADDD5B24BDCB029B928CFE2F /* BeEmpty.swift */,
-				6669125F5B0CA6E48D134A6F0CE349C9 /* BeGreaterThan.swift */,
-				3F6D68A2610EFC67B45E3480DA7DFBB7 /* BeGreaterThanOrEqualTo.swift */,
-				A87B02FB74D381AF0AA2EB206962F708 /* BeIdenticalTo.swift */,
-				A8F63D609F3F455212FC98B4B8E80187 /* BeLessThan.swift */,
-				131B381897C2F71FC7C99DDB2C189C9C /* BeLessThanOrEqual.swift */,
-				72B30A8DDABE4157A957D0F21C71FAA1 /* BeLogical.swift */,
-				1862789E0BAA2AD8801A7C8C3478B14C /* BeNil.swift */,
-				CD4F5ACE51C314B0919E454B63FC6B76 /* BeginWith.swift */,
-				F40340FA4B45A18D3852E719F90D4C35 /* Contain.swift */,
-				465AD7EE17B2EEADBA1C838646DC4502 /* DSL.h */,
-				45CEDE57B4B2A950D9B14641CB2BA6A3 /* DSL.m */,
-				7D97D3E081FFB0F24E08A435D478080A /* DSL.swift */,
-				6CBB221AB10E53C0F3F71D2C2AD368CC /* DSL+Wait.swift */,
-				EE05B2822745D1065F672FE84F0CAA05 /* EndWith.swift */,
-				ACF20C273DA7FE4F19AD1BD32CA5FACD /* Equal.swift */,
-				F3AD66DC8D3AEFDAA2193DCC94F9C168 /* Expectation.swift */,
-				DE6DAEE23E34B0588CC474EA7BEC677A /* Expression.swift */,
-				F29613CAB2550D8434AAD3E18B798B55 /* FailureMessage.swift */,
-				C206B784D8FCCBBF7EE844635A516AF6 /* Functional.swift */,
-				8582752031F8BAABBE323DB645AAC170 /* Match.swift */,
-				40B01C0A71CA8DB12D6AC61C09D3DA37 /* MatcherFunc.swift */,
-				45A70A441A96AF4C2EEF6BE48461D588 /* MatcherProtocols.swift */,
-				C1741B0EDC1C1BF818EDFF543FC885FD /* NMBExceptionCapture.h */,
-				36A09FF20C5B99602F681D2D32E49632 /* NMBExceptionCapture.m */,
-				D5E3858029AF2BC4AA750EDC83F47116 /* Nimble.h */,
-				8635FAD5DE3EC587B62B3F9019D18B8A /* NimbleXCTestHandler.swift */,
-				FB4E0ABA4708483BFB84663FDD032751 /* ObjCExpectation.swift */,
-				D77022633B3AF7152AEE913F83BA34A3 /* ObjCMatcher.swift */,
-				17E9CAE0510ECA8924D2574EC06E438D /* Poll.swift */,
-				220B0D8D7C7117AB21447A0136179D4B /* RaisesException.swift */,
-				D2B7FF425507EE08447B96FF45310D3E /* SourceLocation.swift */,
-				887615452EA60AA330680E76C8B082F6 /* Stringers.swift */,
-				B6A21F930A4CF8FE2A8990D63A938A31 /* ThrowError.swift */,
+				D92760515F25A42717821D820A83B057 /* AdapterProtocols.swift */,
+				859F6DE90AFBC884542360D70C5918B0 /* AllPass.swift */,
+				998417B6F20D297D154C4E1F395D9F28 /* AssertionDispatcher.swift */,
+				7B4D390C7A8FC48159BE0E088F6BE5F4 /* AssertionRecorder.swift */,
+				C890FE3B6A45E667655521E9A7B1B55E /* AsyncMatcherWrapper.swift */,
+				D508B0541F23FB41145D8E8301DDC250 /* BeAKindOf.swift */,
+				29356CB44F5F75772DF42E2B10793CCC /* BeAnInstanceOf.swift */,
+				2CDA84CD057C735A0863E4431B06D583 /* BeCloseTo.swift */,
+				16FF8573C698E8AA712B0203D7CEA38D /* BeEmpty.swift */,
+				77415285B6ABEF7D55E69C0EEE8F3E07 /* BeGreaterThan.swift */,
+				7ED9C1484A1192BB85A9602E16C2823C /* BeGreaterThanOrEqualTo.swift */,
+				B932EC6A8D3380EC06AB67934B9D11A8 /* BeIdenticalTo.swift */,
+				3189D636EB6EBE082754A9315BBCF881 /* BeLessThan.swift */,
+				0FE277C6B9C7B0E4429D1AFD98F4699B /* BeLessThanOrEqual.swift */,
+				736A6D8452A525B67DE141A465988329 /* BeLogical.swift */,
+				BD2E176126663F01B5B9ED558CDB600D /* BeNil.swift */,
+				E72573A4BADFB20F5A252504E6758120 /* BeginWith.swift */,
+				17C3300C12AD0F62600067D634600090 /* Contain.swift */,
+				66295FBDB70F4E5F9551DA82E06354DC /* DSL.h */,
+				E73D8EA6D6714DEFDA6FF65BB3D3EC06 /* DSL.m */,
+				8FF8EF3C1CC9F8247B9B47F25D4C3BDD /* DSL.swift */,
+				0C1536B041DA116B7D4E54DFFAE15AE5 /* DSL+Wait.swift */,
+				D8F7CB5C2DAFF222C31CEDDEA554544C /* EndWith.swift */,
+				59FF37A74E610A657DEEBA442314BCEE /* Equal.swift */,
+				D91420863F18493C39E3F01DE6F6201A /* Expectation.swift */,
+				17BC70C02BE123F9B82A1C7613A66234 /* Expression.swift */,
+				7B368ED0263ABAB3ADC70EEAD44C5884 /* FailureMessage.swift */,
+				3D90D474213A978E9330B8D7ADB0941D /* Functional.swift */,
+				13F5F9F170DA5611BF09C3466BDABC6C /* Match.swift */,
+				58AC887095CA6220C2EF8612C0BAF2BB /* MatcherFunc.swift */,
+				5883ADDB99D5E0E10A4AEBF522E0BB09 /* MatcherProtocols.swift */,
+				2DDE54B3D16E2C010F1705D173D7EFEC /* NMBExceptionCapture.h */,
+				4BA9CA627B1D06E0B9925A681CA463D3 /* NMBExceptionCapture.m */,
+				D28FF74983EC046BBE21E81D58C045E7 /* Nimble.h */,
+				D3FD2E9095B120E394D6F50CB4AB661C /* NimbleXCTestHandler.swift */,
+				B3E9E924244B5D92F2B0478707A83088 /* ObjCExpectation.swift */,
+				A023A7DE3814B184D8A0B20CF6498902 /* ObjCMatcher.swift */,
+				80D27722D83BC3D9312A23783CD5A433 /* Poll.swift */,
+				712831FD80B54DFA3B4C4D3F17A76192 /* RaisesException.swift */,
+				84EC9833CF1C1FBEDB14267CBC48327C /* SourceLocation.swift */,
+				3A28ABBBDA48301F3B41B294BFB74DE0 /* Stringers.swift */,
+				E9C61449C0BF903DE244BC72E6FA9A63 /* ThrowError.swift */,
 				C1EF0396C9EB75CD25BC83283C40E58C /* Support Files */,
 			);
 			path = Nimble;
@@ -444,11 +444,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		26D72991EF03A2A418BD2BEEC4B3A2C3 /* Headers */ = {
+		0722D9948468D97C50A4F4024252D0D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				627932349077925D7E2C906375796675 /* CheckmarkSegmentedControl-umbrella.h in Headers */,
+				5921CDEE13C72105183E639CCAAE9742 /* DSL.h in Headers */,
+				7AA8720F2FD1C041CA861D8B3277C8BC /* NMBExceptionCapture.h in Headers */,
+				1C36DAAC072E8DCA19F65EF2232D8092 /* Nimble-umbrella.h in Headers */,
+				A7098B86DA108566A3696F8474CE03B4 /* Nimble.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +463,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E48E0C21F08F3D2D14568FAC37D6E24C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D4F597F759E30F7D94AB5CD66CCF70 /* CheckmarkSegmentedControl-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2D0E8E729820053902A00996A731809 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,44 +479,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F653CBAF377144413AE8342961248A7D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52FC73690839025008698BA7E8DA79E1 /* DSL.h in Headers */,
-				9501DE8F1994714448D5488AD0D0A473 /* NMBExceptionCapture.h in Headers */,
-				12143FCE1D7E80A4429E106A81CFF236 /* Nimble-umbrella.h in Headers */,
-				999562FEC44FF930491991D22D7142F7 /* Nimble.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		04B252F31C8C72AD902107BCFA3566C7 /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */ = {
+		3DBBFB4845FB652AAAADFCFBEA641EF5 /* Nimble */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6852C38E71AF72A5A092C9A7A328BBFC /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl-CheckmarkSegmentedControl" */;
+			buildConfigurationList = 312782B0432508C2F413C8C848D17181 /* Build configuration list for PBXNativeTarget "Nimble" */;
 			buildPhases = (
-				5F7CF1DD266A9FEABBEC336F4208CECF /* Sources */,
-				2BD3CC528CFFB1BC267D9C7EF54F0E04 /* Frameworks */,
-				FAB20850132DA31A014503121260B103 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
-			productName = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
-			productReference = 3ACB95DED3374BE3EB91144DA523F88D /* CheckmarkSegmentedControl.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		0C4C75AD551F55F485C8B9AD730799B0 /* Nimble */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DDB9091C128B45AFB713922D3014C219 /* Build configuration list for PBXNativeTarget "Nimble" */;
-			buildPhases = (
-				1FBF15F62A8BD60669DCD894C9C8894F /* Sources */,
-				99CBCF3CDFA79EEB1DBDA7312DEB6A58 /* Frameworks */,
-				F653CBAF377144413AE8342961248A7D /* Headers */,
+				5B0E8C878DDB8F2DA9FC1815467C5F25 /* Sources */,
+				1737C4F71A7769D8BF5FB56B8B153970 /* Frameworks */,
+				0722D9948468D97C50A4F4024252D0D5 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -513,8 +496,25 @@
 			);
 			name = Nimble;
 			productName = Nimble;
-			productReference = 1578C1CF52E7F0E5F0495D228F3FFC9A /* Nimble.framework */;
+			productReference = F4DFD6183350FC5BF2480E558E86BD2E /* Nimble.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		5B2D6E7CF593D164CD9C9C8B4AC84C6D /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C110764D9366FB3211A924237008F57 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl-CheckmarkSegmentedControl" */;
+			buildPhases = (
+				213388B0A56F420AE6E0CC47F430300F /* Sources */,
+				3C3C4DFF2AC25A5B2D3E8BE22760FBB5 /* Frameworks */,
+				371A1F1B049C80EC11D7D5662CF11EC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
+			productName = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
+			productReference = 359185C087093E058683A489515D57F4 /* CheckmarkSegmentedControl.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		91783BD10A5CECB4C961FEC3F54E7702 /* Pods-CheckmarkSegmentedControl_Tests */ = {
 			isa = PBXNativeTarget;
@@ -527,31 +527,31 @@
 			buildRules = (
 			);
 			dependencies = (
-				81767CD488297E35FC8218132F239FCC /* PBXTargetDependency */,
-				420B6ECD12DDAE45D2A1817904851E46 /* PBXTargetDependency */,
+				62AEF6E261850D969E1098463B9DB2E4 /* PBXTargetDependency */,
+				434BEF8A435DD8C30EF5AD1F4393515B /* PBXTargetDependency */,
 			);
 			name = "Pods-CheckmarkSegmentedControl_Tests";
 			productName = "Pods-CheckmarkSegmentedControl_Tests";
 			productReference = 62B62DA7444B753278E4220152550DB6 /* Pods_CheckmarkSegmentedControl_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CBD468382E129B55327825AE6BC1B20E /* CheckmarkSegmentedControl */ = {
+		CB0641382CFC4112A6AEB8B042E0610A /* CheckmarkSegmentedControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 030A42C3596A15FC4E706A9D32B486E9 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl" */;
+			buildConfigurationList = A1E8FE37B6A82926916B2894F21F670D /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl" */;
 			buildPhases = (
-				878AFB70072C0D9425781403089810B0 /* Sources */,
-				12FA338EAD769B90E4FF379019B114E9 /* Frameworks */,
-				1B707F7938F9222DAD306D07D8078FE3 /* Resources */,
-				26D72991EF03A2A418BD2BEEC4B3A2C3 /* Headers */,
+				792DF7F80425AB9222ABE0BD181D58BC /* Sources */,
+				E71285F68ABC45D85E4545654B5870CE /* Frameworks */,
+				D7464155034AA97B445C188DD0796293 /* Resources */,
+				E48E0C21F08F3D2D14568FAC37D6E24C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C293013EF43226DF82F9D3F511427823 /* PBXTargetDependency */,
+				655AB37574FD959AA821E9FBB58F1058 /* PBXTargetDependency */,
 			);
 			name = CheckmarkSegmentedControl;
 			productName = CheckmarkSegmentedControl;
-			productReference = 76960A906D24F35D70A6F145250BBD51 /* CheckmarkSegmentedControl.framework */;
+			productReference = D8C07C47B3028E18F7A65B31F1780A8C /* CheckmarkSegmentedControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F137CC361DB95E8897B1FC7D63C22308 /* Pods-CheckmarkSegmentedControl_Example */ = {
@@ -565,7 +565,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C90A5708874FEF8DA2592A89847E61A5 /* PBXTargetDependency */,
+				45944A0B6B6791443A2ECF3286D4E526 /* PBXTargetDependency */,
 			);
 			name = "Pods-CheckmarkSegmentedControl_Example";
 			productName = "Pods-CheckmarkSegmentedControl_Example";
@@ -593,9 +593,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBD468382E129B55327825AE6BC1B20E /* CheckmarkSegmentedControl */,
-				04B252F31C8C72AD902107BCFA3566C7 /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */,
-				0C4C75AD551F55F485C8B9AD730799B0 /* Nimble */,
+				CB0641382CFC4112A6AEB8B042E0610A /* CheckmarkSegmentedControl */,
+				5B2D6E7CF593D164CD9C9C8B4AC84C6D /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */,
+				3DBBFB4845FB652AAAADFCFBEA641EF5 /* Nimble */,
 				F137CC361DB95E8897B1FC7D63C22308 /* Pods-CheckmarkSegmentedControl_Example */,
 				91783BD10A5CECB4C961FEC3F54E7702 /* Pods-CheckmarkSegmentedControl_Tests */,
 			);
@@ -603,84 +603,84 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1B707F7938F9222DAD306D07D8078FE3 /* Resources */ = {
+		371A1F1B049C80EC11D7D5662CF11EC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BAE95E70BF905D35E3F86A5859C2E8 /* CheckmarkSegmentedControl.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAB20850132DA31A014503121260B103 /* Resources */ = {
+		D7464155034AA97B445C188DD0796293 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8920D15EDAB38426F43FB1257A453C35 /* CheckmarkSegmentedControl.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1FBF15F62A8BD60669DCD894C9C8894F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70E32D2BF504148236A17D92FD9F5C9A /* AdapterProtocols.swift in Sources */,
-				8FBA3CD6D8B036E9764DBDC134847E1D /* AllPass.swift in Sources */,
-				CCA6AB81B96B3939D58075EB69FC6707 /* AssertionDispatcher.swift in Sources */,
-				2BA452044BEF7AB5B4FAA47E7E11DFAE /* AssertionRecorder.swift in Sources */,
-				61A017308321F7E7E9A0A191A0FB0370 /* AsyncMatcherWrapper.swift in Sources */,
-				54B291B64E9C7BCDD0B27F30A1EC64C8 /* BeAKindOf.swift in Sources */,
-				B7B64DF526857EF98ECE33C7E80DF99B /* BeAnInstanceOf.swift in Sources */,
-				C7B2935FAC7EF71C668D97A9BB75F02A /* BeCloseTo.swift in Sources */,
-				2EBBEBE9684F8B2F0BD94171735CDDA7 /* BeEmpty.swift in Sources */,
-				1CA10C1DEF4B53CC814B7F6A9F31F53D /* BeGreaterThan.swift in Sources */,
-				7C1924B7DC2BBC2DA9385E210ED3ACBB /* BeGreaterThanOrEqualTo.swift in Sources */,
-				94EC9F088F365A44F88E487A0B2D920A /* BeIdenticalTo.swift in Sources */,
-				2668C8D9EC40C0707489F2DB651F3443 /* BeLessThan.swift in Sources */,
-				7F16D93B4DE9F1B1D07BC6E0C14D63AE /* BeLessThanOrEqual.swift in Sources */,
-				80874BC3B25E6C2EE3960BA75D2A5917 /* BeLogical.swift in Sources */,
-				783D726D55A9FE33AE071300094A39C3 /* BeNil.swift in Sources */,
-				F81DFA2D40A97880E9CD8CF4E24BF838 /* BeginWith.swift in Sources */,
-				97C4E361CDA662CE118F4C127340D118 /* Contain.swift in Sources */,
-				7249F9581FB5A294964B8E9A349BD279 /* DSL+Wait.swift in Sources */,
-				71E3ADC67A93569C532AE8EFE57321E3 /* DSL.m in Sources */,
-				EA976B9546B267C37AC636987080D4A4 /* DSL.swift in Sources */,
-				BDEEB5C4B2155758EF1EBBA3047F51C4 /* EndWith.swift in Sources */,
-				A21D0049A2414805A014BFFCA859F4BF /* Equal.swift in Sources */,
-				E87C4E5631A4221DC3546F35AC599EB2 /* Expectation.swift in Sources */,
-				A28EC366AECE12DBE7C9100F77F496B7 /* Expression.swift in Sources */,
-				F6866EAFC4A92E1BA95C24A96456AEEB /* FailureMessage.swift in Sources */,
-				5B709149CA7315BB70AFF70EF14B4235 /* Functional.swift in Sources */,
-				8E33D739BADCCE059F058745A4E4A33F /* Match.swift in Sources */,
-				5C9825B12F9D4AC581E7D4AE017599EE /* MatcherFunc.swift in Sources */,
-				B2722FA544DDBB0205420AF5661E36A2 /* MatcherProtocols.swift in Sources */,
-				1923D25BD224D52578DFD92BF8F1E5EA /* NMBExceptionCapture.m in Sources */,
-				2A8823223D6E2DF35907142963E9C004 /* Nimble-dummy.m in Sources */,
-				A80CE71D8A20FFCE5F604937C590ECE6 /* NimbleXCTestHandler.swift in Sources */,
-				CC45ECB7C61C2835EBD1E897749319A8 /* ObjCExpectation.swift in Sources */,
-				21E34F7856243AB777594B086D0020E4 /* ObjCMatcher.swift in Sources */,
-				61F31D7A76A82F7098FB741D7049C6AD /* Poll.swift in Sources */,
-				D8291231AA3D63D683D2ABEF3F880889 /* RaisesException.swift in Sources */,
-				04E9BA7BC30C136E9EE9AB82C88DF6BD /* SourceLocation.swift in Sources */,
-				D6C149E415EDE0ACFC0302D1009525D3 /* Stringers.swift in Sources */,
-				366B2A3AB7F5CAD0FB8DCC5C9B40E778 /* ThrowError.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F7CF1DD266A9FEABBEC336F4208CECF /* Sources */ = {
+		213388B0A56F420AE6E0CC47F430300F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		878AFB70072C0D9425781403089810B0 /* Sources */ = {
+		5B0E8C878DDB8F2DA9FC1815467C5F25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141510D75DB560A0A626A36E901A0B9D /* CheckmarkSegmentedControl-dummy.m in Sources */,
-				50D63B08A9AC0F12BC214772482445BE /* CheckmarkSegmentedControl.swift in Sources */,
+				745702EB5AF8E82D7D605F6FB89E4C9E /* AdapterProtocols.swift in Sources */,
+				91B53C930FD075709C03ACD8BFB4B77C /* AllPass.swift in Sources */,
+				1542602256D7457F5F60AA3AE4FE994C /* AssertionDispatcher.swift in Sources */,
+				635D2D2C5316B9B4A3B6C0FEEA4CC40C /* AssertionRecorder.swift in Sources */,
+				37C48D96B98C9FF1364C9D0762199494 /* AsyncMatcherWrapper.swift in Sources */,
+				F2DF8F9B27885C116F3F0FE6D1C79B0A /* BeAKindOf.swift in Sources */,
+				901B3E72294C197649532007DC6D1415 /* BeAnInstanceOf.swift in Sources */,
+				DD108A46DE1CF4BDF4C900583A777180 /* BeCloseTo.swift in Sources */,
+				4D7258A09D45386D92BF3DB5B3D4B7D1 /* BeEmpty.swift in Sources */,
+				4E6E819BA156F67B8364767923767154 /* BeGreaterThan.swift in Sources */,
+				23C94A04E2EB4B3A45FEF86F61738831 /* BeGreaterThanOrEqualTo.swift in Sources */,
+				4DD4E9C0C7E509DEF97DD02CB3ADB401 /* BeIdenticalTo.swift in Sources */,
+				18CAB19AA46FAB5FACD8E7512DDF7A6B /* BeLessThan.swift in Sources */,
+				77850CDB8FA043022311F62E9DA0A546 /* BeLessThanOrEqual.swift in Sources */,
+				3C35CD60523BAD198ED2FAE62DBA0F12 /* BeLogical.swift in Sources */,
+				EA7C250776D66E6EA004C76182A05BFD /* BeNil.swift in Sources */,
+				8819C871B5C265C811CB94B549ABBEBD /* BeginWith.swift in Sources */,
+				448A675F54AE0553804EEFEC201D0FF6 /* Contain.swift in Sources */,
+				9248B00996E0D8F82E1A33F55E64A2A0 /* DSL+Wait.swift in Sources */,
+				05F17A1F0C59C5B1CDA4EF0BCCD6C7FA /* DSL.m in Sources */,
+				58BA02CA933FF79BE0F30A70B47A5BE5 /* DSL.swift in Sources */,
+				63A1482C116FE5EE5304938689661F69 /* EndWith.swift in Sources */,
+				C0246721300D59C9B8556C7D190BE36C /* Equal.swift in Sources */,
+				39CDECC261F9E9FC088975688EAB9AC0 /* Expectation.swift in Sources */,
+				BCD1CF52A9FF49A6151BF1D55F3B00AF /* Expression.swift in Sources */,
+				011D722E2A1BFD696D9C84E27C758C56 /* FailureMessage.swift in Sources */,
+				3314381C12FC6212795D6B6E68D3EA40 /* Functional.swift in Sources */,
+				038D5C99900094F30C36570C3618CDB3 /* Match.swift in Sources */,
+				D3C52F7EC670BB0437E640BBBA24710A /* MatcherFunc.swift in Sources */,
+				E45AAA21D0124CE2A6FB904094F2D6E9 /* MatcherProtocols.swift in Sources */,
+				D04A3D93ACF3CC89FF5418864AB66173 /* NMBExceptionCapture.m in Sources */,
+				001A86EDFEA95BCA08F59FF551E47635 /* Nimble-dummy.m in Sources */,
+				9107863292E82A7BE8A99B86BEEE6161 /* NimbleXCTestHandler.swift in Sources */,
+				C2533050FFAB5E97A81FFF9546B881A4 /* ObjCExpectation.swift in Sources */,
+				2AF17D76D34970D363AC1B9BA80F23B1 /* ObjCMatcher.swift in Sources */,
+				3EF39878408F19160FA0BAD3DD7EBBFC /* Poll.swift in Sources */,
+				C0D75B9A689B4FF3E6589C0B4D97E29A /* RaisesException.swift in Sources */,
+				08CB0DA2314E9BCFE0FE3638C46C5B90 /* SourceLocation.swift in Sources */,
+				49E84B5D1B4DEEA68C23F983E0B8B8B3 /* Stringers.swift in Sources */,
+				FA13A0A60407750014D65390BDDF6688 /* ThrowError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		792DF7F80425AB9222ABE0BD181D58BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0281F32B980BA54592DD957BEFF08F /* CheckmarkSegmentedControl-dummy.m in Sources */,
+				800D0502FB146D1BF83DF75E3998AF7D /* CheckmarkSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,61 +703,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		420B6ECD12DDAE45D2A1817904851E46 /* PBXTargetDependency */ = {
+		434BEF8A435DD8C30EF5AD1F4393515B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Nimble;
-			target = 0C4C75AD551F55F485C8B9AD730799B0 /* Nimble */;
-			targetProxy = 2A596B5511199E65AEA2CC54C875C85A /* PBXContainerItemProxy */;
+			target = 3DBBFB4845FB652AAAADFCFBEA641EF5 /* Nimble */;
+			targetProxy = 612320D10C9C985810D9EDE94972A60D /* PBXContainerItemProxy */;
 		};
-		81767CD488297E35FC8218132F239FCC /* PBXTargetDependency */ = {
+		45944A0B6B6791443A2ECF3286D4E526 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CheckmarkSegmentedControl;
-			target = CBD468382E129B55327825AE6BC1B20E /* CheckmarkSegmentedControl */;
-			targetProxy = 35FC098E9697444C64DEFD3DB6039BFC /* PBXContainerItemProxy */;
+			target = CB0641382CFC4112A6AEB8B042E0610A /* CheckmarkSegmentedControl */;
+			targetProxy = 9B88479AB36C5CCEE2D95DD31252DBBB /* PBXContainerItemProxy */;
 		};
-		C293013EF43226DF82F9D3F511427823 /* PBXTargetDependency */ = {
+		62AEF6E261850D969E1098463B9DB2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CheckmarkSegmentedControl;
+			target = CB0641382CFC4112A6AEB8B042E0610A /* CheckmarkSegmentedControl */;
+			targetProxy = 523BDCC0BEE92188041691538871E614 /* PBXContainerItemProxy */;
+		};
+		655AB37574FD959AA821E9FBB58F1058 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CheckmarkSegmentedControl-CheckmarkSegmentedControl";
-			target = 04B252F31C8C72AD902107BCFA3566C7 /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */;
-			targetProxy = EDB2DE72CCD7F75DF23E78F2BB104DCF /* PBXContainerItemProxy */;
-		};
-		C90A5708874FEF8DA2592A89847E61A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CheckmarkSegmentedControl;
-			target = CBD468382E129B55327825AE6BC1B20E /* CheckmarkSegmentedControl */;
-			targetProxy = 2F30EA05CC1A47BD7B3BEECB9717A233 /* PBXContainerItemProxy */;
+			target = 5B2D6E7CF593D164CD9C9C8B4AC84C6D /* CheckmarkSegmentedControl-CheckmarkSegmentedControl */;
+			targetProxy = 291AABA155698FED291D8814E0D7C3DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06A89E90AD969DC287134FE065BEF237 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70586924B1AE6FAF4B04EFD8E8C7F051 /* Nimble-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Nimble;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		10D0A62803D126BFD6CCB3361BA92EFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B7BA7A0A4D8ADC0AB53A4D3CE337BDC /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */;
@@ -818,9 +790,9 @@
 			};
 			name = Debug;
 		};
-		391EB0C84D79887C7B558533D2EEE376 /* Debug */ = {
+		446869802916C7FB27BB91BF9A58884A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7596FCBAFC28A8CB334FC559C473268 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			baseConfigurationReference = B3EB26DF574BEFE1BFF4B49C37C327F8 /* CheckmarkSegmentedControl-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.1.0;
@@ -835,8 +807,47 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = CheckmarkSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		500D7CB6870C27C3319CE04FE93CFE7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3EB26DF574BEFE1BFF4B49C37C327F8 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = CheckmarkSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5586671F997739132D4172E5CE058F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E25A28595F85BE78EC76AEE214D4725 /* Nimble-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.0.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Nimble;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -919,25 +930,25 @@
 			};
 			name = Release;
 		};
-		7F177991C78576BD4126ADAE57012115 /* Release */ = {
+		823A98F7F173ED75F4258099420C57A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7596FCBAFC28A8CB334FC559C473268 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			baseConfigurationReference = 8E25A28595F85BE78EC76AEE214D4725 /* Nimble-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 2.0.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_COMPATIBILITY_VERSION = 2;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CheckmarkSegmentedControl/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CheckmarkSegmentedControl;
+				PRODUCT_NAME = Nimble;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -975,21 +986,9 @@
 			};
 			name = Release;
 		};
-		B0CA59C4DECDD981DA6288C9F0D57C9B /* Debug */ = {
+		BE4CE10A1DCB7E6EA6CE11C84FD98AE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7596FCBAFC28A8CB334FC559C473268 /* CheckmarkSegmentedControl-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = CheckmarkSegmentedControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		BDF9999B2FFFB453F684F4A5B0C6BDAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7596FCBAFC28A8CB334FC559C473268 /* CheckmarkSegmentedControl-Private.xcconfig */;
+			baseConfigurationReference = B3EB26DF574BEFE1BFF4B49C37C327F8 /* CheckmarkSegmentedControl-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = CheckmarkSegmentedControl;
@@ -999,32 +998,33 @@
 			};
 			name = Release;
 		};
-		EF8080EC1499CAE566642CBF817C8225 /* Release */ = {
+		F0AB41CEEA2252C3BE7D1D4129116C39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70586924B1AE6FAF4B04EFD8E8C7F051 /* Nimble-Private.xcconfig */;
+			baseConfigurationReference = B3EB26DF574BEFE1BFF4B49C37C327F8 /* CheckmarkSegmentedControl-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.0;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CheckmarkSegmentedControl/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Nimble;
+				MODULEMAP_FILE = "Target Support Files/CheckmarkSegmentedControl/CheckmarkSegmentedControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CheckmarkSegmentedControl;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		F776A5228E219A16501C4F52F1CC576F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1058,20 +1058,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		030A42C3596A15FC4E706A9D32B486E9 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				391EB0C84D79887C7B558533D2EEE376 /* Debug */,
-				7F177991C78576BD4126ADAE57012115 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		147AFB7EE73CF6FA0A3C97DE8FF0D97B /* Build configuration list for PBXNativeTarget "Pods-CheckmarkSegmentedControl_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10D0A62803D126BFD6CCB3361BA92EFC /* Debug */,
 				A5CDC80205725898B4FD025198856AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C110764D9366FB3211A924237008F57 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl-CheckmarkSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500D7CB6870C27C3319CE04FE93CFE7B /* Debug */,
+				BE4CE10A1DCB7E6EA6CE11C84FD98AE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1085,11 +1085,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6852C38E71AF72A5A092C9A7A328BBFC /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl-CheckmarkSegmentedControl" */ = {
+		312782B0432508C2F413C8C848D17181 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B0CA59C4DECDD981DA6288C9F0D57C9B /* Debug */,
-				BDF9999B2FFFB453F684F4A5B0C6BDAE /* Release */,
+				5586671F997739132D4172E5CE058F57 /* Debug */,
+				823A98F7F173ED75F4258099420C57A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1103,11 +1103,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDB9091C128B45AFB713922D3014C219 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
+		A1E8FE37B6A82926916B2894F21F670D /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06A89E90AD969DC287134FE065BEF237 /* Debug */,
-				EF8080EC1499CAE566642CBF817C8225 /* Release */,
+				F0AB41CEEA2252C3BE7D1D4129116C39 /* Debug */,
+				446869802916C7FB27BB91BF9A58884A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
