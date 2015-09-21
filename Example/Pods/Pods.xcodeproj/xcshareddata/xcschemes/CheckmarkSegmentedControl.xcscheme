@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "220E826C68CF3B75094D1D04"
+               BlueprintIdentifier = "EFDC51D2366596C783156809"
                BuildableName = "CheckmarkSegmentedControl.framework"
                BlueprintName = "CheckmarkSegmentedControl"
                ReferencedContainer = "container:Pods.xcodeproj">
