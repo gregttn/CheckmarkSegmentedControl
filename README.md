@@ -15,7 +15,7 @@ Visually it looks like radio buttons group with checkmark sign in the middle and
 
 ### Installation
 
-#### Cocoapods
+#### CocoaPods
 Include the following in your Podfile:
 
 ```ruby
