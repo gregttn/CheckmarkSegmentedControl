@@ -113,12 +113,20 @@ NIMBLE_EXPORT id<NMBMatcher> NMB_equal(id expectedValue) {
     return [NMBObjCMatcher equalMatcher:expectedValue];
 }
 
+NIMBLE_EXPORT id<NMBMatcher> NMB_haveCount(id expectedValue) {
+    return [NMBObjCMatcher haveCountMatcher:expectedValue];
+}
+
 NIMBLE_EXPORT id<NMBMatcher> NMB_match(id expectedValue) {
     return [NMBObjCMatcher matchMatcher:expectedValue];
 }
 
 NIMBLE_EXPORT id<NMBMatcher> NMB_allPass(id expectedValue) {
     return [NMBObjCMatcher allPassMatcher:expectedValue];
+}
+
+NIMBLE_EXPORT id<NMBMatcher> NMB_satisfyAnyOfWithMatchers(id matchers) {
+    return [NMBObjCMatcher satisfyAnyOfMatcher:matchers];
 }
 
 NIMBLE_EXPORT NMBObjCRaiseExceptionMatcher *NMB_raiseException() {

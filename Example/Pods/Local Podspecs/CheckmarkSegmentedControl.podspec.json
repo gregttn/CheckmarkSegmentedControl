@@ -1,6 +1,6 @@
 {
   "name": "CheckmarkSegmentedControl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "CheckmarkSegmentedControl is a customisable alternative to UISegmentedControl.",
   "description": "CheckmarkSegmentedControl is a customisable alternative to UISegmentedControl. Visually it looks like radio buttons group with checkmark sign in the middle and animated border on selection. Each option can be fully customised.",
   "homepage": "https://github.com/gregttn/CheckmarkSegmentedControl",
@@ -10,11 +10,11 @@
   },
   "source": {
     "git": "https://github.com/gregttn/CheckmarkSegmentedControl.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "social_media_url": "https://twitter.com/gregttn",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/*.swift",
