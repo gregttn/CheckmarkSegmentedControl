@@ -20,7 +20,7 @@ Include the following in your Podfile:
 
 ```ruby
 use_frameworks!
-pod 'CheckmarkSegmentedControl'
+pod 'CheckmarkSegmentedControl', '0.1.1'
 ```
 
 #### Manual
