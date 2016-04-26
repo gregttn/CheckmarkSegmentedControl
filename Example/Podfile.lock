@@ -1,17 +1,17 @@
 PODS:
   - CheckmarkSegmentedControl (0.1.1)
-  - Nimble (3.1.0)
+  - Nimble (4.0.1)
 
 DEPENDENCIES:
   - CheckmarkSegmentedControl (from `../`)
-  - Nimble (~> 3.1.0)
+  - Nimble (~> 4.0)
 
 EXTERNAL SOURCES:
   CheckmarkSegmentedControl:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   CheckmarkSegmentedControl: ce70c9fb699b623cef8e72c2b8578b505fbf2f48
-  Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
 
 COCOAPODS: 0.39.0
