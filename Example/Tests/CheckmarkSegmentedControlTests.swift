@@ -210,7 +210,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
         let touch = StubTouch(location: point)
         
         let captor: EventCaptor = EventCaptor()
-        checkmark.addTarget(captor, action: "capture", forControlEvents: UIControlEvents.ValueChanged)
+        checkmark.addTarget(captor, action: #selector(EventCaptor.capture), forControlEvents: UIControlEvents.ValueChanged)
         checkmark.touchesBegan([touch], withEvent: UIEvent())
         
         expect(captor.captured).to(beTrue())
