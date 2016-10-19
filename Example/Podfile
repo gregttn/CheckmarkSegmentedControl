@@ -1,12 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'CheckmarkSegmentedControl_Example', :exclusive => true do
-  pod "CheckmarkSegmentedControl", :path => "../"
-end
+target 'CheckmarkSegmentedControl_Example' do
+  pod 'CheckmarkSegmentedControl', :path => '../'
 
-target 'CheckmarkSegmentedControl_Tests', :exclusive => true do
-  pod "CheckmarkSegmentedControl", :path => "../"
-  pod 'Nimble', '~> 4.0'
-  
+  target 'CheckmarkSegmentedControl_Tests' do
+    inherit! :search_paths
+    pod 'Nimble', '~> 5.0'
+  end
 end

@@ -9,26 +9,26 @@
 import UIKit
 
 @IBDesignable
-public class CheckmarkSegmentedControl: UIControl {
-    public static let minCheckmarkHeight: CGFloat = 20.0
+open class CheckmarkSegmentedControl: UIControl {
+    open static let minCheckmarkHeight: CGFloat = 20.0
     
-    public var options: [CheckmarkOption] = [] {
+    open var options: [CheckmarkOption] = [] {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    public var animationLength: CFTimeInterval = 0.4
-    public var titleFont: UIFont = UIFont.systemFontOfSize(12.0)
-    @IBInspectable public var titleColor: UIColor = UIColor.blackColor()
-    public var titleLabelTopMargin: CGFloat = 6.0
-    public var strokeColor: UIColor = UIColor.blackColor() {
+    open var animationLength: CFTimeInterval = 0.4
+    open var titleFont: UIFont = UIFont.systemFont(ofSize: 12.0)
+    @IBInspectable open var titleColor: UIColor = UIColor.black
+    open var titleLabelTopMargin: CGFloat = 6.0
+    open var strokeColor: UIColor = UIColor.black {
         didSet {
             options = options.map({CheckmarkOption(title: $0.title, borderColor: self.strokeColor, fillColor: $0.fillColor)})
         }
     }
     
-    public var lineWidth: CGFloat = 3.0 {
+    open var lineWidth: CGFloat = 3.0 {
         didSet {
             self.tickLineWidth = lineWidth
             self.circleBorderLineWidth = lineWidth * 2
@@ -37,7 +37,7 @@ public class CheckmarkSegmentedControl: UIControl {
         }
     }
     
-    public var selectedIndex: Int {
+    open var selectedIndex: Int {
         get {
             return _selectedIndex
         }
@@ -54,9 +54,9 @@ public class CheckmarkSegmentedControl: UIControl {
         }
     }
     
-    private var tickLineWidth: CGFloat = 0
-    private var circleBorderLineWidth: CGFloat = 0
-    private var _selectedIndex = 0 {
+    fileprivate var tickLineWidth: CGFloat = 0
+    fileprivate var circleBorderLineWidth: CGFloat = 0
+    fileprivate var _selectedIndex = 0 {
         didSet {
             setNeedsDisplay()
         }
@@ -72,18 +72,18 @@ public class CheckmarkSegmentedControl: UIControl {
         setup()
     }
     
-    private func setup() {
-        contentMode = UIViewContentMode.Redraw
+    fileprivate func setup() {
+        contentMode = UIViewContentMode.redraw
         layer.masksToBounds = true
         lineWidth = 3.0
     }
     
-    override public func sizeThatFits(size: CGSize) -> CGSize {
+    override open func sizeThatFits(_ size: CGSize) -> CGSize {
         let largestLabelSize = options.map({ self.sizeForLabel($0.title) })
-                                    .sort({ $0.width > $1.width}).first
+                                    .sorted(by: { $0.width > $1.width}).first
         
         if let largestLabelSize = largestLabelSize {
-            let minAllowedSize = CGSizeMake(largestLabelSize.width * CGFloat(options.count), largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
+            let minAllowedSize = CGSize(width: largestLabelSize.width * CGFloat(options.count), height: largestLabelSize.height + CheckmarkSegmentedControl.minCheckmarkHeight)
             var width: CGFloat = size.width
             var height: CGFloat = size.height
             
@@ -101,19 +101,19 @@ public class CheckmarkSegmentedControl: UIControl {
         return size
     }
     
-    override public func drawRect(rect: CGRect) {
-        let sectionSize: CGSize = CGSizeMake(rect.width / CGFloat(options.count), rect.height)
+    override open func draw(_ rect: CGRect) {
+        let sectionSize: CGSize = CGSize(width: rect.width / CGFloat(options.count), height: rect.height)
         
         self.layer.sublayers = nil
         
         for index in (0..<options.count) {
             let option = options[index]
-            let containerFrame = CGRectIntegral(CGRectMake(sectionSize.width * CGFloat(index), 0, sectionSize.width, sectionSize.height))
+            let containerFrame = CGRect(x: sectionSize.width * CGFloat(index), y: 0, width: sectionSize.width, height: sectionSize.height).integral
             
             let label = createTitleLabel(containerFrame, content: option.title)
             layer.addSublayer(label)
             
-            let remainingContainerFrame = CGRectIntegral(CGRectInset(containerFrame, 0, (label.frame.height + titleLabelTopMargin)/2))
+            let remainingContainerFrame = containerFrame.insetBy(dx: 0, dy: (label.frame.height + titleLabelTopMargin)/2).integral
             let borderLayer = createCircleLayer(remainingContainerFrame, option: option)
             layer.addSublayer(borderLayer)
             
@@ -126,85 +126,85 @@ public class CheckmarkSegmentedControl: UIControl {
         }
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         options = [
             CheckmarkOption(title:"Option 1"), // by default black border and light gray colour as background
-            CheckmarkOption(title: "Option 2", borderColor: UIColor.orangeColor(), fillColor: UIColor.brownColor()),
-            CheckmarkOption(title: "Option 3", borderColor: UIColor.brownColor(), fillColor: UIColor.orangeColor()),
-            CheckmarkOption(title: "Option 4", borderColor: UIColor.greenColor(), fillColor: UIColor.blueColor())
+            CheckmarkOption(title: "Option 2", borderColor: UIColor.orange, fillColor: UIColor.brown),
+            CheckmarkOption(title: "Option 3", borderColor: UIColor.brown, fillColor: UIColor.orange),
+            CheckmarkOption(title: "Option 4", borderColor: UIColor.green, fillColor: UIColor.blue)
         ]
     }
     
-    private func createTitleLabel(containerFrame: CGRect, content: String) -> CATextLayer {
+    fileprivate func createTitleLabel(_ containerFrame: CGRect, content: String) -> CATextLayer {
         let labelSize = sizeForLabel(content)
-        let labelFrame = CGRectMake(containerFrame.origin.x, containerFrame.height - labelSize.height, containerFrame.width, labelSize.height)
+        let labelFrame = CGRect(x: containerFrame.origin.x, y: containerFrame.height - labelSize.height, width: containerFrame.width, height: labelSize.height)
         
         let label: CATextLayer = CATextLayer()
-        label.frame = CGRectIntegral(labelFrame)
+        label.frame = labelFrame.integral
         label.font = titleFont
         label.fontSize = titleFont.pointSize
         label.string = content
         label.alignmentMode = kCAAlignmentCenter
-        label.foregroundColor = titleColor.CGColor
+        label.foregroundColor = titleColor.cgColor
         
         adjustScale(label)
         
         return label
     }
     
-    private func createCircleLayer(containerFrame: CGRect, option: CheckmarkOption) -> CAShapeLayer {
+    fileprivate func createCircleLayer(_ containerFrame: CGRect, option: CheckmarkOption) -> CAShapeLayer {
         let height = min(containerFrame.width, containerFrame.height)
-        let xOffset = CGRectGetMidX(containerFrame) - height/2
-        let frame = CGRectMake(xOffset, 0, height, height)
+        let xOffset = containerFrame.midX - height/2
+        let frame = CGRect(x: xOffset, y: 0, width: height, height: height)
         let cornerRadius = ceil(frame.height/2)
         
         let borderLayer: CAShapeLayer = CAShapeLayer()
         borderLayer.frame = frame
         borderLayer.lineWidth = circleBorderLineWidth
-        borderLayer.fillColor = UIColor.clearColor().CGColor
-        borderLayer.backgroundColor = option.fillColor.CGColor
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.backgroundColor = option.fillColor.cgColor
         borderLayer.cornerRadius = cornerRadius
-        borderLayer.strokeColor = option.borderColor.CGColor
+        borderLayer.strokeColor = option.borderColor.cgColor
         borderLayer.strokeEnd = 0
         borderLayer.masksToBounds = true
         
-        borderLayer.path = UIBezierPath(roundedRect: borderLayer.bounds, cornerRadius: cornerRadius).CGPath
+        borderLayer.path = UIBezierPath(roundedRect: borderLayer.bounds, cornerRadius: cornerRadius).cgPath
         
         adjustScale(borderLayer)
         
         return borderLayer
     }
     
-    private func createTick(containerFrame: CGRect, strokeColor: UIColor) -> CAShapeLayer {
+    fileprivate func createTick(_ containerFrame: CGRect, strokeColor: UIColor) -> CAShapeLayer {
         let tickPath = UIBezierPath()
-        tickPath.moveToPoint(CGPointMake(0, 0))
-        tickPath.addLineToPoint(CGPointMake(0, tickLineWidth * 3))
-        tickPath.addLineToPoint(CGPointMake(tickLineWidth * 5, tickLineWidth * 3))
-        tickPath.addLineToPoint(CGPointMake(tickLineWidth * 5, tickLineWidth * 2))
-        tickPath.addLineToPoint(CGPointMake(tickLineWidth, tickLineWidth * 2))
-        tickPath.addLineToPoint(CGPointMake(tickLineWidth, 0))
-        tickPath.closePath()
-        tickPath.applyTransform(CGAffineTransformMakeRotation(CGFloat(-M_PI_4)))
+        tickPath.move(to: CGPoint(x: 0, y: 0))
+        tickPath.addLine(to: CGPoint(x: 0, y: tickLineWidth * 3))
+        tickPath.addLine(to: CGPoint(x: tickLineWidth * 5, y: tickLineWidth * 3))
+        tickPath.addLine(to: CGPoint(x: tickLineWidth * 5, y: tickLineWidth * 2))
+        tickPath.addLine(to: CGPoint(x: tickLineWidth, y: tickLineWidth * 2))
+        tickPath.addLine(to: CGPoint(x: tickLineWidth, y: 0))
+        tickPath.close()
+        tickPath.apply(CGAffineTransform(rotationAngle: CGFloat(-M_PI_4)))
         
         let tickBorderLayer: CAShapeLayer = CAShapeLayer()
-        tickBorderLayer.frame = CGRectMake(CGRectGetMidX(containerFrame) - (5*tickLineWidth)/2.0, CGRectGetMidY(containerFrame), containerFrame.width, containerFrame.height)
+        tickBorderLayer.frame = CGRect(x: containerFrame.midX - (5*tickLineWidth)/2.0, y: containerFrame.midY, width: containerFrame.width, height: containerFrame.height)
         tickBorderLayer.lineWidth = 1
-        tickBorderLayer.fillColor = strokeColor.CGColor
-        tickBorderLayer.path = tickPath.CGPath
+        tickBorderLayer.fillColor = strokeColor.cgColor
+        tickBorderLayer.path = tickPath.cgPath
         
         adjustScale(tickBorderLayer)
         
         return tickBorderLayer
     }
     
-    private func adjustScale(layer: CALayer) {
+    fileprivate func adjustScale(_ layer: CALayer) {
         layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.mainScreen().scale
-        layer.contentsScale = UIScreen.mainScreen().scale
+        layer.rasterizationScale = UIScreen.main.scale
+        layer.contentsScale = UIScreen.main.scale
     }
     
     // MARK: animations
-    private func animateCircleBorder(layer: CAShapeLayer) {
+    fileprivate func animateCircleBorder(_ layer: CAShapeLayer) {
         layer.strokeEnd = 1.0
         let animationKey = "strokeEnd"
         let animation: CABasicAnimation = CABasicAnimation(keyPath: animationKey)
@@ -213,35 +213,35 @@ public class CheckmarkSegmentedControl: UIControl {
         animation.fromValue = 0.0
         animation.toValue = 1.0
 
-        layer.addAnimation(animation, forKey: animationKey)
+        layer.add(animation, forKey: animationKey)
     }
     
     // MARK: respond to touches
-    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch: UITouch = touches.first else {
             return
         }
         
-        let location = touch.locationInView(self)
+        let location = touch.location(in: self)
         
-        if CGRectContainsPoint(bounds, location) {
+        if bounds.contains(location) {
             let sectionWidth = self.bounds.width / CGFloat(options.count)
             let index = Int(location.x / sectionWidth)
             
             if selectedIndex != index {
                 selectedIndex = index
                 
-                sendActionsForControlEvents(UIControlEvents.ValueChanged)
+                sendActions(for: UIControlEvents.valueChanged)
             }
             
         }
     }
     
-    private func sizeForLabel(text: String) -> CGSize {
+    fileprivate func sizeForLabel(_ text: String) -> CGSize {
         let textAttributes = [NSFontAttributeName : titleFont]
-        let string: NSString = text
+        let string: NSString = text as NSString
         
-        return string.sizeWithAttributes(textAttributes)
+        return string.size(attributes: textAttributes)
     }
 }
 
@@ -253,7 +253,7 @@ public struct CheckmarkOption: CustomStringConvertible {
         return "CheckmarkOption[title: \(title)]"
     }
     
-    public init(title: String, borderColor: UIColor = UIColor.blackColor(), fillColor: UIColor = UIColor.lightGrayColor()) {
+    public init(title: String, borderColor: UIColor = UIColor.black, fillColor: UIColor = UIColor.lightGray) {
         self.title = title
         self.borderColor = borderColor
         self.fillColor = fillColor

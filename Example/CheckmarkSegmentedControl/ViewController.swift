@@ -17,9 +17,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         checkmark.options = [
             CheckmarkOption(title:"Option 1"), // by default black border and light gray colour as background
-            CheckmarkOption(title: "Option 2", borderColor: UIColor.orangeColor(), fillColor: UIColor.brownColor()),
-            CheckmarkOption(title: "Option 3", borderColor: UIColor.brownColor(), fillColor: UIColor.orangeColor()),
-            CheckmarkOption(title: "Option 4", borderColor: UIColor.greenColor(), fillColor: UIColor.blueColor())
+            CheckmarkOption(title: "Option 2", borderColor: UIColor.orange, fillColor: UIColor.brown),
+            CheckmarkOption(title: "Option 3", borderColor: UIColor.brown, fillColor: UIColor.orange),
+            CheckmarkOption(title: "Option 4", borderColor: UIColor.green, fillColor: UIColor.blue)
         ]
         
     }
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func optionSelected(sender: AnyObject) {
+    @IBAction func optionSelected(_ sender: AnyObject) {
         print("Selected option: \(checkmark.options[checkmark.selectedIndex])")
     }
 }

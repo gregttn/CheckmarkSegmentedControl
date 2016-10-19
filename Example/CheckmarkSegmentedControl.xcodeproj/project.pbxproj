@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071CB7F58606019B56FBE2F4 /* Pods_CheckmarkSegmentedControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E52C3060DB3B7B521ACD78 /* Pods_CheckmarkSegmentedControl_Example.framework */; };
-		3413FF1096BE257D88A06536 /* Pods_CheckmarkSegmentedControl_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58981F819C96FCB6FF3BE1 /* Pods_CheckmarkSegmentedControl_Tests.framework */; };
+		082025EC0FD3C358EDA6A2A9 /* Pods_CheckmarkSegmentedControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973986062D402D6CA46DC70 /* Pods_CheckmarkSegmentedControl_Example.framework */; };
+		2FAEED39923658153379F753 /* Pods_CheckmarkSegmentedControl_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473212B7346333E267265993 /* Pods_CheckmarkSegmentedControl_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,7 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B58981F819C96FCB6FF3BE1 /* Pods_CheckmarkSegmentedControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		473212B7346333E267265993 /* Pods_CheckmarkSegmentedControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4973986062D402D6CA46DC70 /* Pods_CheckmarkSegmentedControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC34AECE75D9FED8F165691 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		55263D85EC02E3316356B47A /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CheckmarkSegmentedControl_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckmarkSegmentedControl_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,13 +42,10 @@
 		607FACE51AFB9204008FA782 /* CheckmarkSegmentedControl_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckmarkSegmentedControl_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631CD1081B85C5BB00750091 /* CheckmarkSegmentedControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckmarkSegmentedControlTests.swift; sourceTree = "<group>"; };
-		63D283DC948AE3E9DF7BB93C /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6AB0242F0652C88EF6C7DCCA /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		96177CEA861971B7BB1A30C2 /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B025A3336C7C52DA5D68F662 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		88DBC846643C0059FB30F4E3 /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7F07BB0783B2A71D088B910 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DF8FD99049F4BC455C049C97 /* CheckmarkSegmentedControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CheckmarkSegmentedControl.podspec; path = ../CheckmarkSegmentedControl.podspec; sourceTree = "<group>"; };
-		E1E52C3060DB3B7B521ACD78 /* Pods_CheckmarkSegmentedControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckmarkSegmentedControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4A47CE2B46A7F6E3E5A0FD /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckmarkSegmentedControl_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071CB7F58606019B56FBE2F4 /* Pods_CheckmarkSegmentedControl_Example.framework in Frameworks */,
+				082025EC0FD3C358EDA6A2A9 /* Pods_CheckmarkSegmentedControl_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,33 +61,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3413FF1096BE257D88A06536 /* Pods_CheckmarkSegmentedControl_Tests.framework in Frameworks */,
+				2FAEED39923658153379F753 /* Pods_CheckmarkSegmentedControl_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24757EC8A8916A841E66B714 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E1E52C3060DB3B7B521ACD78 /* Pods_CheckmarkSegmentedControl_Example.framework */,
-				5B58981F819C96FCB6FF3BE1 /* Pods_CheckmarkSegmentedControl_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		56BA7ED6D7BAD2D164229547 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				63D283DC948AE3E9DF7BB93C /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */,
-				96177CEA861971B7BB1A30C2 /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */,
-				6AB0242F0652C88EF6C7DCCA /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */,
-				B025A3336C7C52DA5D68F662 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +75,8 @@
 				607FACD21AFB9204008FA782 /* Example for CheckmarkSegmentedControl */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				56BA7ED6D7BAD2D164229547 /* Pods */,
-				24757EC8A8916A841E66B714 /* Frameworks */,
+				F6AAFBD866EF67F4689C5E7E /* Pods */,
+				64927B0FDECF9B774244E86F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +137,26 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		64927B0FDECF9B774244E86F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4973986062D402D6CA46DC70 /* Pods_CheckmarkSegmentedControl_Example.framework */,
+				473212B7346333E267265993 /* Pods_CheckmarkSegmentedControl_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6AAFBD866EF67F4689C5E7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55263D85EC02E3316356B47A /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */,
+				FD4A47CE2B46A7F6E3E5A0FD /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */,
+				88DBC846643C0059FB30F4E3 /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */,
+				4AC34AECE75D9FED8F165691 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,12 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl_Example" */;
 			buildPhases = (
-				FF3BA3B37496363297E46EE0 /* Check Pods Manifest.lock */,
+				9B24FBD712D8391503E2FA94 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				44261B82BFBE73939DA2DB56 /* Embed Pods Frameworks */,
-				D231D82DEA0FDC075E14FB49 /* Copy Pods Resources */,
+				743EF5737CA5EEEFE9020440 /* [CP] Embed Pods Frameworks */,
+				27234E46619295C9DBFEC920 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,12 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CheckmarkSegmentedControl_Tests" */;
 			buildPhases = (
-				49EECDCF5D88D0205415CB8C /* Check Pods Manifest.lock */,
+				EDE5A2976CA46609ED9442F9 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				2B8D40A8B0C9370498A90435 /* Embed Pods Frameworks */,
-				50E29FA92C0C62BAFBADBCEC /* Copy Pods Resources */,
+				F54A8A2B8505904A7493895F /* [CP] Embed Pods Frameworks */,
+				4C62212324E6A34D44398B82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,9 +213,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -260,74 +262,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B8D40A8B0C9370498A90435 /* Embed Pods Frameworks */ = {
+		27234E46619295C9DBFEC920 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		44261B82BFBE73939DA2DB56 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49EECDCF5D88D0205415CB8C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		50E29FA92C0C62BAFBADBCEC /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D231D82DEA0FDC075E14FB49 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,19 +277,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF3BA3B37496363297E46EE0 /* Check Pods Manifest.lock */ = {
+		4C62212324E6A34D44398B82 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		743EF5737CA5EEEFE9020440 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Example/Pods-CheckmarkSegmentedControl_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B24FBD712D8391503E2FA94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE5A2976CA46609ED9442F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F54A8A2B8505904A7493895F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckmarkSegmentedControl_Tests/Pods-CheckmarkSegmentedControl_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -484,7 +486,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63D283DC948AE3E9DF7BB93C /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */;
+			baseConfigurationReference = 55263D85EC02E3316356B47A /* Pods-CheckmarkSegmentedControl_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CheckmarkSegmentedControl/Info.plist;
@@ -493,12 +495,13 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96177CEA861971B7BB1A30C2 /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */;
+			baseConfigurationReference = FD4A47CE2B46A7F6E3E5A0FD /* Pods-CheckmarkSegmentedControl_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CheckmarkSegmentedControl/Info.plist;
@@ -507,15 +510,16 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AB0242F0652C88EF6C7DCCA /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */;
+			baseConfigurationReference = 88DBC846643C0059FB30F4E3 /* Pods-CheckmarkSegmentedControl_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -524,20 +528,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckmarkSegmentedControl_Example.app/CheckmarkSegmentedControl_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B025A3336C7C52DA5D68F662 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */;
+			baseConfigurationReference = 4AC34AECE75D9FED8F165691 /* Pods-CheckmarkSegmentedControl_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckmarkSegmentedControl_Example.app/CheckmarkSegmentedControl_Example";
 			};
 			name = Release;
