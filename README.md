@@ -20,7 +20,7 @@ Include the following in your Podfile:
 
 ```ruby
 use_frameworks!
-pod 'CheckmarkSegmentedControl', '0.1.1'
+pod 'CheckmarkSegmentedControl', '0.2.0'
 ```
 
 #### Manual
@@ -32,19 +32,20 @@ You need to copy CheckmarkSegmentedControl.swift to your project.
 var checkmark: CheckmarkSegmentedControl = CheckmarkSegmentedControl(frame: frame)
 checkmark.options = [
     CheckmarkOption(title:"Option 1"), // by default black border and light gray colour as background
-    CheckmarkOption(title: "Option 2", borderColor: UIColor.yellowColor(), fillColor: UIColor.greenColor()),
-    CheckmarkOption(title: "Option 3", borderColor: UIColor.blueColor(), fillColor: UIColor.yellowColor()),
-    CheckmarkOption(title: "Option 4", borderColor: UIColor.greenColor(), fillColor: UIColor.blueColor())]
+    CheckmarkOption(title: "Option 2", borderColor: UIColor.orange, fillColor: UIColor.brown),
+    CheckmarkOption(title: "Option 3", borderColor: UIColor.brown, fillColor: UIColor.orange),
+    CheckmarkOption(title: "Option 4", borderColor: UIColor.green, fillColor: UIColor.blue)
+    ]
 
 ```
 
 Get notified when new option is selected:
 
 ```swift
-checkmark.addTarget(self, action: "optionSelected:", forControlEvents: UIControlEvents.ValueChanged)
+checkmark.addTarget(self, action: #selector(ViewController.optionSelected(_:)), for: UIControlEvents.valueChanged)
 
-func optionSelected(sender: AnyObject) {
-    println("Selected option: \(checkmark.options[checkmark.selectedIndex])")
+func optionSelected(_ sender: AnyObject) {
+    print("Selected option: \(checkmark.options[checkmark.selectedIndex])")
 }
 
 ```
