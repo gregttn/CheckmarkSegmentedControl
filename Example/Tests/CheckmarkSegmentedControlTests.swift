@@ -316,10 +316,10 @@ class CheckmarkSegmentedControlTests: XCTestCase {
     
     // helpers
     fileprivate func sizeForText(_ option: CheckmarkOption, font: UIFont) -> CGSize {
-        let textAttributes = [NSFontAttributeName : font]
+        let textAttributes = [NSAttributedStringKey.font : font]
         let string: NSString = option.title as NSString
         
-        return string.size(attributes: textAttributes)
+        return string.size(withAttributes: textAttributes)
     }
     
     fileprivate func expectedFrameFor(_ layer: CALayer, frame: CGRect, index: Int) -> CGRect {
@@ -355,7 +355,7 @@ class CheckmarkSegmentedControlTests: XCTestCase {
 class EventCaptor: NSObject {
     var captured = false
     
-    func capture() {
+    @objc func capture() {
         self.captured = true
     }
 }
