@@ -184,7 +184,7 @@ open class CheckmarkSegmentedControl: UIControl {
         tickPath.addLine(to: CGPoint(x: tickLineWidth, y: tickLineWidth * 2))
         tickPath.addLine(to: CGPoint(x: tickLineWidth, y: 0))
         tickPath.close()
-        tickPath.apply(CGAffineTransform(rotationAngle: CGFloat(-M_PI_4)))
+        tickPath.apply(CGAffineTransform(rotationAngle: CGFloat(-(Double.pi / 4))))
         
         let tickBorderLayer: CAShapeLayer = CAShapeLayer()
         tickBorderLayer.frame = CGRect(x: containerFrame.midX - (5*tickLineWidth)/2.0, y: containerFrame.midY, width: containerFrame.width, height: containerFrame.height)
@@ -238,10 +238,10 @@ open class CheckmarkSegmentedControl: UIControl {
     }
     
     fileprivate func sizeForLabel(_ text: String) -> CGSize {
-        let textAttributes = [NSFontAttributeName : titleFont]
+        let textAttributes = [NSAttributedStringKey.font : titleFont]
         let string: NSString = text as NSString
         
-        return string.size(attributes: textAttributes)
+        return string.size(withAttributes: textAttributes)
     }
 }
 
